@@ -1,0 +1,2613 @@
+fileFormatVersion: 2
+guid: 44ff609fedd9aa3489fcecddd10b24e2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6840688862702742528
+    second: arabelle_POO-Sheet_339x309_0
+  - first:
+      213: 5903872665168142945
+    second: arabelle_POO-Sheet_339x309_1
+  - first:
+      213: -6709560424281899320
+    second: arabelle_POO-Sheet_339x309_2
+  - first:
+      213: 217463466631073569
+    second: arabelle_POO-Sheet_339x309_3
+  - first:
+      213: 3829639955103823035
+    second: arabelle_POO-Sheet_339x309_4
+  - first:
+      213: 1530676603269815515
+    second: arabelle_POO-Sheet_339x309_5
+  - first:
+      213: -215654570313068814
+    second: arabelle_POO-Sheet_339x309_6
+  - first:
+      213: 4796457656151225719
+    second: arabelle_POO-Sheet_339x309_7
+  - first:
+      213: -2947488469152857566
+    second: arabelle_POO-Sheet_339x309_8
+  - first:
+      213: -6852624806624241573
+    second: arabelle_POO-Sheet_339x309_9
+  - first:
+      213: 5940581132275888311
+    second: arabelle_POO-Sheet_339x309_10
+  - first:
+      213: -6916269244008119875
+    second: arabelle_POO-Sheet_339x309_11
+  - first:
+      213: 3541536655824217013
+    second: arabelle_POO-Sheet_339x309_12
+  - first:
+      213: -6821503886571717495
+    second: arabelle_POO-Sheet_339x309_13
+  - first:
+      213: -2635703200669051395
+    second: arabelle_POO-Sheet_339x309_14
+  - first:
+      213: 1287867378294851023
+    second: arabelle_POO-Sheet_339x309_15
+  - first:
+      213: -4501479010622731025
+    second: arabelle_POO-Sheet_339x309_16
+  - first:
+      213: 8713429170692124899
+    second: arabelle_POO-Sheet_339x309_17
+  - first:
+      213: 341815445058937186
+    second: arabelle_POO-Sheet_339x309_18
+  - first:
+      213: -2694612482791541777
+    second: arabelle_POO-Sheet_339x309_19
+  - first:
+      213: 7986935997195848290
+    second: arabelle_POO-Sheet_339x309_20
+  - first:
+      213: 4633710087131459673
+    second: arabelle_POO-Sheet_339x309_21
+  - first:
+      213: 5676796123969089654
+    second: arabelle_POO-Sheet_339x309_22
+  - first:
+      213: 1434899602316065080
+    second: arabelle_POO-Sheet_339x309_23
+  - first:
+      213: 8195843176440887580
+    second: arabelle_POO-Sheet_339x309_24
+  - first:
+      213: -1662391214921688787
+    second: arabelle_POO-Sheet_339x309_25
+  - first:
+      213: 3464141774721279044
+    second: arabelle_POO-Sheet_339x309_26
+  - first:
+      213: -7642996414999963573
+    second: arabelle_POO-Sheet_339x309_27
+  - first:
+      213: 7729557010462489604
+    second: arabelle_POO-Sheet_339x309_28
+  - first:
+      213: -2250618649314264151
+    second: arabelle_POO-Sheet_339x309_29
+  - first:
+      213: -2428350950687041481
+    second: arabelle_POO-Sheet_339x309_30
+  - first:
+      213: -5999812849251332123
+    second: arabelle_POO-Sheet_339x309_31
+  - first:
+      213: -4924024638396284857
+    second: arabelle_POO-Sheet_339x309_32
+  - first:
+      213: -1527025701798349468
+    second: arabelle_POO-Sheet_339x309_33
+  - first:
+      213: 3738760402316884590
+    second: arabelle_POO-Sheet_339x309_34
+  - first:
+      213: 8992061405686773851
+    second: arabelle_POO-Sheet_339x309_35
+  - first:
+      213: 6512335648493884523
+    second: arabelle_POO-Sheet_339x309_36
+  - first:
+      213: -8416495646262353231
+    second: arabelle_POO-Sheet_339x309_37
+  - first:
+      213: 5471113104119254250
+    second: arabelle_POO-Sheet_339x309_38
+  - first:
+      213: -8876292048092755790
+    second: arabelle_POO-Sheet_339x309_39
+  - first:
+      213: 1632719331886275010
+    second: arabelle_POO-Sheet_339x309_40
+  - first:
+      213: 4513022208026940724
+    second: arabelle_POO-Sheet_339x309_41
+  - first:
+      213: 5228929066259113836
+    second: arabelle_POO-Sheet_339x309_42
+  - first:
+      213: 5740632861557283253
+    second: arabelle_POO-Sheet_339x309_43
+  - first:
+      213: -5360696857869214516
+    second: arabelle_POO-Sheet_339x309_44
+  - first:
+      213: -2559734021853754312
+    second: arabelle_POO-Sheet_339x309_45
+  - first:
+      213: -3454727757245323620
+    second: arabelle_POO-Sheet_339x309_46
+  - first:
+      213: 5165569600450928618
+    second: arabelle_POO-Sheet_339x309_47
+  - first:
+      213: 4205779227775415621
+    second: arabelle_POO-Sheet_339x309_48
+  - first:
+      213: 6525785688092733691
+    second: arabelle_POO-Sheet_339x309_49
+  - first:
+      213: 2082854871746307151
+    second: arabelle_POO-Sheet_339x309_50
+  - first:
+      213: 9112232170568622978
+    second: arabelle_POO-Sheet_339x309_51
+  - first:
+      213: -6056613601015608384
+    second: arabelle_POO-Sheet_339x309_52
+  - first:
+      213: -3651615414854937827
+    second: arabelle_POO-Sheet_339x309_53
+  - first:
+      213: 5898964482073127350
+    second: arabelle_POO-Sheet_339x309_54
+  - first:
+      213: -8776940551759103650
+    second: arabelle_POO-Sheet_339x309_55
+  - first:
+      213: 8513867237356644641
+    second: arabelle_POO-Sheet_339x309_56
+  - first:
+      213: 5191112439659393687
+    second: arabelle_POO-Sheet_339x309_57
+  - first:
+      213: 8854512079141390473
+    second: arabelle_POO-Sheet_339x309_58
+  - first:
+      213: -3219087267611480224
+    second: arabelle_POO-Sheet_339x309_59
+  - first:
+      213: 5555730613497230943
+    second: arabelle_POO-Sheet_339x309_60
+  - first:
+      213: 8426252881130974921
+    second: arabelle_POO-Sheet_339x309_61
+  - first:
+      213: 7746922398701860956
+    second: arabelle_POO-Sheet_339x309_62
+  - first:
+      213: 2141232290382312402
+    second: arabelle_POO-Sheet_339x309_63
+  - first:
+      213: 3290340890613384721
+    second: arabelle_POO-Sheet_339x309_64
+  - first:
+      213: -501447607997155929
+    second: arabelle_POO-Sheet_339x309_65
+  - first:
+      213: -3848741514867501830
+    second: arabelle_POO-Sheet_339x309_66
+  - first:
+      213: -7806328262337948207
+    second: arabelle_POO-Sheet_339x309_67
+  - first:
+      213: 6255544653837583185
+    second: arabelle_POO-Sheet_339x309_68
+  - first:
+      213: 7113150125047081416
+    second: arabelle_POO-Sheet_339x309_69
+  - first:
+      213: -325792595411109633
+    second: arabelle_POO-Sheet_339x309_70
+  - first:
+      213: -8316499848909743323
+    second: arabelle_POO-Sheet_339x309_71
+  - first:
+      213: -8977390250109253104
+    second: arabelle_POO-Sheet_339x309_72
+  - first:
+      213: 6500242012868664791
+    second: arabelle_POO-Sheet_339x309_73
+  - first:
+      213: -6333474213217929256
+    second: arabelle_POO-Sheet_339x309_74
+  - first:
+      213: -7868617132505288304
+    second: arabelle_POO-Sheet_339x309_75
+  - first:
+      213: 4651811211928773409
+    second: arabelle_POO-Sheet_339x309_76
+  - first:
+      213: 3399174965337459938
+    second: arabelle_POO-Sheet_339x309_77
+  - first:
+      213: -5489491488149113680
+    second: arabelle_POO-Sheet_339x309_78
+  - first:
+      213: 5541887072283786356
+    second: arabelle_POO-Sheet_339x309_79
+  - first:
+      213: -9123303387922914567
+    second: arabelle_POO-Sheet_339x309_80
+  - first:
+      213: -6604284484199490040
+    second: arabelle_POO-Sheet_339x309_81
+  - first:
+      213: -5867116502733901008
+    second: arabelle_POO-Sheet_339x309_82
+  - first:
+      213: -8763715898953167512
+    second: arabelle_POO-Sheet_339x309_83
+  - first:
+      213: -7066149750213566157
+    second: arabelle_POO-Sheet_339x309_84
+  - first:
+      213: 3959374632574056344
+    second: arabelle_POO-Sheet_339x309_85
+  - first:
+      213: 1581669233870240695
+    second: arabelle_POO-Sheet_339x309_86
+  - first:
+      213: 1740813804986076955
+    second: arabelle_POO-Sheet_339x309_87
+  - first:
+      213: -8766294294785069385
+    second: arabelle_POO-Sheet_339x309_88
+  - first:
+      213: 5391849511990537867
+    second: arabelle_POO-Sheet_339x309_89
+  - first:
+      213: -4056337019210847796
+    second: arabelle_POO-Sheet_339x309_90
+  - first:
+      213: 1960768015630144744
+    second: arabelle_POO-Sheet_339x309_91
+  - first:
+      213: 1597780662660748805
+    second: arabelle_POO-Sheet_339x309_92
+  - first:
+      213: -4927912065968698226
+    second: arabelle_POO-Sheet_339x309_93
+  - first:
+      213: 8079068514950569145
+    second: arabelle_POO-Sheet_339x309_94
+  - first:
+      213: -3521378306820621874
+    second: arabelle_POO-Sheet_339x309_95
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3877
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 004d1af09bdf011a0800000000000000
+      internalID: -6840688862702742528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_1
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 3877
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1626c7ea8e4cee150800000000000000
+      internalID: 5903872665168142945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_2
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 3877
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ce78a7c75ad2e2a0800000000000000
+      internalID: -6709560424281899320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_3
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 3877
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f8b28eed5940300800000000000000
+      internalID: 217463466631073569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_4
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 3877
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb43b95bf3d952530800000000000000
+      internalID: 3829639955103823035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_5
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 3877
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdc16e3c24e0e3510800000000000000
+      internalID: 1530676603269815515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_6
+      rect:
+        serializedVersion: 2
+        x: 2034
+        y: 3877
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fecc469f47d10df0800000000000000
+      internalID: -215654570313068814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_7
+      rect:
+        serializedVersion: 2
+        x: 2373
+        y: 3877
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 775b81753d0709240800000000000000
+      internalID: 4796457656151225719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_8
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 3877
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22285909ada6817d0800000000000000
+      internalID: -2947488469152857566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_9
+      rect:
+        serializedVersion: 2
+        x: 3051
+        y: 3877
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b58d12e8b0696e0a0800000000000000
+      internalID: -6852624806624241573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_10
+      rect:
+        serializedVersion: 2
+        x: 3390
+        y: 3877
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b031b4b01f217250800000000000000
+      internalID: 5940581132275888311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_11
+      rect:
+        serializedVersion: 2
+        x: 3729
+        y: 3877
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db1cfeb34c97400a0800000000000000
+      internalID: -6916269244008119875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3568
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b36d6913d0162130800000000000000
+      internalID: 3541536655824217013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_13
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 3568
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98c32f66b562551a0800000000000000
+      internalID: -6821503886571717495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_14
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 3568
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df5d2ce47e91c6bd0800000000000000
+      internalID: -2635703200669051395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_15
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 3568
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc50411ae8c6fd110800000000000000
+      internalID: 1287867378294851023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_16
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 3568
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fec84ff80b88781c0800000000000000
+      internalID: -4501479010622731025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_17
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 3568
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e071ae3aa15ce870800000000000000
+      internalID: 8713429170692124899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_18
+      rect:
+        serializedVersion: 2
+        x: 2034
+        y: 3568
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 261ea75165f5eb400800000000000000
+      internalID: 341815445058937186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_19
+      rect:
+        serializedVersion: 2
+        x: 2373
+        y: 3568
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe370eb3930da9ad0800000000000000
+      internalID: -2694612482791541777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_20
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 3568
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26a83ac09fb47de60800000000000000
+      internalID: 7986935997195848290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_21
+      rect:
+        serializedVersion: 2
+        x: 3051
+        y: 3568
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9507d9716ce3e4040800000000000000
+      internalID: 4633710087131459673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_22
+      rect:
+        serializedVersion: 2
+        x: 3390
+        y: 3568
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 670fd7f6ff708ce40800000000000000
+      internalID: 5676796123969089654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_23
+      rect:
+        serializedVersion: 2
+        x: 3729
+        y: 3568
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 839f56cf599c9e310800000000000000
+      internalID: 1434899602316065080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3259
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c19719e02fb7db170800000000000000
+      internalID: 8195843176440887580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_25
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 3259
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d29dcdc6ffffde8e0800000000000000
+      internalID: -1662391214921688787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_26
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 3259
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4446add179a131030800000000000000
+      internalID: 3464141774721279044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_27
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 3259
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b48d750414f9ee590800000000000000
+      internalID: -7642996414999963573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_28
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 3259
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40c3fb7e527e44b60800000000000000
+      internalID: 7729557010462489604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_29
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 3259
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9abf0c2434234c0e0800000000000000
+      internalID: -2250618649314264151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_30
+      rect:
+        serializedVersion: 2
+        x: 2034
+        y: 3259
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73811522da3cc4ed0800000000000000
+      internalID: -2428350950687041481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_31
+      rect:
+        serializedVersion: 2
+        x: 2373
+        y: 3259
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5efcc8180026cbca0800000000000000
+      internalID: -5999812849251332123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_32
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 3259
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7404e131ea95aabb0800000000000000
+      internalID: -4924024638396284857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_33
+      rect:
+        serializedVersion: 2
+        x: 3051
+        y: 3259
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 465fa69f63aeecae0800000000000000
+      internalID: -1527025701798349468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_34
+      rect:
+        serializedVersion: 2
+        x: 3390
+        y: 3259
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6af460f6ceb2e330800000000000000
+      internalID: 3738760402316884590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_35
+      rect:
+        serializedVersion: 2
+        x: 3729
+        y: 3259
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b58b57cd4383acc70800000000000000
+      internalID: 8992061405686773851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2950
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b64579ab4c6706a50800000000000000
+      internalID: 6512335648493884523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_37
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 2950
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b229ee5dc9923b80800000000000000
+      internalID: -8416495646262353231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_38
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 2950
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aec4309816c4deb40800000000000000
+      internalID: 5471113104119254250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_39
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 2950
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b88ece296311d480800000000000000
+      internalID: -8876292048092755790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_40
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 2950
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c99ef2f49598a610800000000000000
+      internalID: 1632719331886275010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_41
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 2950
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43515e489c971ae30800000000000000
+      internalID: 4513022208026940724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_42
+      rect:
+        serializedVersion: 2
+        x: 2034
+        y: 2950
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c67e61e1843e09840800000000000000
+      internalID: 5228929066259113836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_43
+      rect:
+        serializedVersion: 2
+        x: 2373
+        y: 2950
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b95e032c23daaf40800000000000000
+      internalID: 5740632861557283253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_44
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 2950
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccc17262c9afa95b0800000000000000
+      internalID: -5360696857869214516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_45
+      rect:
+        serializedVersion: 2
+        x: 3051
+        y: 2950
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ccceb187ff97cd0800000000000000
+      internalID: -2559734021853754312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_46
+      rect:
+        serializedVersion: 2
+        x: 3390
+        y: 2950
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c96e5b1a8675e00d0800000000000000
+      internalID: -3454727757245323620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_47
+      rect:
+        serializedVersion: 2
+        x: 3729
+        y: 2950
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aef1f69ee2acfa740800000000000000
+      internalID: 5165569600450928618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2641
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 545354baceded5a30800000000000000
+      internalID: 4205779227775415621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_49
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 2641
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf0781b128f309a50800000000000000
+      internalID: 6525785688092733691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_50
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 2641
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f44612d6879c7ec10800000000000000
+      internalID: 2082854871746307151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_51
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 2641
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28321a561e6257e70800000000000000
+      internalID: 9112232170568622978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_52
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 2641
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cb4aa9e40692fba0800000000000000
+      internalID: -6056613601015608384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_53
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 2641
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d131b35902bd25dc0800000000000000
+      internalID: -3651615414854937827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_54
+      rect:
+        serializedVersion: 2
+        x: 2034
+        y: 2641
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b96d9041f45dd150800000000000000
+      internalID: 5898964482073127350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_55
+      rect:
+        serializedVersion: 2
+        x: 2373
+        y: 2641
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e597da5021b023680800000000000000
+      internalID: -8776940551759103650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_56
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 2641
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 129aa7bd425572670800000000000000
+      internalID: 8513867237356644641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_57
+      rect:
+        serializedVersion: 2
+        x: 3051
+        y: 2641
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 792720b92498a0840800000000000000
+      internalID: 5191112439659393687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_58
+      rect:
+        serializedVersion: 2
+        x: 3390
+        y: 2641
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 988c0a0a2db81ea70800000000000000
+      internalID: 8854512079141390473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_59
+      rect:
+        serializedVersion: 2
+        x: 3729
+        y: 2641
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06fe8018f218353d0800000000000000
+      internalID: -3219087267611480224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2332
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f56f345be8be91d40800000000000000
+      internalID: 5555730613497230943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_61
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 2332
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ce6c67e95010f470800000000000000
+      internalID: 8426252881130974921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_62
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 2332
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c58342d60e8928b60800000000000000
+      internalID: 7746922398701860956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_63
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 2332
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d375d16c6f27bd10800000000000000
+      internalID: 2141232290382312402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_64
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 2332
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11604f66b93a9ad20800000000000000
+      internalID: 3290340890613384721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_65
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 2332
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a53cdbae008a09f0800000000000000
+      internalID: -501447607997155929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_66
+      rect:
+        serializedVersion: 2
+        x: 2034
+        y: 2332
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af41606dbf5869ac0800000000000000
+      internalID: -3848741514867501830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_67
+      rect:
+        serializedVersion: 2
+        x: 2373
+        y: 2332
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d5114b1ec95aa390800000000000000
+      internalID: -7806328262337948207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_68
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 2332
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 153459828b820d650800000000000000
+      internalID: 6255544653837583185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_69
+      rect:
+        serializedVersion: 2
+        x: 3051
+        y: 2332
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c9e4750a5cf6b260800000000000000
+      internalID: 7113150125047081416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_70
+      rect:
+        serializedVersion: 2
+        x: 3390
+        y: 2332
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff871105c5d8a7bf0800000000000000
+      internalID: -325792595411109633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_71
+      rect:
+        serializedVersion: 2
+        x: 3729
+        y: 2332
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52b152b337bd59c80800000000000000
+      internalID: -8316499848909743323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2023
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ace2cb127e96380800000000000000
+      internalID: -8977390250109253104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_73
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 2023
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dd5b13cbaf753a50800000000000000
+      internalID: 6500242012868664791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_74
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 2023
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d77c0f52cafa18a0800000000000000
+      internalID: -6333474213217929256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_75
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 2023
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 091387f586e0dc290800000000000000
+      internalID: -7868617132505288304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_76
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 2023
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 123a131a6ad8e8040800000000000000
+      internalID: 4651811211928773409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_77
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 2023
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ec07521f9b4c2f20800000000000000
+      internalID: 3399174965337459938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_78
+      rect:
+        serializedVersion: 2
+        x: 2034
+        y: 2023
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b4775b739861d3b0800000000000000
+      internalID: -5489491488149113680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_79
+      rect:
+        serializedVersion: 2
+        x: 2373
+        y: 2023
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47cfdc81eecb8ec40800000000000000
+      internalID: 5541887072283786356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_80
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 2023
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f2acb0f7e3836180800000000000000
+      internalID: -9123303387922914567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_81
+      rect:
+        serializedVersion: 2
+        x: 3051
+        y: 2023
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80e5aaba04ed854a0800000000000000
+      internalID: -6604284484199490040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_82
+      rect:
+        serializedVersion: 2
+        x: 3390
+        y: 2023
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 033b6b640a0d39ea0800000000000000
+      internalID: -5867116502733901008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_83
+      rect:
+        serializedVersion: 2
+        x: 3729
+        y: 2023
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86d047272d6016680800000000000000
+      internalID: -8763715898953167512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1714
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3312ec08d3effed90800000000000000
+      internalID: -7066149750213566157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_85
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 1714
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 897f44b204682f630800000000000000
+      internalID: 3959374632574056344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_86
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 1714
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bbfff4c9c733f510800000000000000
+      internalID: 1581669233870240695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_87
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 1714
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1f8a42beec982810800000000000000
+      internalID: 1740813804986076955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_88
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 1714
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7be6dc2e8cdd75680800000000000000
+      internalID: -8766294294785069385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_89
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 1714
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e2f8c5092b3da40800000000000000
+      internalID: 5391849511990537867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_90
+      rect:
+        serializedVersion: 2
+        x: 2034
+        y: 1714
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc9aba0f8fef4b7c0800000000000000
+      internalID: -4056337019210847796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_91
+      rect:
+        serializedVersion: 2
+        x: 2373
+        y: 1714
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e415922f1c063b10800000000000000
+      internalID: 1960768015630144744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_92
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 1714
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 506d1ea1c057c2610800000000000000
+      internalID: 1597780662660748805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_93
+      rect:
+        serializedVersion: 2
+        x: 3051
+        y: 1714
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8c039fc51a8c9bb0800000000000000
+      internalID: -4927912065968698226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_94
+      rect:
+        serializedVersion: 2
+        x: 3390
+        y: 1714
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bcdba5720e9e1070800000000000000
+      internalID: 8079068514950569145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arabelle_POO-Sheet_339x309_95
+      rect:
+        serializedVersion: 2
+        x: 3729
+        y: 1714
+        width: 339
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec9b036461d812fc0800000000000000
+      internalID: -3521378306820621874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4e2c29ac17abd50448ccf537efa315e6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      arabelle_POO-Sheet_339x309_0: -6840688862702742528
+      arabelle_POO-Sheet_339x309_1: 5903872665168142945
+      arabelle_POO-Sheet_339x309_10: 5940581132275888311
+      arabelle_POO-Sheet_339x309_11: -6916269244008119875
+      arabelle_POO-Sheet_339x309_12: 3541536655824217013
+      arabelle_POO-Sheet_339x309_13: -6821503886571717495
+      arabelle_POO-Sheet_339x309_14: -2635703200669051395
+      arabelle_POO-Sheet_339x309_15: 1287867378294851023
+      arabelle_POO-Sheet_339x309_16: -4501479010622731025
+      arabelle_POO-Sheet_339x309_17: 8713429170692124899
+      arabelle_POO-Sheet_339x309_18: 341815445058937186
+      arabelle_POO-Sheet_339x309_19: -2694612482791541777
+      arabelle_POO-Sheet_339x309_2: -6709560424281899320
+      arabelle_POO-Sheet_339x309_20: 7986935997195848290
+      arabelle_POO-Sheet_339x309_21: 4633710087131459673
+      arabelle_POO-Sheet_339x309_22: 5676796123969089654
+      arabelle_POO-Sheet_339x309_23: 1434899602316065080
+      arabelle_POO-Sheet_339x309_24: 8195843176440887580
+      arabelle_POO-Sheet_339x309_25: -1662391214921688787
+      arabelle_POO-Sheet_339x309_26: 3464141774721279044
+      arabelle_POO-Sheet_339x309_27: -7642996414999963573
+      arabelle_POO-Sheet_339x309_28: 7729557010462489604
+      arabelle_POO-Sheet_339x309_29: -2250618649314264151
+      arabelle_POO-Sheet_339x309_3: 217463466631073569
+      arabelle_POO-Sheet_339x309_30: -2428350950687041481
+      arabelle_POO-Sheet_339x309_31: -5999812849251332123
+      arabelle_POO-Sheet_339x309_32: -4924024638396284857
+      arabelle_POO-Sheet_339x309_33: -1527025701798349468
+      arabelle_POO-Sheet_339x309_34: 3738760402316884590
+      arabelle_POO-Sheet_339x309_35: 8992061405686773851
+      arabelle_POO-Sheet_339x309_36: 6512335648493884523
+      arabelle_POO-Sheet_339x309_37: -8416495646262353231
+      arabelle_POO-Sheet_339x309_38: 5471113104119254250
+      arabelle_POO-Sheet_339x309_39: -8876292048092755790
+      arabelle_POO-Sheet_339x309_4: 3829639955103823035
+      arabelle_POO-Sheet_339x309_40: 1632719331886275010
+      arabelle_POO-Sheet_339x309_41: 4513022208026940724
+      arabelle_POO-Sheet_339x309_42: 5228929066259113836
+      arabelle_POO-Sheet_339x309_43: 5740632861557283253
+      arabelle_POO-Sheet_339x309_44: -5360696857869214516
+      arabelle_POO-Sheet_339x309_45: -2559734021853754312
+      arabelle_POO-Sheet_339x309_46: -3454727757245323620
+      arabelle_POO-Sheet_339x309_47: 5165569600450928618
+      arabelle_POO-Sheet_339x309_48: 4205779227775415621
+      arabelle_POO-Sheet_339x309_49: 6525785688092733691
+      arabelle_POO-Sheet_339x309_5: 1530676603269815515
+      arabelle_POO-Sheet_339x309_50: 2082854871746307151
+      arabelle_POO-Sheet_339x309_51: 9112232170568622978
+      arabelle_POO-Sheet_339x309_52: -6056613601015608384
+      arabelle_POO-Sheet_339x309_53: -3651615414854937827
+      arabelle_POO-Sheet_339x309_54: 5898964482073127350
+      arabelle_POO-Sheet_339x309_55: -8776940551759103650
+      arabelle_POO-Sheet_339x309_56: 8513867237356644641
+      arabelle_POO-Sheet_339x309_57: 5191112439659393687
+      arabelle_POO-Sheet_339x309_58: 8854512079141390473
+      arabelle_POO-Sheet_339x309_59: -3219087267611480224
+      arabelle_POO-Sheet_339x309_6: -215654570313068814
+      arabelle_POO-Sheet_339x309_60: 5555730613497230943
+      arabelle_POO-Sheet_339x309_61: 8426252881130974921
+      arabelle_POO-Sheet_339x309_62: 7746922398701860956
+      arabelle_POO-Sheet_339x309_63: 2141232290382312402
+      arabelle_POO-Sheet_339x309_64: 3290340890613384721
+      arabelle_POO-Sheet_339x309_65: -501447607997155929
+      arabelle_POO-Sheet_339x309_66: -3848741514867501830
+      arabelle_POO-Sheet_339x309_67: -7806328262337948207
+      arabelle_POO-Sheet_339x309_68: 6255544653837583185
+      arabelle_POO-Sheet_339x309_69: 7113150125047081416
+      arabelle_POO-Sheet_339x309_7: 4796457656151225719
+      arabelle_POO-Sheet_339x309_70: -325792595411109633
+      arabelle_POO-Sheet_339x309_71: -8316499848909743323
+      arabelle_POO-Sheet_339x309_72: -8977390250109253104
+      arabelle_POO-Sheet_339x309_73: 6500242012868664791
+      arabelle_POO-Sheet_339x309_74: -6333474213217929256
+      arabelle_POO-Sheet_339x309_75: -7868617132505288304
+      arabelle_POO-Sheet_339x309_76: 4651811211928773409
+      arabelle_POO-Sheet_339x309_77: 3399174965337459938
+      arabelle_POO-Sheet_339x309_78: -5489491488149113680
+      arabelle_POO-Sheet_339x309_79: 5541887072283786356
+      arabelle_POO-Sheet_339x309_8: -2947488469152857566
+      arabelle_POO-Sheet_339x309_80: -9123303387922914567
+      arabelle_POO-Sheet_339x309_81: -6604284484199490040
+      arabelle_POO-Sheet_339x309_82: -5867116502733901008
+      arabelle_POO-Sheet_339x309_83: -8763715898953167512
+      arabelle_POO-Sheet_339x309_84: -7066149750213566157
+      arabelle_POO-Sheet_339x309_85: 3959374632574056344
+      arabelle_POO-Sheet_339x309_86: 1581669233870240695
+      arabelle_POO-Sheet_339x309_87: 1740813804986076955
+      arabelle_POO-Sheet_339x309_88: -8766294294785069385
+      arabelle_POO-Sheet_339x309_89: 5391849511990537867
+      arabelle_POO-Sheet_339x309_9: -6852624806624241573
+      arabelle_POO-Sheet_339x309_90: -4056337019210847796
+      arabelle_POO-Sheet_339x309_91: 1960768015630144744
+      arabelle_POO-Sheet_339x309_92: 1597780662660748805
+      arabelle_POO-Sheet_339x309_93: -4927912065968698226
+      arabelle_POO-Sheet_339x309_94: 8079068514950569145
+      arabelle_POO-Sheet_339x309_95: -3521378306820621874
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

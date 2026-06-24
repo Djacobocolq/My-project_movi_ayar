@@ -1,0 +1,1443 @@
+fileFormatVersion: 2
+guid: 5db1d7c6d3d1d5944b6b9c88418589aa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3807275028138473668
+    second: bosss_POO_279x260_0
+  - first:
+      213: -9022738719107417898
+    second: bosss_POO_279x260_1
+  - first:
+      213: -5547557561658439148
+    second: bosss_POO_279x260_2
+  - first:
+      213: -2230194584447728790
+    second: bosss_POO_279x260_3
+  - first:
+      213: -7858466033108675332
+    second: bosss_POO_279x260_4
+  - first:
+      213: -5363050278099197417
+    second: bosss_POO_279x260_5
+  - first:
+      213: -4956540798090888225
+    second: bosss_POO_279x260_6
+  - first:
+      213: 6989544492865919260
+    second: bosss_POO_279x260_7
+  - first:
+      213: 8585229468950331250
+    second: bosss_POO_279x260_8
+  - first:
+      213: -249045925198089078
+    second: bosss_POO_279x260_9
+  - first:
+      213: -2863529953389061038
+    second: bosss_POO_279x260_10
+  - first:
+      213: 856038785992748380
+    second: bosss_POO_279x260_11
+  - first:
+      213: 4431631936355682168
+    second: bosss_POO_279x260_12
+  - first:
+      213: 6974303872822071604
+    second: bosss_POO_279x260_13
+  - first:
+      213: 2956344019832219879
+    second: bosss_POO_279x260_14
+  - first:
+      213: 6414941674780519895
+    second: bosss_POO_279x260_15
+  - first:
+      213: 5405724555953010618
+    second: bosss_POO_279x260_16
+  - first:
+      213: -41247652389546734
+    second: bosss_POO_279x260_17
+  - first:
+      213: 4469280900186648884
+    second: bosss_POO_279x260_18
+  - first:
+      213: -4517093118949270289
+    second: bosss_POO_279x260_19
+  - first:
+      213: -6244035538600687936
+    second: bosss_POO_279x260_20
+  - first:
+      213: 442947534170461103
+    second: bosss_POO_279x260_21
+  - first:
+      213: -7741941871737385853
+    second: bosss_POO_279x260_22
+  - first:
+      213: -7454261817264251446
+    second: bosss_POO_279x260_23
+  - first:
+      213: -606279388184006809
+    second: bosss_POO_279x260_24
+  - first:
+      213: 7462378024208735344
+    second: bosss_POO_279x260_25
+  - first:
+      213: 5135770583469440006
+    second: bosss_POO_279x260_26
+  - first:
+      213: -556456501904358835
+    second: bosss_POO_279x260_27
+  - first:
+      213: 3460227695819177948
+    second: bosss_POO_279x260_28
+  - first:
+      213: 4308966009064846034
+    second: bosss_POO_279x260_29
+  - first:
+      213: 1821274537858249808
+    second: bosss_POO_279x260_30
+  - first:
+      213: -2805876827394147119
+    second: bosss_POO_279x260_31
+  - first:
+      213: 1218315956367831129
+    second: bosss_POO_279x260_32
+  - first:
+      213: -913245502371167976
+    second: bosss_POO_279x260_33
+  - first:
+      213: 8630201020631045908
+    second: bosss_POO_279x260_34
+  - first:
+      213: -2502037857843678332
+    second: bosss_POO_279x260_35
+  - first:
+      213: 4757643909245053494
+    second: bosss_POO_279x260_36
+  - first:
+      213: -6450962097383654043
+    second: bosss_POO_279x260_37
+  - first:
+      213: -7064310101020634903
+    second: bosss_POO_279x260_38
+  - first:
+      213: 777845723980950057
+    second: bosss_POO_279x260_39
+  - first:
+      213: 1003299935357971250
+    second: bosss_POO_279x260_40
+  - first:
+      213: 7897260010793441502
+    second: bosss_POO_279x260_41
+  - first:
+      213: -5268788861917658731
+    second: bosss_POO_279x260_42
+  - first:
+      213: -2986786112106685512
+    second: bosss_POO_279x260_43
+  - first:
+      213: -2001616395505284935
+    second: bosss_POO_279x260_44
+  - first:
+      213: -1407329501175312036
+    second: bosss_POO_279x260_45
+  - first:
+      213: -7689581425239957209
+    second: bosss_POO_279x260_46
+  - first:
+      213: 689073475788432447
+    second: bosss_POO_279x260_47
+  - first:
+      213: 4363064531845599545
+    second: bosss_POO_279x260_48
+  - first:
+      213: 6238225762864695506
+    second: bosss_POO_279x260_49
+  - first:
+      213: -2000917887746350088
+    second: bosss_POO_279x260_50
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bosss_POO_279x260_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c8b86e577826d430800000000000000
+      internalID: 3807275028138473668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_1
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d8707280fac8c280800000000000000
+      internalID: -9022738719107417898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_2
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41a01563acd1303b0800000000000000
+      internalID: -5547557561658439148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_3
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a634efd67d1cc01e0800000000000000
+      internalID: -2230194584447728790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_4
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf4951167ce11f290800000000000000
+      internalID: -7858466033108675332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_5
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 712665dcf2e9295b0800000000000000
+      internalID: -5363050278099197417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_6
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdbbf0fa764d63bb0800000000000000
+      internalID: -4956540798090888225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_7
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c199f0f1fa9dff060800000000000000
+      internalID: 6989544492865919260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_8
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27ffffb27bcd42770800000000000000
+      internalID: 8585229468950331250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_9
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a843fcfec063b8cf0800000000000000
+      internalID: -249045925198089078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_10
+      rect:
+        serializedVersion: 2
+        x: 2790
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25cdd84dda2b248d0800000000000000
+      internalID: -2863529953389061038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_11
+      rect:
+        serializedVersion: 2
+        x: 3069
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5ded098db241eb00800000000000000
+      internalID: 856038785992748380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_12
+      rect:
+        serializedVersion: 2
+        x: 3348
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 877c1cd24c1508d30800000000000000
+      internalID: 4431631936355682168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_13
+      rect:
+        serializedVersion: 2
+        x: 3627
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 431d03fbb64b9c060800000000000000
+      internalID: 6974303872822071604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_14
+      rect:
+        serializedVersion: 2
+        x: 3906
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e823fff83b070920800000000000000
+      internalID: 2956344019832219879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_15
+      rect:
+        serializedVersion: 2
+        x: 4185
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dd64242773760950800000000000000
+      internalID: 6414941674780519895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_16
+      rect:
+        serializedVersion: 2
+        x: 4464
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab77f27c7ddf40b40800000000000000
+      internalID: 5405724555953010618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_17
+      rect:
+        serializedVersion: 2
+        x: 4743
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 215908b8a757d6ff0800000000000000
+      internalID: -41247652389546734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_18
+      rect:
+        serializedVersion: 2
+        x: 5022
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4313019ac43160e30800000000000000
+      internalID: 4469280900186648884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_19
+      rect:
+        serializedVersion: 2
+        x: 5301
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fecdaabadbf0051c0800000000000000
+      internalID: -4517093118949270289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_20
+      rect:
+        serializedVersion: 2
+        x: 5580
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c68acc82cab859a0800000000000000
+      internalID: -6244035538600687936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_21
+      rect:
+        serializedVersion: 2
+        x: 5859
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa39d5c7f6aa52600800000000000000
+      internalID: 442947534170461103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_22
+      rect:
+        serializedVersion: 2
+        x: 6138
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38cce5fd2e81f8490800000000000000
+      internalID: -7741941871737385853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_23
+      rect:
+        serializedVersion: 2
+        x: 6417
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acdd43f1f542d8890800000000000000
+      internalID: -7454261817264251446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_24
+      rect:
+        serializedVersion: 2
+        x: 6696
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76fa6a0db101697f0800000000000000
+      internalID: -606279388184006809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_25
+      rect:
+        serializedVersion: 2
+        x: 6975
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07c94a09641bf8760800000000000000
+      internalID: 7462378024208735344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_26
+      rect:
+        serializedVersion: 2
+        x: 7254
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60cb89b922ce54740800000000000000
+      internalID: 5135770583469440006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_27
+      rect:
+        serializedVersion: 2
+        x: 7533
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d42c80f72c11748f0800000000000000
+      internalID: -556456501904358835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_28
+      rect:
+        serializedVersion: 2
+        x: 7812
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdf354b91c2350030800000000000000
+      internalID: 3460227695819177948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_29
+      rect:
+        serializedVersion: 2
+        x: 8091
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d2fa8f51c58ccb30800000000000000
+      internalID: 4308966009064846034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_30
+      rect:
+        serializedVersion: 2
+        x: 8370
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 054318bea87764910800000000000000
+      internalID: 1821274537858249808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_31
+      rect:
+        serializedVersion: 2
+        x: 8649
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dcfba344e58f09d0800000000000000
+      internalID: -2805876827394147119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_32
+      rect:
+        serializedVersion: 2
+        x: 8928
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 950be7b48e358e010800000000000000
+      internalID: 1218315956367831129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_33
+      rect:
+        serializedVersion: 2
+        x: 9207
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 811817edd008353f0800000000000000
+      internalID: -913245502371167976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_34
+      rect:
+        serializedVersion: 2
+        x: 9486
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4175dee7a12a4c770800000000000000
+      internalID: 8630201020631045908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_35
+      rect:
+        serializedVersion: 2
+        x: 9765
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 483f5ac13d9f64dd0800000000000000
+      internalID: -2502037857843678332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_36
+      rect:
+        serializedVersion: 2
+        x: 10044
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63a2a5aadeb860240800000000000000
+      internalID: 4757643909245053494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_37
+      rect:
+        serializedVersion: 2
+        x: 10323
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56d30fda6249976a0800000000000000
+      internalID: -6450962097383654043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_38
+      rect:
+        serializedVersion: 2
+        x: 10602
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e01675346786fd90800000000000000
+      internalID: -7064310101020634903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_39
+      rect:
+        serializedVersion: 2
+        x: 10881
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92ae0f390967bca00800000000000000
+      internalID: 777845723980950057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_40
+      rect:
+        serializedVersion: 2
+        x: 11160
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23b2f2ab9ff6ced00800000000000000
+      internalID: 1003299935357971250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_41
+      rect:
+        serializedVersion: 2
+        x: 11439
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed89d3a6324b89d60800000000000000
+      internalID: 7897260010793441502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_42
+      rect:
+        serializedVersion: 2
+        x: 11718
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5910dd0027081e6b0800000000000000
+      internalID: -5268788861917658731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_43
+      rect:
+        serializedVersion: 2
+        x: 11997
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bb9fcf0bddcc86d0800000000000000
+      internalID: -2986786112106685512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_44
+      rect:
+        serializedVersion: 2
+        x: 12276
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b84f494e74d834e0800000000000000
+      internalID: -2001616395505284935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_45
+      rect:
+        serializedVersion: 2
+        x: 12555
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5194886649287ce0800000000000000
+      internalID: -1407329501175312036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_46
+      rect:
+        serializedVersion: 2
+        x: 12834
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72161255f6e194590800000000000000
+      internalID: -7689581425239957209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_47
+      rect:
+        serializedVersion: 2
+        x: 13113
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f346384eca4109900800000000000000
+      internalID: 689073475788432447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_48
+      rect:
+        serializedVersion: 2
+        x: 13392
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93153c04318bc8c30800000000000000
+      internalID: 4363064531845599545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_49
+      rect:
+        serializedVersion: 2
+        x: 13671
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d88d30a741a29650800000000000000
+      internalID: 6238225762864695506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosss_POO_279x260_50
+      rect:
+        serializedVersion: 2
+        x: 13950
+        y: 0
+        width: 279
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f3672c48cf4b34e0800000000000000
+      internalID: -2000917887746350088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 89eaac54a52f1be439cb0452bab8f781
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bosss_POO_279x260_0: 3807275028138473668
+      bosss_POO_279x260_1: -9022738719107417898
+      bosss_POO_279x260_10: -2863529953389061038
+      bosss_POO_279x260_11: 856038785992748380
+      bosss_POO_279x260_12: 4431631936355682168
+      bosss_POO_279x260_13: 6974303872822071604
+      bosss_POO_279x260_14: 2956344019832219879
+      bosss_POO_279x260_15: 6414941674780519895
+      bosss_POO_279x260_16: 5405724555953010618
+      bosss_POO_279x260_17: -41247652389546734
+      bosss_POO_279x260_18: 4469280900186648884
+      bosss_POO_279x260_19: -4517093118949270289
+      bosss_POO_279x260_2: -5547557561658439148
+      bosss_POO_279x260_20: -6244035538600687936
+      bosss_POO_279x260_21: 442947534170461103
+      bosss_POO_279x260_22: -7741941871737385853
+      bosss_POO_279x260_23: -7454261817264251446
+      bosss_POO_279x260_24: -606279388184006809
+      bosss_POO_279x260_25: 7462378024208735344
+      bosss_POO_279x260_26: 5135770583469440006
+      bosss_POO_279x260_27: -556456501904358835
+      bosss_POO_279x260_28: 3460227695819177948
+      bosss_POO_279x260_29: 4308966009064846034
+      bosss_POO_279x260_3: -2230194584447728790
+      bosss_POO_279x260_30: 1821274537858249808
+      bosss_POO_279x260_31: -2805876827394147119
+      bosss_POO_279x260_32: 1218315956367831129
+      bosss_POO_279x260_33: -913245502371167976
+      bosss_POO_279x260_34: 8630201020631045908
+      bosss_POO_279x260_35: -2502037857843678332
+      bosss_POO_279x260_36: 4757643909245053494
+      bosss_POO_279x260_37: -6450962097383654043
+      bosss_POO_279x260_38: -7064310101020634903
+      bosss_POO_279x260_39: 777845723980950057
+      bosss_POO_279x260_4: -7858466033108675332
+      bosss_POO_279x260_40: 1003299935357971250
+      bosss_POO_279x260_41: 7897260010793441502
+      bosss_POO_279x260_42: -5268788861917658731
+      bosss_POO_279x260_43: -2986786112106685512
+      bosss_POO_279x260_44: -2001616395505284935
+      bosss_POO_279x260_45: -1407329501175312036
+      bosss_POO_279x260_46: -7689581425239957209
+      bosss_POO_279x260_47: 689073475788432447
+      bosss_POO_279x260_48: 4363064531845599545
+      bosss_POO_279x260_49: 6238225762864695506
+      bosss_POO_279x260_5: -5363050278099197417
+      bosss_POO_279x260_50: -2000917887746350088
+      bosss_POO_279x260_6: -4956540798090888225
+      bosss_POO_279x260_7: 6989544492865919260
+      bosss_POO_279x260_8: 8585229468950331250
+      bosss_POO_279x260_9: -249045925198089078
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

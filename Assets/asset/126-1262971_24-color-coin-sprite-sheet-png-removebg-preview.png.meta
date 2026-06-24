@@ -1,0 +1,273 @@
+fileFormatVersion: 2
+guid: 9ebc667c5683543429ef16eee661b3de
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -688611444955889693
+    second: 126-1262971_24-color-coin-sprite-sheet-png-removebg-preview_0
+  - first:
+      213: 4846472611338774207
+    second: 126-1262971_24-color-coin-sprite-sheet-png-removebg-preview_1
+  - first:
+      213: -1002565276950492447
+    second: 126-1262971_24-color-coin-sprite-sheet-png-removebg-preview_2
+  - first:
+      213: -2622011678971730787
+    second: 126-1262971_24-color-coin-sprite-sheet-png-removebg-preview_3
+  - first:
+      213: -6097432036445806783
+    second: 126-1262971_24-color-coin-sprite-sheet-png-removebg-preview_4
+  - first:
+      213: -5623872274956693149
+    second: 126-1262971_24-color-coin-sprite-sheet-png-removebg-preview_5
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 126-1262971_24-color-coin-sprite-sheet-png-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 38
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3efb22b0a8f8176f0800000000000000
+      internalID: -688611444955889693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 126-1262971_24-color-coin-sprite-sheet-png-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 38
+        width: 88
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb6e18c8921224340800000000000000
+      internalID: 4846472611338774207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 126-1262971_24-color-coin-sprite-sheet-png-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 38
+        width: 52
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ea8933413c2612f0800000000000000
+      internalID: -1002565276950492447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 126-1262971_24-color-coin-sprite-sheet-png-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 38
+        width: 28
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d94e6fd154ebc9bd0800000000000000
+      internalID: -2622011678971730787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 126-1262971_24-color-coin-sprite-sheet-png-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 38
+        width: 52
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14f9f815ed1916ba0800000000000000
+      internalID: -6097432036445806783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 126-1262971_24-color-coin-sprite-sheet-png-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 38
+        width: 88
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 361d90566fdf3f1b0800000000000000
+      internalID: -5623872274956693149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      126-1262971_24-color-coin-sprite-sheet-png-removebg-preview_0: -688611444955889693
+      126-1262971_24-color-coin-sprite-sheet-png-removebg-preview_1: 4846472611338774207
+      126-1262971_24-color-coin-sprite-sheet-png-removebg-preview_2: -1002565276950492447
+      126-1262971_24-color-coin-sprite-sheet-png-removebg-preview_3: -2622011678971730787
+      126-1262971_24-color-coin-sprite-sheet-png-removebg-preview_4: -6097432036445806783
+      126-1262971_24-color-coin-sprite-sheet-png-removebg-preview_5: -5623872274956693149
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
