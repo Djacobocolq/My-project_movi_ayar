@@ -31,6 +31,12 @@ public class player1 : MonoBehaviour
     private Keyboard keyboard;
     private float movimientoHorizontal;
 
+    // ==========================================
+    // CONTROL DE BOTONES
+    // ==========================================
+    private bool botonIzquierdaPresionado = false;
+    private bool botonDerechaPresionado = false;
+
     void Start()
     {
         scaleZ = transform.localScale.z;
@@ -43,33 +49,55 @@ public class player1 : MonoBehaviour
 
     void Update()
     {
-        if (keyboard != null)
+        // ==========================================
+        // CONTROLES DE BOTONES (prioridad)
+        // ==========================================
+        if (botonIzquierdaPresionado)
         {
-            movimientoHorizontal = 0f;
-            if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed)
-                movimientoHorizontal = -1f;
-            if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed)
-                movimientoHorizontal = 1f;
-
-            if (!muerto)
+            movimientoHorizontal = -1f;
+        }
+        else if (botonDerechaPresionado)
+        {
+            movimientoHorizontal = 1f;
+        }
+        else
+        {
+            // ==========================================
+            // CONTROLES DE TECLADO (PC)
+            // ==========================================
+            if (keyboard != null)
             {
-                if (!atacando)
+                if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed)
+                    movimientoHorizontal = -1f;
+                else if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed)
+                    movimientoHorizontal = 1f;
+                else
+                    movimientoHorizontal = 0f;
+            }
+            else
+            {
+                movimientoHorizontal = 0f;
+            }
+        }
+
+        if (!muerto)
+        {
+            if (!atacando)
+            {
+                Movimiento();
+
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, longitudRaycast, capaSuelo);
+                enSuelo = hit.collider != null;
+
+                if (enSuelo && keyboard != null && keyboard.spaceKey.wasPressedThisFrame && !recibiendoDanio)
                 {
-                    Movimiento();
-
-                    RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, longitudRaycast, capaSuelo);
-                    enSuelo = hit.collider != null;
-
-                    if (enSuelo && keyboard.spaceKey.wasPressedThisFrame && !recibiendoDanio)
-                    {
-                        rb.AddForce(new Vector2(0f, fuerzaSalto), ForceMode2D.Impulse);
-                    }
+                    rb.AddForce(new Vector2(0f, fuerzaSalto), ForceMode2D.Impulse);
                 }
+            }
 
-                if (keyboard.eKey.wasPressedThisFrame && !atacando && enSuelo && !recibiendoDanio)
-                {
-                    Atacar();
-                }
+            if (keyboard != null && keyboard.eKey.wasPressedThisFrame && !atacando && enSuelo && !recibiendoDanio)
+            {
+                Atacar();
             }
         }
 
@@ -135,7 +163,6 @@ public class player1 : MonoBehaviour
     {
         atacando = true;
 
-        // Detectar enemigos con Raycast
         float direccionX = transform.localScale.x > 0 ? 1 : -1;
         Vector2 origen = transform.position;
         Vector2 direccion = new Vector2(direccionX, 0);
@@ -157,10 +184,7 @@ public class player1 : MonoBehaviour
         if (espadaTrigger != null)
             espadaTrigger.SetActive(true);
 
-        // ==========================================
-        // AUMENTAR EL TIEMPO DEL ATAQUE
-        // ==========================================
-        Invoke("DesactivaAtaque", 0.6f); // ← Cambiado de 0.3f a 0.6f
+        Invoke("DesactivaAtaque", 0.6f);
     }
 
     public void Atacando()
@@ -174,6 +198,65 @@ public class player1 : MonoBehaviour
 
         if (espadaTrigger != null)
             espadaTrigger.SetActive(false);
+    }
+
+    // ==========================================
+    // MÉTODOS PARA CONTROLES TÁCTILES (BOTONES)
+    // ==========================================
+
+    public void MoverIzquierda()
+    {
+        Debug.Log("MoverIzquierda llamado");
+        botonIzquierdaPresionado = true;
+        botonDerechaPresionado = false;
+        movimientoHorizontal = -1f;
+    }
+
+    public void MoverDerecha()
+    {
+        Debug.Log("MoverDerecha llamado");
+        botonDerechaPresionado = true;
+        botonIzquierdaPresionado = false;
+        movimientoHorizontal = 1f;
+    }
+
+    public void DetenerMovimiento()
+    {
+        Debug.Log("DetenerMovimiento llamado");
+        botonIzquierdaPresionado = false;
+        botonDerechaPresionado = false;
+        movimientoHorizontal = 0f;
+    }
+
+    public void SaltarTouch()
+    {
+        Debug.Log("SaltarTouch llamado");
+        if (enSuelo && !recibiendoDanio && !muerto)
+        {
+            rb.AddForce(new Vector2(0f, fuerzaSalto), ForceMode2D.Impulse);
+        }
+    }
+
+    public void AtacarTouch()
+    {
+        Debug.Log("AtacarTouch llamado");
+        if (!atacando && enSuelo && !recibiendoDanio && !muerto)
+        {
+            Atacar();
+        }
+    }
+
+    public void PausarTouch()
+    {
+        Debug.Log("PausarTouch llamado");
+        pausar_juego pausa = FindFirstObjectByType<pausar_juego>();
+        if (pausa != null)
+        {
+            if (pausa.juegoPausado)
+                pausa.Reanudar();
+            else
+                pausa.Pausar();
+        }
     }
 
     void OnDrawGizmos()
