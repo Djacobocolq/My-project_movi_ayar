@@ -145,7 +145,7 @@ public class player1 : MonoBehaviour
 
         if (hit.collider != null)
         {
-            EnemigoMecha enemigo = hit.collider.GetComponent<EnemigoMecha>();
+            EnemigoBase enemigo = hit.collider.GetComponent<EnemigoBase>();
             if (enemigo != null)
             {
                 Vector2 direccionDanio = new Vector2(hit.collider.transform.position.x, 0);

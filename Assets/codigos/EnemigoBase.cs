@@ -1,18 +1,18 @@
-﻿using System.Collections;
+﻿using System.Collections; // ← AGREGADO
 using UnityEngine;
 using Spine.Unity;
 
-public class EnemigoMecha : MonoBehaviour
+public class EnemigoBase : MonoBehaviour
 {
     // ============================================
-    // CONFIGURACIÓN
+    // CONFIGURACIÓN EN EL INSPECTOR
     // ============================================
     [Header("MOVIMIENTO")]
     public float velocidad = 2f;
 
     [Header("DETECCIÓN")]
-    public float distanciaDeteccion = 4f;
-    public float distanciaAtaque = 1.0f;
+    public float distanciaDeteccion = 5f;
+    public float distanciaAtaque = 1.5f;
 
     [Header("VIDA")]
     public int vidaMaxima = 3;
@@ -26,7 +26,7 @@ public class EnemigoMecha : MonoBehaviour
     public float longitudRaycast = 0.2f;
 
     // ============================================
-    // REFERENCIAS
+    // REFERENCIAS INTERNAS
     // ============================================
     private SkeletonAnimation skeletonAnimation;
     private Rigidbody2D rb;
@@ -39,11 +39,7 @@ public class EnemigoMecha : MonoBehaviour
     private bool recibiendoDanio;
     private bool muerto;
     private bool jugadorMuerto = false;
-
-    // ============================================
-    // VARIABLE DE DIRECCIÓN
-    // ============================================
-    private float direccion = 1; // 1 = derecha, -1 = izquierda
+    private float direccion = 1;
 
     // ============================================
     // NOMBRES DE ANIMACIONES
@@ -68,11 +64,6 @@ public class EnemigoMecha : MonoBehaviour
         {
             jugador = player.transform;
             scriptJugador = player.GetComponent<player1>();
-            Debug.Log("Enemigo encontró al jugador: " + jugador.name);
-        }
-        else
-        {
-            Debug.LogError("¡No se encontró al jugador! Asegúrate de que tenga Tag 'Player'");
         }
 
         vidaActual = vidaMaxima;
@@ -107,6 +98,15 @@ public class EnemigoMecha : MonoBehaviour
                 jugadorMuerto = false;
                 DejarDeBailar();
             }
+        }
+
+        // Forzar que mire al jugador
+        if (jugador != null && !jugadorMuerto && !muerto)
+        {
+            if (jugador.position.x < transform.position.x)
+                skeletonAnimation.Skeleton.ScaleX = -1;
+            else
+                skeletonAnimation.Skeleton.ScaleX = 1;
         }
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, longitudRaycast, capaSuelo);
@@ -145,15 +145,9 @@ public class EnemigoMecha : MonoBehaviour
     void ComportamientoIA()
     {
         if (muerto || recibiendoDanio || atacando) return;
-        if (jugador == null || jugadorMuerto)
-        {
-            // Si no hay jugador, se queda quieto
-            rb.linearVelocity = Vector2.zero;
-            return;
-        }
+        if (jugador == null || jugadorMuerto) return;
 
         float distancia = Vector2.Distance(transform.position, jugador.position);
-        Debug.Log("Distancia al jugador: " + distancia);
 
         if (distancia <= distanciaAtaque)
         {
@@ -165,7 +159,6 @@ public class EnemigoMecha : MonoBehaviour
         }
         else
         {
-            // Quieto
             if (skeletonAnimation != null)
             {
                 skeletonAnimation.AnimationName = IDLE;
@@ -176,43 +169,22 @@ public class EnemigoMecha : MonoBehaviour
     }
 
     // ============================================
-    // MOVIMIENTO (CORREGIDO)
+    // MOVIMIENTO
     // ============================================
     void MoverHaciaJugador()
     {
-        if (jugador == null) return;
-
-        // ==========================================
-        // CALCULAR DIRECCIÓN HACIA EL JUGADOR
-        // ==========================================
         if (jugador.position.x < transform.position.x)
-        {
-            direccion = -1; // El jugador está a la IZQUIERDA
-        }
+            direccion = -1;
         else
-        {
-            direccion = 1; // El jugador está a la DERECHA
-        }
+            direccion = 1;
 
-        // ==========================================
-        // MOVERSE
-        // ==========================================
         if (!recibiendoDanio && !atacando)
-        {
             rb.linearVelocity = new Vector2(direccion * velocidad, rb.linearVelocity.y);
-            Debug.Log("Enemigo se mueve hacia: " + (direccion == 1 ? "DERECHA" : "IZQUIERDA"));
-        }
         else
-        {
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-        }
 
-        // ==========================================
-        // VOLTEAR SPRITE
-        // ==========================================
-        if (skeletonAnimation != null)
+        if (skeletonAnimation != null && !atacando)
         {
-            skeletonAnimation.Skeleton.ScaleX = direccion;
             skeletonAnimation.AnimationName = WALK;
             skeletonAnimation.loop = true;
         }
@@ -227,10 +199,9 @@ public class EnemigoMecha : MonoBehaviour
         if (atacando || recibiendoDanio || muerto) return;
         if (skeletonAnimation == null) return;
 
-        // Si está en el suelo y no se mueve
         if (enSuelo && Mathf.Abs(rb.linearVelocity.x) < 0.1f)
         {
-            if (skeletonAnimation.AnimationName != IDLE && !atacando)
+            if (skeletonAnimation.AnimationName != IDLE)
             {
                 skeletonAnimation.AnimationName = IDLE;
                 skeletonAnimation.loop = true;
@@ -243,8 +214,6 @@ public class EnemigoMecha : MonoBehaviour
     // ============================================
     void Atacar()
     {
-        if (atacando) return;
-
         atacando = true;
 
         // Detener movimiento durante el ataque
@@ -256,23 +225,15 @@ public class EnemigoMecha : MonoBehaviour
             skeletonAnimation.loop = false;
         }
 
-        // ==========================================
-        // DAÑAR AL JUGADOR
-        // ==========================================
+        // Dañar al jugador
         if (jugador != null && scriptJugador != null && !jugadorMuerto)
         {
             float distancia = Vector2.Distance(transform.position, jugador.position);
-            Debug.Log("Atacando! Distancia: " + distancia);
-
             if (distancia <= distanciaAtaque + 0.5f)
             {
                 Vector2 direccionAtaque = (jugador.position - transform.position).normalized;
                 scriptJugador.RecibeDanio(direccionAtaque, dañoAtaque);
                 Debug.Log("¡Enemigo atacó al jugador! Daño: " + dañoAtaque);
-            }
-            else
-            {
-                Debug.Log("Jugador fuera de rango de ataque");
             }
         }
 
