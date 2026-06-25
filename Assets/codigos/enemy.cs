@@ -25,16 +25,30 @@ public class enemy : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-
     void Update()
     {
-        if (playerVivo && !muerto)
+        // Buscar al jugador si se pierde la referencia
+        if (player == null)
+        {
+            BuscarJugador();
+        }
+
+        if (playerVivo && !muerto && player != null)
         {
             Movimiento();
         }
 
         animator.SetBool("enMovimiento", enMovimiento);
         animator.SetBool("muerto", muerto);
+    }
+    void BuscarJugador()
+    {
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject != null)
+        {
+            player = playerObject.transform;
+            Debug.Log("Enemy: Jugador encontrado");
+        }
     }
     private void Movimiento()
     {
