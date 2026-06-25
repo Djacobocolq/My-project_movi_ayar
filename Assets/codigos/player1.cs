@@ -99,18 +99,13 @@ public class player1 : MonoBehaviour
             {
                 Atacar();
             }
-        }
-        if (keyboard != null && keyboard.rKey.wasPressedThisFrame && !atacando && !recibiendoDanio)
-        {
-            // Buscar la flor más cercana
-            FlorRecolectable flor = FindFirstObjectByType<FlorRecolectable>();
-            if (flor != null)
+
+            // ==========================================
+            // RECOGER FLOR CON TECLA R
+            // ==========================================
+            if (keyboard != null && keyboard.rKey.wasPressedThisFrame && !atacando && !recibiendoDanio && !muerto)
             {
-                float distancia = Vector2.Distance(transform.position, flor.transform.position);
-                if (distancia <= flor.distanciaInteraccion)
-                {
-                    flor.RecogerTouch();
-                }
+                RecogerFlor();
             }
         }
 
@@ -211,6 +206,29 @@ public class player1 : MonoBehaviour
 
         if (espadaTrigger != null)
             espadaTrigger.SetActive(false);
+    }
+
+    // ==========================================
+    // MÉTODO PARA RECOGER FLOR
+    // ==========================================
+    public void RecogerFlor()
+    {
+        // Buscar todas las flores
+        FlorRecolectable[] flores = FindObjectsByType<FlorRecolectable>(FindObjectsSortMode.None);
+
+        foreach (FlorRecolectable flor in flores)
+        {
+            if (!flor.recolectada)
+            {
+                float distancia = Vector2.Distance(transform.position, flor.transform.position);
+                if (distancia <= flor.distanciaInteraccion)
+                {
+                    flor.RecogerTouch();
+                    Debug.Log("¡Flor recolectada!");
+                    break; // Solo recoger una flor por vez
+                }
+            }
+        }
     }
 
     // ==========================================

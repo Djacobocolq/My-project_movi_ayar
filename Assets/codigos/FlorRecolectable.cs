@@ -1,33 +1,26 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
-using UnityEngine.InputSystem; // ← Agregar para Input System
+using UnityEngine.InputSystem;
 
 public class FlorRecolectable : MonoBehaviour
 {
     [Header("CONFIGURACIÓN")]
     public float distanciaInteraccion = 2f;
-    public GameObject textoInteraccion;
-    public GameObject botonRecoger; // ← AGREGADO
     public bool recolectada = false;
 
     [Header("REFERENCIAS")]
     public player1 jugador;
+    public GameObject botonRecoger; // Botón táctil para móvil (opcional)
 
     private SpriteRenderer spriteRenderer;
     private Collider2D colliderFlor;
-    private Keyboard keyboard; // ← NUEVO para Input System
+    private Keyboard keyboard;
 
     void Start()
     {
-        // Obtener componentes
         spriteRenderer = GetComponent<SpriteRenderer>();
         colliderFlor = GetComponent<Collider2D>();
-
-        // Obtener teclado
         keyboard = Keyboard.current;
 
-        // Buscar al jugador si no está asignado
         if (jugador == null)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -35,54 +28,27 @@ public class FlorRecolectable : MonoBehaviour
                 jugador = player.GetComponent<player1>();
         }
 
-        // Ocultar texto y botón al inicio
-        if (textoInteraccion != null)
-            textoInteraccion.SetActive(false);
-
+        // Ocultar botón al inicio
         if (botonRecoger != null)
             botonRecoger.SetActive(false);
     }
 
     void Update()
     {
-        // Si ya fue recolectada, no hacer nada
-        if (recolectada) return;
+        if (recolectada || jugador == null) return;
 
-        // Verificar si el jugador está cerca
-        if (jugador != null)
-        {
-            float distancia = Vector2.Distance(transform.position, jugador.transform.position);
+        float distancia = Vector2.Distance(transform.position, jugador.transform.position);
+        bool estaCerca = distancia <= distanciaInteraccion;
 
-            if (distancia <= distanciaInteraccion)
-            {
-                // Mostrar texto y botón de interacción
-                MostrarInteraccion(true);
-
-                // ==========================================
-                // RECOGER CON INPUT SYSTEM (CORREGIDO)
-                // ==========================================
-                if (keyboard != null && keyboard.eKey.wasPressedThisFrame)
-                {
-                    Recolectar();
-                }
-            }
-            else
-            {
-                // Ocultar si está lejos
-                MostrarInteraccion(false);
-            }
-        }
-    }
-
-    void MostrarInteraccion(bool mostrar)
-    {
-        // Mostrar/ocultar texto
-        if (textoInteraccion != null)
-            textoInteraccion.SetActive(mostrar);
-
-        // Mostrar/ocultar botón táctil
+        // Mostrar/ocultar botón según distancia
         if (botonRecoger != null)
-            botonRecoger.SetActive(mostrar);
+            botonRecoger.SetActive(estaCerca);
+
+        // Recoger con tecla R
+        if (estaCerca && keyboard != null && keyboard.rKey.wasPressedThisFrame)
+        {
+            Recolectar();
+        }
     }
 
     void Recolectar()
@@ -92,8 +58,9 @@ public class FlorRecolectable : MonoBehaviour
         recolectada = true;
         Debug.Log("¡Flor recolectada!");
 
-        // Ocultar interacción
-        MostrarInteraccion(false);
+        // Ocultar botón
+        if (botonRecoger != null)
+            botonRecoger.SetActive(false);
 
         // Desaparecer la flor
         if (spriteRenderer != null)
@@ -102,8 +69,8 @@ public class FlorRecolectable : MonoBehaviour
         if (colliderFlor != null)
             colliderFlor.enabled = false;
 
-        // Puedes agregar lógica aquí (ej: sumar puntos)
-        // if (jugador != null) jugador.SumarPuntos(10);
+        // Opcional: Destruir la flor después de un tiempo
+        // Destroy(gameObject, 0.5f);
     }
 
     // ==========================================
@@ -121,7 +88,6 @@ public class FlorRecolectable : MonoBehaviour
         }
     }
 
-    // Visualizar el rango de interacción en el editor
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
