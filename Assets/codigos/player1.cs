@@ -100,6 +100,19 @@ public class player1 : MonoBehaviour
                 Atacar();
             }
         }
+        if (keyboard != null && keyboard.rKey.wasPressedThisFrame && !atacando && !recibiendoDanio)
+        {
+            // Buscar la flor más cercana
+            FlorRecolectable flor = FindFirstObjectByType<FlorRecolectable>();
+            if (flor != null)
+            {
+                float distancia = Vector2.Distance(transform.position, flor.transform.position);
+                if (distancia <= flor.distanciaInteraccion)
+                {
+                    flor.RecogerTouch();
+                }
+            }
+        }
 
         animator.SetBool("ensuelo", enSuelo);
         animator.SetBool("recibeDanio", recibiendoDanio);
