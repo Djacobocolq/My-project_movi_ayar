@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class CanvasPersistente : MonoBehaviour
+public class SistemaPersistente : MonoBehaviour
 {
-    private static CanvasPersistente instancia;
+    private static SistemaPersistente instancia;
 
     void Awake()
     {
