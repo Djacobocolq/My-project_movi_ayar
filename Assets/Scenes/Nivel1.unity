@@ -54952,7 +54952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb22380a18f64e7428123de7ba7caf16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 12
+  velocidad: 8
   vida: 5
   fuerzaSalto: 14
   fuerzaRebote: 4
@@ -55512,9 +55512,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b069246aaa5fc14d8d75f427286e5cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemigoMecha
-  velocidad: 8
+  velocidad: 6
   distanciaDeteccion: 15
-  distanciaAtaque: 3
+  distanciaAtaque: 2.5
   vidaMaxima: 5
   "da\xF1oAtaque": 1
   fuerzaRebote: 0
@@ -55623,6 +55623,7 @@ GameObject:
   - component: {fileID: 1775850210}
   - component: {fileID: 1775850209}
   - component: {fileID: 1775850208}
+  - component: {fileID: 1775850211}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -55720,6 +55721,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1775850211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775850206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d13646cc032e15647bbec4b15490717b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CanvasPersistente
 --- !u!1 &1850982172
 GameObject:
   m_ObjectHideFlags: 0
@@ -56690,7 +56703,7 @@ Transform:
   m_GameObject: {fileID: 2117003863}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.14, y: 3.7, z: 0}
+  m_LocalPosition: {x: 22.58, y: -6.03, z: 0}
   m_LocalScale: {x: 12, y: 12, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56783,7 +56796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1511786286}
   detectionRadius: 15
-  speed: 8
+  speed: 6
   fuerzaRebote: 4
   vida: 3
 --- !u!95 &2117003869
