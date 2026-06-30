@@ -44,22 +44,22 @@ public class ControladorDialogo : MonoBehaviour
         }
 
         // ==========================================
-        // VERIFICAR TEXTOS
+        // DESACTIVAR RAYCAST TARGET EN TEXTOS
         // ==========================================
-        if (textoNombre == null)
-            Debug.LogError("❌ textoNombre NO está asignado!");
-        else
+        if (textoNombre != null)
         {
-            Debug.Log("✅ textoNombre: " + textoNombre.name);
-            textoNombre.text = "Nombre de prueba"; // Texto de prueba
+            textoNombre.raycastTarget = false;
+            Debug.Log("✅ textoNombre: RaycastTarget desactivado");
         }
-
-        if (textoDialogo == null)
-            Debug.LogError("❌ textoDialogo NO está asignado!");
-        else
+        if (textoDialogo != null)
         {
-            Debug.Log("✅ textoDialogo: " + textoDialogo.name);
-            textoDialogo.text = "Texto de prueba con varias líneas para verificar que el TextMeshPro funcione correctamente y muestre todo el contenido sin cortarse.";
+            textoDialogo.raycastTarget = false;
+            Debug.Log("✅ textoDialogo: RaycastTarget desactivado");
+        }
+        if (textoContinuar != null)
+        {
+            textoContinuar.raycastTarget = false;
+            Debug.Log("✅ textoContinuar: RaycastTarget desactivado");
         }
     }
 
@@ -70,7 +70,6 @@ public class ControladorDialogo : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 ContinuarDialogo();
-                Debug.Log("🖱️ Clic detectado");
             }
         }
     }
@@ -93,35 +92,18 @@ public class ControladorDialogo : MonoBehaviour
 
         DialogoLinea linea = lineasDialogo[indice];
 
-        // ==========================================
-        // ACTUALIZAR NOMBRE
-        // ==========================================
         if (textoNombre != null)
         {
             textoNombre.text = linea.nombre;
             textoNombre.color = linea.colorNombre;
-            Debug.Log("📝 Nombre asignado: " + linea.nombre);
-            Debug.Log("📝 Color nombre: " + linea.colorNombre);
-        }
-        else
-        {
-            Debug.LogError("❌ textoNombre es NULL!");
         }
 
-        // ==========================================
-        // ACTUALIZAR TEXTO
-        // ==========================================
         if (textoDialogo != null)
         {
             if (coroutineEscritura != null)
                 StopCoroutine(coroutineEscritura);
 
             coroutineEscritura = StartCoroutine(EscribirTexto(linea.texto));
-            Debug.Log("📝 Texto asignado: " + linea.texto.Substring(0, Mathf.Min(50, linea.texto.Length)) + "...");
-        }
-        else
-        {
-            Debug.LogError("❌ textoDialogo es NULL!");
         }
 
         if (textoContinuar != null)
@@ -147,11 +129,7 @@ public class ControladorDialogo : MonoBehaviour
 
     public void ContinuarDialogo()
     {
-        if (!dialogoActivo)
-        {
-            Debug.Log("⚠️ Diálogo no activo");
-            return;
-        }
+        if (!dialogoActivo) return;
 
         if (escribiendo)
         {
@@ -167,7 +145,6 @@ public class ControladorDialogo : MonoBehaviour
         }
 
         indiceActual++;
-        Debug.Log("➡️ Avanzando a línea: " + indiceActual);
 
         if (indiceActual < lineasDialogo.Count)
         {
