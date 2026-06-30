@@ -361,16 +361,19 @@ public class JugadorController : MonoBehaviour
     public void MoverIzquierda()
     {
         movimientoHorizontal = -1f;
+        Debug.Log("MoverIzquierda llamado");
     }
 
     public void MoverDerecha()
     {
         movimientoHorizontal = 1f;
+        Debug.Log("MoverDerecha llamado");
     }
 
     public void DetenerMovimiento()
     {
         movimientoHorizontal = 0f;
+        Debug.Log("DetenerMovimiento llamado");
     }
 
     public void SaltarTouch()
