@@ -36,31 +36,19 @@ public class ControladorDialogo : MonoBehaviour
 
     void Start()
     {
+        // Asegurar que el GameObject esté desactivado al inicio
         gameObject.SetActive(false);
+        Debug.Log("🔍 ControladorDialogo: Start - Oculto");
 
         if (botonContinuar != null)
         {
             botonContinuar.onClick.AddListener(ContinuarDialogo);
         }
 
-        // ==========================================
-        // DESACTIVAR RAYCAST TARGET EN TEXTOS
-        // ==========================================
-        if (textoNombre != null)
-        {
-            textoNombre.raycastTarget = false;
-            Debug.Log("✅ textoNombre: RaycastTarget desactivado");
-        }
-        if (textoDialogo != null)
-        {
-            textoDialogo.raycastTarget = false;
-            Debug.Log("✅ textoDialogo: RaycastTarget desactivado");
-        }
-        if (textoContinuar != null)
-        {
-            textoContinuar.raycastTarget = false;
-            Debug.Log("✅ textoContinuar: RaycastTarget desactivado");
-        }
+        if (textoNombre == null)
+            Debug.LogError("❌ textoNombre NO está asignado!");
+        if (textoDialogo == null)
+            Debug.LogError("❌ textoDialogo NO está asignado!");
     }
 
     void Update()
@@ -76,6 +64,27 @@ public class ControladorDialogo : MonoBehaviour
 
     public void IniciarDialogo()
     {
+        Debug.Log("💬 IniciarDialogo() llamado");
+
+        if (lineasDialogo.Count == 0)
+        {
+            Debug.LogError("❌ No hay líneas de diálogo!");
+            return;
+        }
+
+        // ==========================================
+        // FORZAR ACTIVACIÓN DEL GAMEOBJECT
+        // ==========================================
+        gameObject.SetActive(true);
+        Debug.Log("✅ ControladorDialogo: GameObject activado");
+
+        // Activar todos los hijos también
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(true);
+            Debug.Log("✅ Hijo activado: " + child.name);
+        }
+
         indiceActual = 0;
         dialogoActivo = true;
         MostrarLinea(indiceActual);
@@ -96,6 +105,7 @@ public class ControladorDialogo : MonoBehaviour
         {
             textoNombre.text = linea.nombre;
             textoNombre.color = linea.colorNombre;
+            Debug.Log("📝 Nombre: " + linea.nombre);
         }
 
         if (textoDialogo != null)

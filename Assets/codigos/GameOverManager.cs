@@ -12,13 +12,13 @@ public class GameOverManager : MonoBehaviour
     public Button btnSalir;
 
     [Header("CONFIGURACIÓN")]
-    public string nombreEscenaReinicio = "Nivel1";
+    public string nombreEscenaMenu = "Menu"; // ← Escena a la que irá
 
     private static GameOverManager instancia;
 
     void Awake()
     {
-        if (instancia != null)
+        if (instancia != null && instancia != this)
         {
             Destroy(gameObject);
             return;
@@ -26,23 +26,40 @@ public class GameOverManager : MonoBehaviour
 
         instancia = this;
         DontDestroyOnLoad(gameObject);
+
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(false);
     }
 
     void Start()
     {
-        if (gameOverPanel != null)
-            gameOverPanel.SetActive(false);
-
-        if (btnReiniciar != null)
-            btnReiniciar.onClick.AddListener(ReiniciarJuego);
-
-        if (btnSalir != null)
-            btnSalir.onClick.AddListener(SalirJuego);
+        ConectarBotonesGameOver();
     }
 
-    // ==========================================
-    // MÉTODOS PÚBLICOS
-    // ==========================================
+    void ConectarBotonesGameOver()
+    {
+        if (gameOverPanel == null) return;
+
+        if (btnReiniciar == null)
+            btnReiniciar = GameObject.Find("BtnReiniciar")?.GetComponent<Button>();
+
+        if (btnSalir == null)
+            btnSalir = GameObject.Find("BtnSalir")?.GetComponent<Button>();
+
+        if (btnReiniciar != null)
+        {
+            btnReiniciar.onClick.RemoveAllListeners();
+            btnReiniciar.onClick.AddListener(IrAlMenu); // ← CAMBIADO
+            Debug.Log("✅ BtnReiniciar: IrAlMenu");
+        }
+
+        if (btnSalir != null)
+        {
+            btnSalir.onClick.RemoveAllListeners();
+            btnSalir.onClick.AddListener(SalirJuego);
+            Debug.Log("✅ BtnSalir: SalirJuego");
+        }
+    }
 
     public void MostrarGameOver()
     {
@@ -50,7 +67,7 @@ public class GameOverManager : MonoBehaviour
             gameOverPanel.SetActive(true);
 
         Time.timeScale = 0;
-        Debug.Log("💀 GAME OVER");
+        Debug.Log("💀 GAME OVER - Mostrado");
     }
 
     public void OcultarGameOver()
@@ -58,16 +75,23 @@ public class GameOverManager : MonoBehaviour
         if (gameOverPanel != null)
             gameOverPanel.SetActive(false);
         Time.timeScale = 1;
+        Debug.Log("💀 GAME OVER - Ocultado");
     }
 
-    public void ReiniciarJuego()
+    // ==========================================
+    // BOTÓN REINICIAR → MENÚ
+    // ==========================================
+    public void IrAlMenu()
     {
-        Debug.Log("🔄 Reiniciando juego...");
+        Debug.Log("🏠 Volviendo al menú principal...");
         Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         OcultarGameOver();
+        SceneManager.LoadScene(nombreEscenaMenu);
     }
 
+    // ==========================================
+    // BOTÓN SALIR
+    // ==========================================
     public void SalirJuego()
     {
         Debug.Log("🚪 Saliendo del juego...");
@@ -79,10 +103,6 @@ public class GameOverManager : MonoBehaviour
             Application.Quit();
 #endif
     }
-
-    // ==========================================
-    // MÉTODO PARA ACCEDER DESDE OTROS SCRIPTS
-    // ==========================================
 
     public static void ActivarGameOver()
     {

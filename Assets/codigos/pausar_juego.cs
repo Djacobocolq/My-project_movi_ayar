@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class pausar_juego : MonoBehaviour
@@ -9,12 +7,11 @@ public class pausar_juego : MonoBehaviour
     public GameObject menuPausa;
     public bool juegoPausado = false;
 
-    private Keyboard keyboard;
     private static pausar_juego instancia;
 
     void Awake()
     {
-        if (instancia != null)
+        if (instancia != null && instancia != this)
         {
             Destroy(gameObject);
             return;
@@ -22,38 +19,53 @@ public class pausar_juego : MonoBehaviour
 
         instancia = this;
         DontDestroyOnLoad(gameObject);
+        Debug.Log("✅ SystemPause: Awake");
     }
 
     void Start()
     {
-        keyboard = Keyboard.current;
-        BuscarMenuPausa();
-    }
-
-    void Update()
-    {
-        if (keyboard != null && keyboard.escapeKey.wasPressedThisFrame)
+        // Si no está asignado en el Inspector, buscarlo automáticamente
+        if (menuPausa == null)
         {
-            if (juegoPausado)
-                Reanudar();
-            else
-                Pausar();
+            Debug.Log("🔍 menuPausa no asignado en Inspector, buscando...");
+            menuPausa = GameObject.Find("MenuPause");
         }
-    }
 
-    public void BuscarMenuPausa()
-    {
-        GameObject menu = GameObject.Find("MenuPause");
-        if (menu != null)
+        if (menuPausa != null)
         {
-            menuPausa = menu;
             menuPausa.SetActive(false);
-            Debug.Log("Menú de pausa encontrado");
+            Debug.Log("✅ MenuPause encontrado y oculto: " + menuPausa.name);
         }
         else
         {
-            Debug.LogWarning("No se encontró 'MenuPause' en la escena actual");
+            Debug.LogError("❌ No se encontró MenuPause en la escena!");
         }
+    }
+
+    public void Pausar()
+    {
+        Debug.Log("⏸️ Pausar() llamado");
+
+        // Si el menú se perdió, buscarlo nuevamente
+        if (menuPausa == null)
+        {
+            menuPausa = GameObject.Find("MenuPause");
+        }
+
+        if (menuPausa != null)
+        {
+            menuPausa.SetActive(true);
+            Debug.Log("✅ MenuPause ACTIVADO");
+        }
+        else
+        {
+            Debug.LogError("❌ No se encontró MenuPause!");
+            return;
+        }
+
+        Time.timeScale = 0;
+        juegoPausado = true;
+        Debug.Log("⏸️ Juego pausado");
     }
 
     public void Reanudar()
@@ -63,63 +75,18 @@ public class pausar_juego : MonoBehaviour
 
         Time.timeScale = 1;
         juegoPausado = false;
-
-        // ==========================================
-        // REANUDAR MÚSICA DEL NIVEL ACTUAL
-        // ==========================================
-        MusicaNivel musica = FindFirstObjectByType<MusicaNivel>();
-        if (musica != null)
-        {
-            musica.ReanudarMusica();
-            Debug.Log("🎵 Música reanudada");
-        }
-
         Debug.Log("🎮 Juego reanudado");
     }
 
-    public void Pausar()
+    public void IrAlMenu()
     {
-        if (menuPausa != null)
-            menuPausa.SetActive(true);
-
-        Time.timeScale = 0;
-        juegoPausado = true;
-
-        // ==========================================
-        // PAUSAR MÚSICA DEL NIVEL ACTUAL
-        // ==========================================
-        MusicaNivel musica = FindFirstObjectByType<MusicaNivel>();
-        if (musica != null)
-        {
-            musica.PausarMusica();
-            Debug.Log("🎵 Música pausada");
-        }
-
-        Debug.Log("⏸️ Juego pausado");
-    }
-
-    public void irAlMenu()
-    {
+        Debug.Log("🏠 Volviendo al menú principal...");
         Time.timeScale = 1;
         juegoPausado = false;
-        // ==========================================
-        // REANUDAR MÚSICA DEL NIVEL ACTUAL
-        // ==========================================
-        MusicaNivel musica = FindFirstObjectByType<MusicaNivel>();
-        if (musica != null)
-        {
-            musica.ReanudarMusica();
-            Debug.Log("🎵 Música reanudada");
-        }
-        // Cargar la escena del menú principal
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
-    }
 
-    public void AlternarPausa()
-    {
-        if (juegoPausado)
-            Reanudar();
-        else
-            Pausar();
+        if (menuPausa != null)
+            menuPausa.SetActive(false);
+
+        SceneManager.LoadScene("Menu");
     }
 }

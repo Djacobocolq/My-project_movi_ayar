@@ -5,22 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class JugadorController : MonoBehaviour
 {
+    // ============================================
+    // CONFIGURACIÓN EN EL INSPECTOR
+    // ============================================
     [Header("MOVIMIENTO")]
     public float velocidad = 5f;
     public float fuerzaSalto = 10f;
     public int vida = 3;
-    public float fuerzaEmpuje = 20f;
+    public float fuerzaEmpuje = 15f;
 
     [Header("ATAQUE")]
     public GameObject espadaTrigger;
-    public float distanciaAtaque = 2.5f;
+    public float distanciaAtaque = 1.8f;
     public LayerMask capaEnemigo;
 
     [Header("SUELO")]
     public LayerMask capaSuelo;
     public float longitudRaycast = 0.5f;
 
-    private SkeletonAnimation skeletonAnimation;
+    // ============================================
+    // REFERENCIAS PRIVADAS
+    // ============================================
+    public SkeletonAnimation skeletonAnimation; // ← AHORA PÚBLICA
     private Rigidbody2D rb;
     private float movimientoHorizontal = 0f;
     private bool enSuelo;
@@ -33,6 +39,9 @@ public class JugadorController : MonoBehaviour
     private bool botonIzquierdaPresionado = false;
     private bool botonDerechaPresionado = false;
 
+    // ============================================
+    // NOMBRES DE ANIMACIONES
+    // ============================================
     private string IDLE = "basket_idle_side";
     private string WALK = "[down]walk_side";
     private string JUMP = "twohand_damaged_side";
@@ -40,6 +49,9 @@ public class JugadorController : MonoBehaviour
     private string HIT = "[emo]damaged_side";
     private string DEATH = "dead4_side";
 
+    // ============================================
+    // INICIALIZACIÓN
+    // ============================================
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -180,7 +192,7 @@ public class JugadorController : MonoBehaviour
     }
 
     // ==========================================
-    // ATAQUE CON EMPUJE (CORREGIDO)
+    // ATAQUE CON EMPUJE
     // ==========================================
     void Atacar()
     {
@@ -193,42 +205,22 @@ public class JugadorController : MonoBehaviour
             skeletonAnimation.loop = false;
         }
 
-        // ==========================================
-        // DETECTAR ENEMIGOS CON OVERLAP CIRCLE
-        // ==========================================
+        // Detectar enemigos
+        float direccionX = transform.localScale.x > 0 ? 1 : -1;
         Vector2 origen = transform.position;
-        float radioAtaque = distanciaAtaque;
+        Vector2 direccion = new Vector2(direccionX, 0);
 
-        // Detectar todos los colliders en el área
-        Collider2D[] enemigos = Physics2D.OverlapCircleAll(origen, radioAtaque, capaEnemigo);
+        RaycastHit2D hit = Physics2D.Raycast(origen, direccion, distanciaAtaque, capaEnemigo);
+        Debug.DrawRay(origen, direccion * distanciaAtaque, Color.blue, 1f);
 
-        Debug.Log("🔍 Enemigos detectados en el área: " + enemigos.Length);
-
-        foreach (Collider2D col in enemigos)
+        if (hit.collider != null)
         {
-            EnemigoBase enemigo = col.GetComponent<EnemigoBase>();
+            EnemigoBase enemigo = hit.collider.GetComponent<EnemigoBase>();
             if (enemigo != null)
             {
-                // ==========================================
-                // CALCULAR DIRECCIÓN CORRECTA DEL EMPUJE
-                // ==========================================
-                Vector2 direccionAlEnemigo = (col.transform.position - transform.position).normalized;
-
-                // Dirección horizontal (derecha o izquierda)
-                float direccionX = direccionAlEnemigo.x > 0 ? 1 : -1;
-
-                // Verificar que el enemigo esté en la dirección correcta (horizontal)
-                if (Mathf.Abs(direccionAlEnemigo.x) > 0.3f) // Suficiente distancia horizontal
-                {
-                    // Dirección del empuje (horizontal + ligero hacia arriba)
-                    Vector2 direccionEmpuje = new Vector2(direccionX, 0.3f).normalized;
-                    enemigo.Empujar(direccionEmpuje, fuerzaEmpuje);
-                    Debug.Log("👊 ¡Enemigo empujado! Dirección: " + direccionX);
-                }
-                else
-                {
-                    Debug.Log("❌ Enemigo no está lo suficientemente horizontal");
-                }
+                Vector2 direccionEmpuje = new Vector2(direccionX, 0.3f).normalized;
+                enemigo.Empujar(direccionEmpuje, fuerzaEmpuje);
+                Debug.Log("👊 ¡Enemigo empujado!");
             }
         }
 
@@ -326,18 +318,16 @@ public class JugadorController : MonoBehaviour
         muerto = true;
         Debug.Log("💀 Jugador murió");
 
-        // Animación de muerte
         if (skeletonAnimation != null)
         {
             skeletonAnimation.AnimationName = DEATH;
             skeletonAnimation.loop = false;
         }
 
-        // Desactivar físicas
         rb.bodyType = RigidbodyType2D.Kinematic;
         GetComponent<Collider2D>().enabled = false;
 
-        // Activar Game Over después de la animación
+        // Activar Game Over después de 2 segundos
         Invoke("ActivarGameOver", 2f);
     }
 
@@ -353,6 +343,40 @@ public class JugadorController : MonoBehaviour
             Debug.LogError("❌ No se encontró GameOverManager");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+    }
+
+    // ==========================================
+    // MÉTODO PARA REVIVIR (LLAMADO DESDE POSICIONARJUGADOR)
+    // ==========================================
+    public void Revivir(int vidaNueva)
+    {
+        // Resetear estado
+        muerto = false;
+        vida = vidaNueva;
+        recibiendoDanio = false;
+        atacando = false;
+        movimientoHorizontal = 0f;
+
+        // Reactivar collider
+        Collider2D collider = GetComponent<Collider2D>();
+        if (collider != null)
+            collider.enabled = true;
+
+        // Reactivar Rigidbody
+        if (rb != null)
+        {
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            rb.linearVelocity = Vector2.zero;
+        }
+
+        // Resetear animación
+        if (skeletonAnimation != null)
+        {
+            skeletonAnimation.AnimationName = IDLE;
+            skeletonAnimation.loop = true;
+        }
+
+        Debug.Log("❤️ Jugador revivido con vida: " + vidaNueva);
     }
 
     // ==========================================
@@ -433,6 +457,8 @@ public class JugadorController : MonoBehaviour
         Gizmos.DrawLine(transform.position, transform.position + Vector3.down * (longitudRaycast + 0.2f));
 
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, distanciaAtaque);
+        float direccionX = transform.localScale.x > 0 ? 1 : -1;
+        Vector3 finRaycast = transform.position + new Vector3(direccionX * distanciaAtaque, 0, 0);
+        Gizmos.DrawLine(transform.position, finRaycast);
     }
 }
