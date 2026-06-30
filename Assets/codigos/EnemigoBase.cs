@@ -284,6 +284,18 @@ public class EnemigoBase : MonoBehaviour
     }
 
     // ============================================
+    // EMPUJAR (sin daño)
+    // ============================================
+    public void Empujar(Vector2 direccion, float fuerza)
+    {
+        if (muerto) return;
+
+        // Aplicar fuerza de empuje
+        rb.AddForce(direccion * fuerza, ForceMode2D.Impulse);
+        Debug.Log("Enemigo empujado!");
+    }
+
+    // ============================================
     // MUERTE
     // ============================================
     void Morir()
