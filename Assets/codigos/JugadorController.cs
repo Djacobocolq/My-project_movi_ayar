@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Spine.Unity;
+using UnityEngine.InputSystem;
 
 public class JugadorController : MonoBehaviour
 {
@@ -25,11 +26,16 @@ public class JugadorController : MonoBehaviour
     // ============================================
     private SkeletonAnimation skeletonAnimation;
     private Rigidbody2D rb;
-    private float movimientoHorizontal;
+    private float movimientoHorizontal = 0f;
     private bool enSuelo;
     private bool atacando;
     private bool recibiendoDanio;
     public bool muerto;
+
+    // ============================================
+    // INPUT SYSTEM
+    // ============================================
+    private Keyboard keyboard;
 
     // ============================================
     // NOMBRES DE ANIMACIONES
@@ -45,6 +51,7 @@ public class JugadorController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         skeletonAnimation = GetComponentInChildren<SkeletonAnimation>();
+        keyboard = Keyboard.current;
 
         if (espadaTrigger != null)
             espadaTrigger.SetActive(false);
@@ -55,6 +62,8 @@ public class JugadorController : MonoBehaviour
             skeletonAnimation.AnimationName = IDLE;
             skeletonAnimation.loop = true;
         }
+
+        Debug.Log("JugadorController: Inicializado correctamente");
     }
 
     void Update()
@@ -62,10 +71,27 @@ public class JugadorController : MonoBehaviour
         if (muerto) return;
 
         // ==========================================
-        // MOVIMIENTO (teclado A/D)
+        // MOVIMIENTO CON INPUT SYSTEM
         // ==========================================
-        movimientoHorizontal = Input.GetAxis("Horizontal");
+        if (keyboard != null)
+        {
+            // Reiniciar movimiento
+            movimientoHorizontal = 0f;
 
+            // Leer teclas
+            if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed)
+            {
+                movimientoHorizontal = -1f;
+            }
+            else if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed)
+            {
+                movimientoHorizontal = 1f;
+            }
+        }
+
+        // ==========================================
+        // MOVER AL JUGADOR (SI NO ESTÁ ATACANDO O RECIBIENDO DAÑO)
+        // ==========================================
         if (!atacando && !recibiendoDanio)
         {
             Mover();
@@ -80,7 +106,7 @@ public class JugadorController : MonoBehaviour
         // ==========================================
         // SALTO (Espacio)
         // ==========================================
-        if (enSuelo && Input.GetKeyDown(KeyCode.Space) && !recibiendoDanio && !atacando)
+        if (enSuelo && keyboard != null && keyboard.spaceKey.wasPressedThisFrame && !recibiendoDanio && !atacando)
         {
             rb.AddForce(new Vector2(0f, fuerzaSalto), ForceMode2D.Impulse);
             if (skeletonAnimation != null)
@@ -93,7 +119,7 @@ public class JugadorController : MonoBehaviour
         // ==========================================
         // ATAQUE (E)
         // ==========================================
-        if (Input.GetKeyDown(KeyCode.E) && enSuelo && !atacando && !recibiendoDanio)
+        if (keyboard != null && keyboard.eKey.wasPressedThisFrame && enSuelo && !atacando && !recibiendoDanio)
         {
             Atacar();
         }
@@ -101,7 +127,7 @@ public class JugadorController : MonoBehaviour
         // ==========================================
         // RECOGER FLOR (R)
         // ==========================================
-        if (Input.GetKeyDown(KeyCode.R) && !atacando && !recibiendoDanio)
+        if (keyboard != null && keyboard.rKey.wasPressedThisFrame && !atacando && !recibiendoDanio)
         {
             RecogerFlor();
         }
@@ -114,7 +140,10 @@ public class JugadorController : MonoBehaviour
 
     void Mover()
     {
+        // Calcular velocidad
         float velocidadX = movimientoHorizontal * velocidad * Time.deltaTime;
+
+        // Aplicar movimiento
         transform.position += new Vector3(velocidadX, 0, 0);
 
         // Voltear personaje
@@ -270,16 +299,19 @@ public class JugadorController : MonoBehaviour
     public void MoverIzquierda()
     {
         movimientoHorizontal = -1f;
+        Debug.Log("MoverIzquierda (táctil)");
     }
 
     public void MoverDerecha()
     {
         movimientoHorizontal = 1f;
+        Debug.Log("MoverDerecha (táctil)");
     }
 
     public void DetenerMovimiento()
     {
         movimientoHorizontal = 0f;
+        Debug.Log("DetenerMovimiento (táctil)");
     }
 
     public void SaltarTouch()
@@ -292,6 +324,7 @@ public class JugadorController : MonoBehaviour
                 skeletonAnimation.AnimationName = JUMP;
                 skeletonAnimation.loop = false;
             }
+            Debug.Log("SaltarTouch");
         }
     }
 
@@ -300,6 +333,7 @@ public class JugadorController : MonoBehaviour
         if (!atacando && enSuelo && !recibiendoDanio && !muerto)
         {
             Atacar();
+            Debug.Log("AtacarTouch");
         }
     }
 
@@ -308,20 +342,16 @@ public class JugadorController : MonoBehaviour
         if (!atacando && !recibiendoDanio && !muerto)
         {
             RecogerFlor();
+            Debug.Log("RecogerTouch");
         }
     }
 
     // ==========================================
-    // RECOGER FLOR (CORREGIDO)
+    // RECOGER FLOR
     // ==========================================
     void RecogerFlor()
     {
-        // Opción 1: FindObjectsByType (más rápido, recomendado)
         FlorRecolectable[] flores = FindObjectsByType<FlorRecolectable>(FindObjectsSortMode.None);
-
-        // Opción 2: FindObjectsOfType (sigue funcionando, solo es advertencia)
-        // FlorRecolectable[] flores = FindObjectsOfType<FlorRecolectable>();
-
         foreach (FlorRecolectable flor in flores)
         {
             if (!flor.recolectada)
