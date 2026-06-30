@@ -53860,7 +53860,7 @@ GameObject:
   - component: {fileID: 1063864302}
   - component: {fileID: 1063864301}
   - component: {fileID: 1063864300}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpineEnemigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54341,7 +54341,7 @@ GameObject:
   - component: {fileID: 1730612450}
   - component: {fileID: 1730612449}
   - component: {fileID: 1730612448}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

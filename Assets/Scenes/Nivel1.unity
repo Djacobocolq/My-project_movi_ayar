@@ -865,10 +865,10 @@ MonoBehaviour:
   vida: 5
   fuerzaEmpuje: 3
   espadaTrigger: {fileID: 0}
-  distanciaAtaque: 2
+  distanciaAtaque: 3
   capaEnemigo:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   capaSuelo:
     serializedVersion: 2
     m_Bits: 8
@@ -54775,7 +54775,7 @@ GameObject:
   - component: {fileID: 1063864302}
   - component: {fileID: 1063864301}
   - component: {fileID: 1063864300}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpineEnemigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55597,7 +55597,7 @@ GameObject:
   - component: {fileID: 1730612450}
   - component: {fileID: 1730612449}
   - component: {fileID: 1730612448}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55621,11 +55621,11 @@ MonoBehaviour:
   distanciaAtaque: 2.5
   vidaMaxima: 5
   "da\xF1oAtaque": 1
-  fuerzaRebote: 0
+  fuerzaRebote: 3
   capaSuelo:
     serializedVersion: 2
     m_Bits: 8
-  longitudRaycast: 1
+  longitudRaycast: 0.4
 --- !u!61 &1730612449
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55660,7 +55660,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.025779199, y: 0.19184929}
+  m_Offset: {x: 0.0132980645, y: 0.19184929}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -55670,7 +55670,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.25608805, y: 0.38649893}
+  m_Size: {x: 0.23112577, y: 0.38649893}
   m_EdgeRadius: 0
 --- !u!50 &1730612450
 Rigidbody2D:

@@ -4,9 +4,6 @@ using Spine.Unity;
 
 public class EnemigoBase : MonoBehaviour
 {
-    // ============================================
-    // CONFIGURACIÓN EN EL INSPECTOR
-    // ============================================
     [Header("MOVIMIENTO")]
     public float velocidad = 2f;
 
@@ -25,13 +22,10 @@ public class EnemigoBase : MonoBehaviour
     public LayerMask capaSuelo;
     public float longitudRaycast = 0.2f;
 
-    // ============================================
-    // REFERENCIAS INTERNAS
-    // ============================================
     private SkeletonAnimation skeletonAnimation;
     private Rigidbody2D rb;
     private Transform jugador;
-    private JugadorController scriptJugador; // ← CAMBIADO
+    private JugadorController scriptJugador;
 
     private int vidaActual;
     private bool enSuelo;
@@ -41,9 +35,6 @@ public class EnemigoBase : MonoBehaviour
     private bool jugadorMuerto = false;
     private float direccion = 1;
 
-    // ============================================
-    // NOMBRES DE ANIMACIONES
-    // ============================================
     private string IDLE = "idle_side";
     private string WALK = "walk_side";
     private string ATTACK = "attack_side";
@@ -51,11 +42,10 @@ public class EnemigoBase : MonoBehaviour
     private string DEATH = "dead_side";
     private string DANCE = "dance_side";
 
-    // ============================================
-    // INICIALIZACIÓN
-    // ============================================
     void Start()
     {
+        Debug.Log("Enemigo: Iniciando...");
+
         rb = GetComponent<Rigidbody2D>();
         skeletonAnimation = GetComponentInChildren<SkeletonAnimation>();
 
@@ -63,7 +53,12 @@ public class EnemigoBase : MonoBehaviour
         if (player != null)
         {
             jugador = player.transform;
-            scriptJugador = player.GetComponent<JugadorController>(); // ← CAMBIADO
+            scriptJugador = player.GetComponent<JugadorController>();
+            Debug.Log("Enemigo: Jugador encontrado: " + player.name);
+        }
+        else
+        {
+            Debug.LogError("Enemigo: No se encontró al jugador con Tag 'Player'");
         }
 
         vidaActual = vidaMaxima;
@@ -77,14 +72,10 @@ public class EnemigoBase : MonoBehaviour
         InvokeRepeating("ComportamientoIA", 0f, 0.5f);
     }
 
-    // ============================================
-    // ACTUALIZACIÓN
-    // ============================================
     void Update()
     {
         if (muerto || skeletonAnimation == null) return;
 
-        // Detectar estado del jugador
         if (scriptJugador != null)
         {
             if (scriptJugador.muerto && !jugadorMuerto)
@@ -100,7 +91,6 @@ public class EnemigoBase : MonoBehaviour
             }
         }
 
-        // Forzar que mire al jugador
         if (jugador != null && !jugadorMuerto && !muerto)
         {
             if (jugador.position.x < transform.position.x)
@@ -115,16 +105,13 @@ public class EnemigoBase : MonoBehaviour
         ActualizarAnimaciones();
     }
 
-    // ============================================
-    // BAILAR
-    // ============================================
     void CelebrarVictoria()
     {
         if (skeletonAnimation != null)
         {
             skeletonAnimation.AnimationName = DANCE;
             skeletonAnimation.loop = true;
-            Debug.Log("¡El enemigo está bailando!");
+            Debug.Log("🎉 ¡El enemigo está bailando!");
         }
         rb.linearVelocity = Vector2.zero;
     }
@@ -139,9 +126,6 @@ public class EnemigoBase : MonoBehaviour
         }
     }
 
-    // ============================================
-    // INTELIGENCIA ARTIFICIAL
-    // ============================================
     void ComportamientoIA()
     {
         if (muerto || recibiendoDanio || atacando) return;
@@ -168,9 +152,6 @@ public class EnemigoBase : MonoBehaviour
         }
     }
 
-    // ============================================
-    // MOVIMIENTO
-    // ============================================
     void MoverHaciaJugador()
     {
         if (jugador.position.x < transform.position.x)
@@ -190,9 +171,6 @@ public class EnemigoBase : MonoBehaviour
         }
     }
 
-    // ============================================
-    // ANIMACIONES
-    // ============================================
     void ActualizarAnimaciones()
     {
         if (jugadorMuerto) return;
@@ -209,14 +187,9 @@ public class EnemigoBase : MonoBehaviour
         }
     }
 
-    // ============================================
-    // ATAQUE
-    // ============================================
     void Atacar()
     {
         atacando = true;
-
-        // Detener movimiento durante el ataque
         rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
 
         if (skeletonAnimation != null)
@@ -225,7 +198,6 @@ public class EnemigoBase : MonoBehaviour
             skeletonAnimation.loop = false;
         }
 
-        // Dañar al jugador
         if (jugador != null && scriptJugador != null && !jugadorMuerto)
         {
             float distancia = Vector2.Distance(transform.position, jugador.position);
@@ -233,7 +205,7 @@ public class EnemigoBase : MonoBehaviour
             {
                 Vector2 direccionAtaque = (jugador.position - transform.position).normalized;
                 scriptJugador.RecibeDanio(direccionAtaque, dañoAtaque);
-                Debug.Log("¡Enemigo atacó al jugador! Daño: " + dañoAtaque);
+                Debug.Log("⚔️ Enemigo atacó al jugador! Daño: " + dañoAtaque);
             }
         }
 
@@ -251,7 +223,7 @@ public class EnemigoBase : MonoBehaviour
     }
 
     // ============================================
-    // RECIBIR DAÑO
+    // RECIBIR DAÑO (del jugador)
     // ============================================
     public void RecibeDanio(Vector2 direccion, int cantDanio)
     {
@@ -259,7 +231,7 @@ public class EnemigoBase : MonoBehaviour
 
         recibiendoDanio = true;
         vidaActual -= cantDanio;
-        Debug.Log("Enemigo recibe daño. Vida: " + vidaActual);
+        Debug.Log("💥 Enemigo recibe daño. Vida: " + vidaActual);
 
         if (skeletonAnimation != null)
         {
@@ -284,7 +256,7 @@ public class EnemigoBase : MonoBehaviour
     }
 
     // ============================================
-    // EMPUJAR (sin daño)
+    // EMPUJAR (CON ANIMACIÓN)
     // ============================================
     public void Empujar(Vector2 direccion, float fuerza)
     {
@@ -292,12 +264,37 @@ public class EnemigoBase : MonoBehaviour
 
         // Aplicar fuerza de empuje
         rb.AddForce(direccion * fuerza, ForceMode2D.Impulse);
-        Debug.Log("Enemigo empujado!");
+        Debug.Log("💨 Enemigo empujado con fuerza: " + fuerza);
+
+        // ==========================================
+        // REPRODUCIR ANIMACIÓN DE EMPUJE
+        // ==========================================
+        if (skeletonAnimation != null)
+        {
+            skeletonAnimation.AnimationName = HIT;
+            skeletonAnimation.loop = false;
+        }
+
+        // Activar estado de daño
+        recibiendoDanio = true;
+
+        // Desactivar daño después del empuje
+        CancelInvoke("DesactivarDanioEmpuje");
+        Invoke("DesactivarDanioEmpuje", 0.3f);
     }
 
-    // ============================================
-    // MUERTE
-    // ============================================
+    void DesactivarDanioEmpuje()
+    {
+        recibiendoDanio = false;
+        rb.linearVelocity = Vector2.zero;
+
+        if (skeletonAnimation != null && !muerto)
+        {
+            skeletonAnimation.AnimationName = IDLE;
+            skeletonAnimation.loop = true;
+        }
+    }
+
     void Morir()
     {
         muerto = true;
@@ -312,22 +309,16 @@ public class EnemigoBase : MonoBehaviour
         Destroy(gameObject, 2f);
     }
 
-    // ============================================
-    // TRIGGER CON LA ESPADA
-    // ============================================
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Espada"))
         {
             Vector2 direccionDanio = new Vector2(collision.gameObject.transform.position.x, 0);
             RecibeDanio(direccionDanio, 1);
-            Debug.Log("¡Enemigo golpeado por la espada!");
+            Debug.Log("🗡️ Enemigo golpeado por la espada!");
         }
     }
 
-    // ============================================
-    // COLISIÓN CON EL JUGADOR
-    // ============================================
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -340,15 +331,12 @@ public class EnemigoBase : MonoBehaviour
                 {
                     Vector2 direccionRebote = Vector2.up;
                     jugadorScript.RecibeDanio(direccionRebote, 0);
-                    Debug.Log("¡El jugador saltó encima del enemigo!");
+                    Debug.Log("⬇️ ¡El jugador saltó encima del enemigo!");
                 }
             }
         }
     }
 
-    // ============================================
-    // VISUALIZACIÓN
-    // ============================================
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;

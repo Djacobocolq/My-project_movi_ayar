@@ -8,11 +8,11 @@ public class JugadorController : MonoBehaviour
     public float velocidad = 5f;
     public float fuerzaSalto = 10f;
     public int vida = 3;
-    public float fuerzaEmpuje = 5f;
+    public float fuerzaEmpuje = 20f;
 
     [Header("ATAQUE")]
     public GameObject espadaTrigger;
-    public float distanciaAtaque = 1.5f;
+    public float distanciaAtaque = 2.5f;
     public LayerMask capaEnemigo;
 
     [Header("SUELO")]
@@ -29,10 +29,6 @@ public class JugadorController : MonoBehaviour
     public bool muerto;
 
     private Keyboard keyboard;
-
-    // ==========================================
-    // NUEVO: Control de botones
-    // ==========================================
     private bool botonIzquierdaPresionado = false;
     private bool botonDerechaPresionado = false;
 
@@ -65,31 +61,22 @@ public class JugadorController : MonoBehaviour
     {
         if (muerto) return;
 
-        // ==========================================
-        // MOVIMIENTO CON TECLADO (SOLO si no hay botones presionados)
-        // ==========================================
+        // Movimiento con teclado
         if (keyboard != null && !botonIzquierdaPresionado && !botonDerechaPresionado)
         {
             movimientoHorizontal = 0f;
-
             if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed)
                 movimientoHorizontal = -1f;
             else if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed)
                 movimientoHorizontal = 1f;
         }
-        // Si hay botones presionados, NO sobrescribimos movimientoHorizontal
 
-        // ==========================================
-        // MOVER AL JUGADOR
-        // ==========================================
         if (!atacando && !recibiendoDanio)
         {
             Mover();
         }
 
-        // ==========================================
-        // DETECTAR SUELO
-        // ==========================================
+        // Detectar suelo
         estabaEnSuelo = enSuelo;
         float raycastLength = longitudRaycast + 0.2f;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raycastLength, capaSuelo);
@@ -191,6 +178,9 @@ public class JugadorController : MonoBehaviour
         }
     }
 
+    // ==========================================
+    // ATAQUE CON EMPUJE (CORREGIDO)
+    // ==========================================
     void Atacar()
     {
         if (atacando) return;
@@ -202,21 +192,42 @@ public class JugadorController : MonoBehaviour
             skeletonAnimation.loop = false;
         }
 
-        float direccionX = transform.localScale.x > 0 ? 1 : -1;
+        // ==========================================
+        // DETECTAR ENEMIGOS CON OVERLAP CIRCLE
+        // ==========================================
         Vector2 origen = transform.position;
-        Vector2 direccion = new Vector2(direccionX, 0);
+        float radioAtaque = distanciaAtaque;
 
-        RaycastHit2D hit = Physics2D.Raycast(origen, direccion, distanciaAtaque, capaEnemigo);
-        Debug.DrawRay(origen, direccion * distanciaAtaque, Color.blue, 0.5f);
+        // Detectar todos los colliders en el área
+        Collider2D[] enemigos = Physics2D.OverlapCircleAll(origen, radioAtaque, capaEnemigo);
 
-        if (hit.collider != null)
+        Debug.Log("🔍 Enemigos detectados en el área: " + enemigos.Length);
+
+        foreach (Collider2D col in enemigos)
         {
-            EnemigoBase enemigo = hit.collider.GetComponent<EnemigoBase>();
+            EnemigoBase enemigo = col.GetComponent<EnemigoBase>();
             if (enemigo != null)
             {
-                Vector2 direccionEmpuje = new Vector2(direccionX, 0.5f).normalized;
-                enemigo.Empujar(direccionEmpuje, fuerzaEmpuje);
-                Debug.Log("👊 ¡Enemigo empujado!");
+                // ==========================================
+                // CALCULAR DIRECCIÓN CORRECTA DEL EMPUJE
+                // ==========================================
+                Vector2 direccionAlEnemigo = (col.transform.position - transform.position).normalized;
+
+                // Dirección horizontal (derecha o izquierda)
+                float direccionX = direccionAlEnemigo.x > 0 ? 1 : -1;
+
+                // Verificar que el enemigo esté en la dirección correcta (horizontal)
+                if (Mathf.Abs(direccionAlEnemigo.x) > 0.3f) // Suficiente distancia horizontal
+                {
+                    // Dirección del empuje (horizontal + ligero hacia arriba)
+                    Vector2 direccionEmpuje = new Vector2(direccionX, 0.3f).normalized;
+                    enemigo.Empujar(direccionEmpuje, fuerzaEmpuje);
+                    Debug.Log("👊 ¡Enemigo empujado! Dirección: " + direccionX);
+                }
+                else
+                {
+                    Debug.Log("❌ Enemigo no está lo suficientemente horizontal");
+                }
             }
         }
 
@@ -323,7 +334,7 @@ public class JugadorController : MonoBehaviour
     }
 
     // ==========================================
-    // MÉTODOS TÁCTILES (CON CONTROL DE ESTADO)
+    // MÉTODOS TÁCTILES
     // ==========================================
 
     public void MoverIzquierda()
@@ -331,7 +342,6 @@ public class JugadorController : MonoBehaviour
         botonIzquierdaPresionado = true;
         botonDerechaPresionado = false;
         movimientoHorizontal = -1f;
-        Debug.Log("⬅️ MoverIzquierda - movimientoHorizontal: " + movimientoHorizontal);
     }
 
     public void MoverDerecha()
@@ -339,7 +349,6 @@ public class JugadorController : MonoBehaviour
         botonDerechaPresionado = true;
         botonIzquierdaPresionado = false;
         movimientoHorizontal = 1f;
-        Debug.Log("➡️ MoverDerecha - movimientoHorizontal: " + movimientoHorizontal);
     }
 
     public void DetenerMovimiento()
@@ -347,7 +356,6 @@ public class JugadorController : MonoBehaviour
         botonIzquierdaPresionado = false;
         botonDerechaPresionado = false;
         movimientoHorizontal = 0f;
-        Debug.Log("⏹️ DetenerMovimiento - movimientoHorizontal: " + movimientoHorizontal);
     }
 
     public void SaltarTouch()
@@ -360,7 +368,6 @@ public class JugadorController : MonoBehaviour
                 skeletonAnimation.AnimationName = JUMP;
                 skeletonAnimation.loop = false;
             }
-            Debug.Log("🔼 SaltarTouch ejecutado");
         }
     }
 
@@ -369,7 +376,6 @@ public class JugadorController : MonoBehaviour
         if (!atacando && enSuelo && !recibiendoDanio && !muerto)
         {
             Atacar();
-            Debug.Log("⚔️ AtacarTouch ejecutado");
         }
     }
 
@@ -378,7 +384,6 @@ public class JugadorController : MonoBehaviour
         if (!atacando && !recibiendoDanio && !muerto)
         {
             RecogerFlor();
-            Debug.Log("🌸 RecogerTouch ejecutado");
         }
     }
 
@@ -406,8 +411,6 @@ public class JugadorController : MonoBehaviour
         Gizmos.DrawLine(transform.position, transform.position + Vector3.down * (longitudRaycast + 0.2f));
 
         Gizmos.color = Color.blue;
-        float direccionX = transform.localScale.x > 0 ? 1 : -1;
-        Vector3 finRaycast = transform.position + new Vector3(direccionX * distanciaAtaque, 0, 0);
-        Gizmos.DrawLine(transform.position, finRaycast);
+        Gizmos.DrawWireSphere(transform.position, distanciaAtaque);
     }
 }
