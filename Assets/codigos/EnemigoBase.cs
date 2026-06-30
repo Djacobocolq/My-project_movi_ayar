@@ -1,4 +1,4 @@
-﻿using System.Collections; // ← AGREGADO
+﻿using System.Collections;
 using UnityEngine;
 using Spine.Unity;
 
@@ -31,7 +31,7 @@ public class EnemigoBase : MonoBehaviour
     private SkeletonAnimation skeletonAnimation;
     private Rigidbody2D rb;
     private Transform jugador;
-    private player1 scriptJugador;
+    private JugadorController scriptJugador; // ← CAMBIADO
 
     private int vidaActual;
     private bool enSuelo;
@@ -63,7 +63,7 @@ public class EnemigoBase : MonoBehaviour
         if (player != null)
         {
             jugador = player.transform;
-            scriptJugador = player.GetComponent<player1>();
+            scriptJugador = player.GetComponent<JugadorController>(); // ← CAMBIADO
         }
 
         vidaActual = vidaMaxima;
@@ -320,7 +320,7 @@ public class EnemigoBase : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            player1 jugadorScript = collision.gameObject.GetComponent<player1>();
+            JugadorController jugadorScript = collision.gameObject.GetComponent<JugadorController>();
             if (jugadorScript != null && !jugadorScript.muerto)
             {
                 Rigidbody2D rbJugador = collision.gameObject.GetComponent<Rigidbody2D>();

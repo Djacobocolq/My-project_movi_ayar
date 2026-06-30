@@ -8,7 +8,7 @@ public class FlorRecolectable : MonoBehaviour
     public bool recolectada = false;
 
     [Header("REFERENCIAS")]
-    public player1 jugador;
+    public JugadorController jugador;
     public GameObject botonRecoger; // Botón táctil para móvil (opcional)
 
     private SpriteRenderer spriteRenderer;
@@ -25,7 +25,7 @@ public class FlorRecolectable : MonoBehaviour
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             if (player != null)
-                jugador = player.GetComponent<player1>();
+                jugador = player.GetComponent<JugadorController>();
         }
 
         // Ocultar botón al inicio

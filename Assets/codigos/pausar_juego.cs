@@ -3,30 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class pausar_juego : MonoBehaviour
+
+public class Pausar_juego : MonoBehaviour
 {
     public GameObject menuPausa;
     public bool juegoPausado = false;
 
     private Keyboard keyboard;
-    private static pausar_juego instancia;
+    private static Pausar_juego instancia;
 
-    // ==========================================
-    // PERSISTENCIA (Singleton)
-    // ==========================================
     void Awake()
     {
-        // Si ya existe una instancia, destruir esta
         if (instancia != null)
         {
             Destroy(gameObject);
             return;
         }
 
-        // Guardar esta instancia y hacerla persistente
         instancia = this;
         DontDestroyOnLoad(gameObject);
-        Debug.Log("Sistema de pausa creado (persistente)");
     }
 
     void Start()
@@ -37,7 +32,6 @@ public class pausar_juego : MonoBehaviour
 
     void Update()
     {
-        // Pausa con tecla ESC en PC
         if (keyboard != null && keyboard.escapeKey.wasPressedThisFrame)
         {
             if (juegoPausado)
@@ -47,9 +41,6 @@ public class pausar_juego : MonoBehaviour
         }
     }
 
-    // ==========================================
-    // BUSCAR MENÚ DE PAUSA EN LA ESCENA ACTUAL
-    // ==========================================
     public void BuscarMenuPausa()
     {
         // Buscar el menú de pausa en la escena actual
@@ -67,9 +58,6 @@ public class pausar_juego : MonoBehaviour
         }
     }
 
-    // ==========================================
-    // MÉTODOS PÚBLICOS
-    // ==========================================
     public void Reanudar()
     {
         if (menuPausa != null)
@@ -90,9 +78,6 @@ public class pausar_juego : MonoBehaviour
         Debug.Log("Juego pausado");
     }
 
-    // ==========================================
-    // MÉTODO PARA ALTERNAR PAUSA (para botones)
-    // ==========================================
     public void AlternarPausa()
     {
         if (juegoPausado)

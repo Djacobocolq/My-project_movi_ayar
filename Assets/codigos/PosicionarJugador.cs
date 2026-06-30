@@ -5,7 +5,7 @@ public class PosicionarJugador : MonoBehaviour
     void Start()
     {
         // Buscar al jugador que viene del nivel anterior
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject player = GameObject.FindGameObjectWithTag("Jugador");
 
         if (player != null)
         {

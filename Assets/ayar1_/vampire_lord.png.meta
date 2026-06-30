@@ -1,0 +1,3237 @@
+fileFormatVersion: 2
+guid: 419710a33d813a64fb95190898074b20
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2085243268858724637
+    second: vampire_lord_0
+  - first:
+      213: -5401974119438128213
+    second: vampire_lord_1
+  - first:
+      213: 7899566589366322546
+    second: vampire_lord_2
+  - first:
+      213: 2416411095242941137
+    second: vampire_lord_3
+  - first:
+      213: -3639837392065436964
+    second: vampire_lord_4
+  - first:
+      213: -5117008673325927327
+    second: vampire_lord_5
+  - first:
+      213: 426529133479326807
+    second: vampire_lord_6
+  - first:
+      213: 854532935627087057
+    second: vampire_lord_7
+  - first:
+      213: 1786052347415057123
+    second: vampire_lord_8
+  - first:
+      213: 2416928385116989039
+    second: vampire_lord_9
+  - first:
+      213: 5948569216045888569
+    second: vampire_lord_10
+  - first:
+      213: -3320411961649109989
+    second: vampire_lord_11
+  - first:
+      213: -1155325917776628032
+    second: vampire_lord_12
+  - first:
+      213: -3145831363177935505
+    second: vampire_lord_13
+  - first:
+      213: 1379518243740860044
+    second: vampire_lord_14
+  - first:
+      213: 8518581923946925356
+    second: vampire_lord_15
+  - first:
+      213: 6339565663439690741
+    second: vampire_lord_16
+  - first:
+      213: 593640214046449717
+    second: vampire_lord_17
+  - first:
+      213: 5885366491528702314
+    second: vampire_lord_18
+  - first:
+      213: -5151232885357230212
+    second: vampire_lord_19
+  - first:
+      213: -6109498227345868234
+    second: vampire_lord_20
+  - first:
+      213: 4475104463382760568
+    second: vampire_lord_21
+  - first:
+      213: 7590448022152177731
+    second: vampire_lord_22
+  - first:
+      213: 6028404604808086730
+    second: vampire_lord_23
+  - first:
+      213: -949834177609308693
+    second: vampire_lord_24
+  - first:
+      213: -7029843610396054314
+    second: vampire_lord_25
+  - first:
+      213: -4548225342241612697
+    second: vampire_lord_26
+  - first:
+      213: -6416576832999355891
+    second: vampire_lord_27
+  - first:
+      213: 3265510026513047936
+    second: vampire_lord_28
+  - first:
+      213: 1386390866105642318
+    second: vampire_lord_29
+  - first:
+      213: 2068184208839482631
+    second: vampire_lord_30
+  - first:
+      213: 7490028185858531835
+    second: vampire_lord_31
+  - first:
+      213: 1352308775944757120
+    second: vampire_lord_32
+  - first:
+      213: -2779045394633073605
+    second: vampire_lord_33
+  - first:
+      213: 537577821674801217
+    second: vampire_lord_34
+  - first:
+      213: -7809722303234187802
+    second: vampire_lord_35
+  - first:
+      213: 614005226127950847
+    second: vampire_lord_36
+  - first:
+      213: -8119461400011215356
+    second: vampire_lord_37
+  - first:
+      213: 2031459103634677483
+    second: vampire_lord_38
+  - first:
+      213: -8864953612171566357
+    second: vampire_lord_39
+  - first:
+      213: 6158867912328132434
+    second: vampire_lord_40
+  - first:
+      213: 4541266022555947153
+    second: vampire_lord_41
+  - first:
+      213: 5935484423544284928
+    second: vampire_lord_42
+  - first:
+      213: 7370717039740049610
+    second: vampire_lord_43
+  - first:
+      213: 5346347438456447632
+    second: vampire_lord_44
+  - first:
+      213: -3899063229881934112
+    second: vampire_lord_45
+  - first:
+      213: -1197532310050374606
+    second: vampire_lord_46
+  - first:
+      213: 4236701223376133328
+    second: vampire_lord_47
+  - first:
+      213: 4246708756607206101
+    second: vampire_lord_48
+  - first:
+      213: -7529751836648799932
+    second: vampire_lord_49
+  - first:
+      213: -804536331011030721
+    second: vampire_lord_50
+  - first:
+      213: 3372234565067771597
+    second: vampire_lord_51
+  - first:
+      213: 5918944100422102785
+    second: vampire_lord_52
+  - first:
+      213: -1306739607885966424
+    second: vampire_lord_53
+  - first:
+      213: 7616213743437979203
+    second: vampire_lord_54
+  - first:
+      213: 7182743627086696941
+    second: vampire_lord_55
+  - first:
+      213: 6443034168630593957
+    second: vampire_lord_56
+  - first:
+      213: 3065360407886581516
+    second: vampire_lord_57
+  - first:
+      213: 2664273829132026105
+    second: vampire_lord_58
+  - first:
+      213: 652610879846797118
+    second: vampire_lord_59
+  - first:
+      213: -3636523896285283152
+    second: vampire_lord_60
+  - first:
+      213: -3845192651634459618
+    second: vampire_lord_61
+  - first:
+      213: -7167240252175151286
+    second: vampire_lord_62
+  - first:
+      213: -2023749801015361493
+    second: vampire_lord_63
+  - first:
+      213: -410223912031965644
+    second: vampire_lord_64
+  - first:
+      213: -8158258038311461166
+    second: vampire_lord_65
+  - first:
+      213: -6819775771124433029
+    second: vampire_lord_66
+  - first:
+      213: 6401463960715843979
+    second: vampire_lord_67
+  - first:
+      213: -3227682973850001850
+    second: vampire_lord_68
+  - first:
+      213: -1780380124254115193
+    second: vampire_lord_69
+  - first:
+      213: -648102321990122575
+    second: vampire_lord_70
+  - first:
+      213: -7982749770800598620
+    second: vampire_lord_71
+  - first:
+      213: 3507901988749412207
+    second: vampire_lord_72
+  - first:
+      213: -8576678614774039334
+    second: vampire_lord_73
+  - first:
+      213: 4996907957717211370
+    second: vampire_lord_74
+  - first:
+      213: 4472972786731204101
+    second: vampire_lord_75
+  - first:
+      213: -6925148522483839065
+    second: vampire_lord_76
+  - first:
+      213: 5445950294895214608
+    second: vampire_lord_77
+  - first:
+      213: -4927586994710354239
+    second: vampire_lord_78
+  - first:
+      213: 6208870967169273843
+    second: vampire_lord_79
+  - first:
+      213: 1973094908002089349
+    second: vampire_lord_80
+  - first:
+      213: -1031708525869377279
+    second: vampire_lord_81
+  - first:
+      213: 7621264311416818964
+    second: vampire_lord_82
+  - first:
+      213: 3002666079238860471
+    second: vampire_lord_83
+  - first:
+      213: 2160497027721842869
+    second: vampire_lord_84
+  - first:
+      213: 2865937447104101604
+    second: vampire_lord_85
+  - first:
+      213: 7409798109001350408
+    second: vampire_lord_86
+  - first:
+      213: -3308118959147563470
+    second: vampire_lord_87
+  - first:
+      213: 7063000598044126942
+    second: vampire_lord_88
+  - first:
+      213: -7015213864355826270
+    second: vampire_lord_89
+  - first:
+      213: 7328243658430631618
+    second: vampire_lord_90
+  - first:
+      213: -1296732571425945288
+    second: vampire_lord_91
+  - first:
+      213: 1261013593729074125
+    second: vampire_lord_92
+  - first:
+      213: -8418600978986849843
+    second: vampire_lord_93
+  - first:
+      213: -5335939448907892131
+    second: vampire_lord_94
+  - first:
+      213: 940369852262930019
+    second: vampire_lord_95
+  - first:
+      213: -6459538443592396314
+    second: vampire_lord_96
+  - first:
+      213: -64836053434122188
+    second: vampire_lord_97
+  - first:
+      213: 1099703301580391880
+    second: vampire_lord_98
+  - first:
+      213: 5722434484292375440
+    second: vampire_lord_99
+  - first:
+      213: -3562855639113866787
+    second: vampire_lord_100
+  - first:
+      213: -8321424728291273858
+    second: vampire_lord_101
+  - first:
+      213: -4321632578286619332
+    second: vampire_lord_102
+  - first:
+      213: 3249310616710387426
+    second: vampire_lord_103
+  - first:
+      213: 8767670936850464678
+    second: vampire_lord_104
+  - first:
+      213: -2685601181391043785
+    second: vampire_lord_105
+  - first:
+      213: -5566223599616423750
+    second: vampire_lord_106
+  - first:
+      213: -1844149201192275853
+    second: vampire_lord_107
+  - first:
+      213: -6380514981083304987
+    second: vampire_lord_108
+  - first:
+      213: -5474244531034841088
+    second: vampire_lord_109
+  - first:
+      213: -685501478557040739
+    second: vampire_lord_110
+  - first:
+      213: 7997262914329137857
+    second: vampire_lord_111
+  - first:
+      213: -9022778704271593377
+    second: vampire_lord_112
+  - first:
+      213: -1786141899168761518
+    second: vampire_lord_113
+  - first:
+      213: -9144550621539595293
+    second: vampire_lord_114
+  - first:
+      213: 854900098157365584
+    second: vampire_lord_115
+  - first:
+      213: 6102675952636393001
+    second: vampire_lord_116
+  - first:
+      213: -4157495169448746924
+    second: vampire_lord_117
+  - first:
+      213: -2431464720688547058
+    second: vampire_lord_118
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: vampire_lord_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 118
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d11499674b540fc10800000000000000
+      internalID: 2085243268858724637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_1
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 116
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bab6905c8255805b0800000000000000
+      internalID: -5401974119438128213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_2
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 116
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27549b695f5e0ad60800000000000000
+      internalID: 7899566589366322546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_3
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 116
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d2a443a611d88120800000000000000
+      internalID: 2416411095242941137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_4
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 116
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd261c53d23bc7dc0800000000000000
+      internalID: -3639837392065436964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_5
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 117
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 164b0d109bbbcf8b0800000000000000
+      internalID: -5117008673325927327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_6
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 117
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 754f36facf55be500800000000000000
+      internalID: 426529133479326807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_7
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 117
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc9cec6d29ebdb00800000000000000
+      internalID: 854532935627087057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_8
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 118
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e25de5a52559c810800000000000000
+      internalID: 1786052347415057123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_9
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 116
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f66e4729f87aa8120800000000000000
+      internalID: 2416928385116989039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_10
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 113
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9343d346f209d8250800000000000000
+      internalID: 5948569216045888569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_11
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 116
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1462f5c9e68be1d0800000000000000
+      internalID: -3320411961649109989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_12
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 115
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c63f1fe23577ffe0800000000000000
+      internalID: -1155325917776628032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_13
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 120
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6d0f72ea03c754d0800000000000000
+      internalID: -3145831363177935505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_14
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 112
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8e385f9888052310800000000000000
+      internalID: 1379518243740860044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_15
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 116
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2d8bee5025183670800000000000000
+      internalID: 8518581923946925356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_16
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 121
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fb1697e169aaf750800000000000000
+      internalID: 6339565663439690741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_17
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 113
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53020a221a80d3800800000000000000
+      internalID: 593640214046449717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_18
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 116
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a692e8c54a50da150800000000000000
+      internalID: 5885366491528702314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_19
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 117
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c77c8f0bbf42388b0800000000000000
+      internalID: -5151232885357230212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_20
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 112
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63abb235bb3b63ba0800000000000000
+      internalID: -6109498227345868234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_21
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 116
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87cc1b0acc3ca1e30800000000000000
+      internalID: 4475104463382760568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_22
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 119
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 348627e9240b65960800000000000000
+      internalID: 7590448022152177731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_23
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 121
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac44ae75c0239a350800000000000000
+      internalID: 6028404604808086730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_24
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 112
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be5621019d281d2f0800000000000000
+      internalID: -949834177609308693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_25
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 120
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dc2bc76b7af07e90800000000000000
+      internalID: -7029843610396054314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_26
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 114
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76c5245162571e0c0800000000000000
+      internalID: -4548225342241612697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_27
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 109
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0a821bed5db3f6a0800000000000000
+      internalID: -6416576832999355891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_28
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 108
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08169c4511c615d20800000000000000
+      internalID: 3265510026513047936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_29
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 108
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4da216b5237d3310800000000000000
+      internalID: 1386390866105642318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_30
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 108
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70d13f9849aa3bc10800000000000000
+      internalID: 2068184208839482631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_31
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 108
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf1e2cf73fce1f760800000000000000
+      internalID: 7490028185858531835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_32
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 108
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08f94d8baad54c210800000000000000
+      internalID: 1352308775944757120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_33
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 110
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3cd53600f8de69d0800000000000000
+      internalID: -2779045394633073605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_34
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 109
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1480e0c3e2cd57700800000000000000
+      internalID: 537577821674801217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_35
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 109
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6edd74161fa4e9390800000000000000
+      internalID: -7809722303234187802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_36
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 104
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff307910082658800800000000000000
+      internalID: 614005226127950847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_37
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 107
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40ee5dc10e0e15f80800000000000000
+      internalID: -8119461400011215356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_38
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 112
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beed0e7aa41313c10800000000000000
+      internalID: 2031459103634677483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_39
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 105
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be2a23488ab59f480800000000000000
+      internalID: -8864953612171566357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_40
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 107
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 257bed43cb1b87550800000000000000
+      internalID: 6158867912328132434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_41
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 106
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1909ff80361d50f30800000000000000
+      internalID: 4541266022555947153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_42
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 106
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 007a83bb2a31f5250800000000000000
+      internalID: 5935484423544284928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_43
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 98
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac8df9d881c0a4660800000000000000
+      internalID: 7370717039740049610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_44
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 108
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 092240b4baa023a40800000000000000
+      internalID: 5346347438456447632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_45
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 108
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ee991a86aeb3e9c0800000000000000
+      internalID: -3899063229881934112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_46
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 98
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23cf46475b2816fe0800000000000000
+      internalID: -1197532310050374606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_47
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 107
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dc1ccec059cbca30800000000000000
+      internalID: 4236701223376133328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_48
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 112
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d20d163d175fea30800000000000000
+      internalID: 4246708756607206101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_49
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 105
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44104b15992f08790800000000000000
+      internalID: -7529751836648799932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_50
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 105
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3101353876b5d4f0800000000000000
+      internalID: -804536331011030721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_51
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 105
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dce882658759cce20800000000000000
+      internalID: 3372234565067771597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_52
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 99
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10fad07ac40542250800000000000000
+      internalID: 5918944100422102785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_53
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 99
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a3160200478ddde0800000000000000
+      internalID: -1306739607885966424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_54
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 101
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34e91171c0a32b960800000000000000
+      internalID: 7616213743437979203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_55
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 101
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de11435e54b3ea360800000000000000
+      internalID: 7182743627086696941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_56
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 101
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a94ee090714a6950800000000000000
+      internalID: 6443034168630593957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_57
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 99
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f40accc095a8a20800000000000000
+      internalID: 3065360407886581516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_58
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f0c8c18ee669f420800000000000000
+      internalID: 2664273829132026105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_59
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 100
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3fc2d5332a8e0900800000000000000
+      internalID: 652610879846797118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_60
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 100
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc32b098c8788dc0800000000000000
+      internalID: -3636523896285283152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_61
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 99
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1cb262f7a123aac0800000000000000
+      internalID: -3845192651634459618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_62
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 98
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4f083dd6f8d88c90800000000000000
+      internalID: -7167240252175151286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_63
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 105
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b20463c37423ae3e0800000000000000
+      internalID: -2023749801015361493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_64
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 99
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43ea6f486879e4af0800000000000000
+      internalID: -410223912031965644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_65
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 99
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2de5878d98b08ce80800000000000000
+      internalID: -8158258038311461166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_66
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 95
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7fff42a11a4b51a0800000000000000
+      internalID: -6819775771124433029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_67
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 98
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b89deec4e8196d850800000000000000
+      internalID: 6401463960715843979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_68
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 97
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e1810bf67f433d0800000000000000
+      internalID: -3227682973850001850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_69
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 94
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78aeaa8b5b1da47e0800000000000000
+      internalID: -1780380124254115193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_70
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 94
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b34ca73f5a7107f0800000000000000
+      internalID: -648102321990122575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_71
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 88
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a1799cb063973190800000000000000
+      internalID: -7982749770800598620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_72
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 80
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f678b4ae5429ea030800000000000000
+      internalID: 3507901988749412207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_73
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 81
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adc34b5bd3489f880800000000000000
+      internalID: -8576678614774039334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_74
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 92
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae89e031055985540800000000000000
+      internalID: 4996907957717211370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_75
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 78
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50e3a1bfc01331e30800000000000000
+      internalID: 4472972786731204101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_76
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 90
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af878c1c1ee4ef90800000000000000
+      internalID: -6925148522483839065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_77
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 77
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 010c9a770f6e39b40800000000000000
+      internalID: 5445950294895214608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_78
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 89
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c6647c5cb1bd9bb0800000000000000
+      internalID: -4927586994710354239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_79
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 86
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ff4c56af375a2650800000000000000
+      internalID: 6208870967169273843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_80
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 75
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 589b89b6d57d16b10800000000000000
+      internalID: 1973094908002089349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_81
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 80
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10950dbdf82aea1f0800000000000000
+      internalID: -1031708525869377279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_82
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 87
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41d8c55138b24c960800000000000000
+      internalID: 7621264311416818964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_83
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 90
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bea528e3ec9ba920800000000000000
+      internalID: 3002666079238860471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_84
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 81
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b0d5a39990abfd10800000000000000
+      internalID: 2160497027721842869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_85
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 77
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ec312b7cead5c720800000000000000
+      internalID: 2865937447104101604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_86
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 89
+        width: 22
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80df2601f14e4d660800000000000000
+      internalID: 7409798109001350408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_87
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 89
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 236464575533712d0800000000000000
+      internalID: -3308118959147563470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_88
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 85
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edeaace5f91d40260800000000000000
+      internalID: 7063000598044126942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_89
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a5fca79824f4ae90800000000000000
+      internalID: -7015213864355826270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_90
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 68
+        width: 31
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ce4448d7c623b560800000000000000
+      internalID: 7328243658430631618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_91
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8394a7fb894110ee0800000000000000
+      internalID: -1296732571425945288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_92
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 66
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc3092fae25008110800000000000000
+      internalID: 1261013593729074125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_93
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 81
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc9abb5630f1b2b80800000000000000
+      internalID: -8418600978986849843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_94
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 77
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5af9dc975fe2f5b0800000000000000
+      internalID: -5335939448907892131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_95
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 62
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3665e99f56ddc0d00800000000000000
+      internalID: 940369852262930019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_96
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 80
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e112b8720c1b56a0800000000000000
+      internalID: -6459538443592396314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_97
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 73
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 430cb62f3f7a91ff0800000000000000
+      internalID: -64836053434122188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_98
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 79
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c50609835ee24f00800000000000000
+      internalID: 1099703301580391880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_99
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 79
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09351be38db2a6f40800000000000000
+      internalID: 5722434484292375440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_100
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 81
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd1ee9c4ca13e8ec0800000000000000
+      internalID: -3562855639113866787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_101
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 72
+        width: 25
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e731c056c4c548c80800000000000000
+      internalID: -8321424728291273858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_102
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 75
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c357879211a7604c0800000000000000
+      internalID: -4321632578286619332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_103
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 72
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e69de15aced71d20800000000000000
+      internalID: 3249310616710387426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_104
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 72
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6affc7293460da970800000000000000
+      internalID: 8767670936850464678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_105
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 76
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73341d654f3dabad0800000000000000
+      internalID: -2685601181391043785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_106
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 37
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab88774902dc0c2b0800000000000000
+      internalID: -5566223599616423750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_107
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 66
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3703d1e72144866e0800000000000000
+      internalID: -1844149201192275853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_108
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 62
+        width: 33
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eba87c1e6bd377a0800000000000000
+      internalID: -6380514981083304987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_109
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 67
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0002b025a939704b0800000000000000
+      internalID: -5474244531034841088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_110
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 37
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9f3a95890c9c76f0800000000000000
+      internalID: -685501478557040739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_111
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 59
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c25effcf3cfbfe60800000000000000
+      internalID: 7997262914329137857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_112
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 66
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f50beecb296a8c280800000000000000
+      internalID: -9022778704271593377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_113
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 37
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 259ba95f7695637e0800000000000000
+      internalID: -1786141899168761518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_114
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 37
+        width: 14
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3eb0e8cd8a7081180800000000000000
+      internalID: -9144550621539595293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_115
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 37
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 059cd1d1c173ddb00800000000000000
+      internalID: 854900098157365584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_116
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 37
+        width: 35
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 926f530127f01b450800000000000000
+      internalID: 6102675952636393001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_117
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 37
+        width: 35
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 450ea95bb2c9d46c0800000000000000
+      internalID: -4157495169448746924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_lord_118
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 37
+        width: 35
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0bf67f08b3b14ed0800000000000000
+      internalID: -2431464720688547058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      vampire_lord_0: 2085243268858724637
+      vampire_lord_1: -5401974119438128213
+      vampire_lord_10: 5948569216045888569
+      vampire_lord_100: -3562855639113866787
+      vampire_lord_101: -8321424728291273858
+      vampire_lord_102: -4321632578286619332
+      vampire_lord_103: 3249310616710387426
+      vampire_lord_104: 8767670936850464678
+      vampire_lord_105: -2685601181391043785
+      vampire_lord_106: -5566223599616423750
+      vampire_lord_107: -1844149201192275853
+      vampire_lord_108: -6380514981083304987
+      vampire_lord_109: -5474244531034841088
+      vampire_lord_11: -3320411961649109989
+      vampire_lord_110: -685501478557040739
+      vampire_lord_111: 7997262914329137857
+      vampire_lord_112: -9022778704271593377
+      vampire_lord_113: -1786141899168761518
+      vampire_lord_114: -9144550621539595293
+      vampire_lord_115: 854900098157365584
+      vampire_lord_116: 6102675952636393001
+      vampire_lord_117: -4157495169448746924
+      vampire_lord_118: -2431464720688547058
+      vampire_lord_12: -1155325917776628032
+      vampire_lord_13: -3145831363177935505
+      vampire_lord_14: 1379518243740860044
+      vampire_lord_15: 8518581923946925356
+      vampire_lord_16: 6339565663439690741
+      vampire_lord_17: 593640214046449717
+      vampire_lord_18: 5885366491528702314
+      vampire_lord_19: -5151232885357230212
+      vampire_lord_2: 7899566589366322546
+      vampire_lord_20: -6109498227345868234
+      vampire_lord_21: 4475104463382760568
+      vampire_lord_22: 7590448022152177731
+      vampire_lord_23: 6028404604808086730
+      vampire_lord_24: -949834177609308693
+      vampire_lord_25: -7029843610396054314
+      vampire_lord_26: -4548225342241612697
+      vampire_lord_27: -6416576832999355891
+      vampire_lord_28: 3265510026513047936
+      vampire_lord_29: 1386390866105642318
+      vampire_lord_3: 2416411095242941137
+      vampire_lord_30: 2068184208839482631
+      vampire_lord_31: 7490028185858531835
+      vampire_lord_32: 1352308775944757120
+      vampire_lord_33: -2779045394633073605
+      vampire_lord_34: 537577821674801217
+      vampire_lord_35: -7809722303234187802
+      vampire_lord_36: 614005226127950847
+      vampire_lord_37: -8119461400011215356
+      vampire_lord_38: 2031459103634677483
+      vampire_lord_39: -8864953612171566357
+      vampire_lord_4: -3639837392065436964
+      vampire_lord_40: 6158867912328132434
+      vampire_lord_41: 4541266022555947153
+      vampire_lord_42: 5935484423544284928
+      vampire_lord_43: 7370717039740049610
+      vampire_lord_44: 5346347438456447632
+      vampire_lord_45: -3899063229881934112
+      vampire_lord_46: -1197532310050374606
+      vampire_lord_47: 4236701223376133328
+      vampire_lord_48: 4246708756607206101
+      vampire_lord_49: -7529751836648799932
+      vampire_lord_5: -5117008673325927327
+      vampire_lord_50: -804536331011030721
+      vampire_lord_51: 3372234565067771597
+      vampire_lord_52: 5918944100422102785
+      vampire_lord_53: -1306739607885966424
+      vampire_lord_54: 7616213743437979203
+      vampire_lord_55: 7182743627086696941
+      vampire_lord_56: 6443034168630593957
+      vampire_lord_57: 3065360407886581516
+      vampire_lord_58: 2664273829132026105
+      vampire_lord_59: 652610879846797118
+      vampire_lord_6: 426529133479326807
+      vampire_lord_60: -3636523896285283152
+      vampire_lord_61: -3845192651634459618
+      vampire_lord_62: -7167240252175151286
+      vampire_lord_63: -2023749801015361493
+      vampire_lord_64: -410223912031965644
+      vampire_lord_65: -8158258038311461166
+      vampire_lord_66: -6819775771124433029
+      vampire_lord_67: 6401463960715843979
+      vampire_lord_68: -3227682973850001850
+      vampire_lord_69: -1780380124254115193
+      vampire_lord_7: 854532935627087057
+      vampire_lord_70: -648102321990122575
+      vampire_lord_71: -7982749770800598620
+      vampire_lord_72: 3507901988749412207
+      vampire_lord_73: -8576678614774039334
+      vampire_lord_74: 4996907957717211370
+      vampire_lord_75: 4472972786731204101
+      vampire_lord_76: -6925148522483839065
+      vampire_lord_77: 5445950294895214608
+      vampire_lord_78: -4927586994710354239
+      vampire_lord_79: 6208870967169273843
+      vampire_lord_8: 1786052347415057123
+      vampire_lord_80: 1973094908002089349
+      vampire_lord_81: -1031708525869377279
+      vampire_lord_82: 7621264311416818964
+      vampire_lord_83: 3002666079238860471
+      vampire_lord_84: 2160497027721842869
+      vampire_lord_85: 2865937447104101604
+      vampire_lord_86: 7409798109001350408
+      vampire_lord_87: -3308118959147563470
+      vampire_lord_88: 7063000598044126942
+      vampire_lord_89: -7015213864355826270
+      vampire_lord_9: 2416928385116989039
+      vampire_lord_90: 7328243658430631618
+      vampire_lord_91: -1296732571425945288
+      vampire_lord_92: 1261013593729074125
+      vampire_lord_93: -8418600978986849843
+      vampire_lord_94: -5335939448907892131
+      vampire_lord_95: 940369852262930019
+      vampire_lord_96: -6459538443592396314
+      vampire_lord_97: -64836053434122188
+      vampire_lord_98: 1099703301580391880
+      vampire_lord_99: 5722434484292375440
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
