@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class pausar_juego : MonoBehaviour
 {
@@ -95,6 +96,23 @@ public class pausar_juego : MonoBehaviour
         }
 
         Debug.Log("⏸️ Juego pausado");
+    }
+
+    public void irAlMenu()
+    {
+        Time.timeScale = 1;
+        juegoPausado = false;
+        // ==========================================
+        // REANUDAR MÚSICA DEL NIVEL ACTUAL
+        // ==========================================
+        MusicaNivel musica = FindFirstObjectByType<MusicaNivel>();
+        if (musica != null)
+        {
+            musica.ReanudarMusica();
+            Debug.Log("🎵 Música reanudada");
+        }
+        // Cargar la escena del menú principal
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
     }
 
     public void AlternarPausa()

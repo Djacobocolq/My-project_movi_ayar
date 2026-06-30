@@ -1,6 +1,7 @@
-﻿using UnityEngine;
-using Spine.Unity;
+﻿using Spine.Unity;
+using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class JugadorController : MonoBehaviour
 {
@@ -323,14 +324,35 @@ public class JugadorController : MonoBehaviour
     void Morir()
     {
         muerto = true;
+        Debug.Log("💀 Jugador murió");
+
+        // Animación de muerte
         if (skeletonAnimation != null)
         {
             skeletonAnimation.AnimationName = DEATH;
             skeletonAnimation.loop = false;
         }
+
+        // Desactivar físicas
         rb.bodyType = RigidbodyType2D.Kinematic;
         GetComponent<Collider2D>().enabled = false;
-        Debug.Log("💀 Jugador murió");
+
+        // Activar Game Over después de la animación
+        Invoke("ActivarGameOver", 2f);
+    }
+
+    void ActivarGameOver()
+    {
+        GameOverManager gameOver = FindFirstObjectByType<GameOverManager>();
+        if (gameOver != null)
+        {
+            gameOver.MostrarGameOver();
+        }
+        else
+        {
+            Debug.LogError("❌ No se encontró GameOverManager");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     // ==========================================
