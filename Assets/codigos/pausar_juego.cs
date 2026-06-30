@@ -66,7 +66,7 @@ public class pausar_juego : MonoBehaviour
         // ==========================================
         // REANUDAR MÚSICA DEL NIVEL ACTUAL
         // ==========================================
-        MusicaNivel musica = FindObjectOfType<MusicaNivel>();
+        MusicaNivel musica = FindFirstObjectByType<MusicaNivel>();
         if (musica != null)
         {
             musica.ReanudarMusica();
@@ -87,7 +87,7 @@ public class pausar_juego : MonoBehaviour
         // ==========================================
         // PAUSAR MÚSICA DEL NIVEL ACTUAL
         // ==========================================
-        MusicaNivel musica = FindObjectOfType<MusicaNivel>();
+        MusicaNivel musica = FindFirstObjectByType<MusicaNivel>();
         if (musica != null)
         {
             musica.PausarMusica();
