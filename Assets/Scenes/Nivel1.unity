@@ -449,6 +449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 154541576}
   - component: {fileID: 154541575}
+  - component: {fileID: 154541577}
   m_Layer: 0
   m_Name: nivel1_1
   m_TagString: Untagged
@@ -471,7 +472,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -568,6 +569,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &154541577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154541574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c1170b9d89d2d84b8c51214cb6f9e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicaNivel
 --- !u!1 &401707690
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,7 +683,6 @@ GameObject:
   - component: {fileID: 438323181}
   - component: {fileID: 438323180}
   - component: {fileID: 438323179}
-  - component: {fileID: 438323182}
   m_Layer: 5
   m_Name: BtnRecoger
   m_TagString: Untagged
@@ -791,35 +803,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438323177}
   m_CullTransparentMesh: 1
---- !u!114 &438323182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438323177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 497696519}
-          m_TargetAssemblyTypeName: JugadorController, Assembly-CSharp
-          m_MethodName: RecogerTouch
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &497696516
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,7 +872,7 @@ MonoBehaviour:
   capaSuelo:
     serializedVersion: 2
     m_Bits: 8
-  longitudRaycast: 3
+  longitudRaycast: 0.3
   muerto: 0
 --- !u!50 &497696521
 Rigidbody2D:
@@ -55867,12 +55850,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d4f625f9429584e9e717d62503a39f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConectarBotones
-  BtnIzquierda: {fileID: 0}
-  BtnDerecha: {fileID: 0}
-  BtnSaltar: {fileID: 0}
-  BtnAtacar: {fileID: 0}
-  BtnRecoger: {fileID: 0}
-  BtnPausa: {fileID: 0}
+  btnIzquierda: {fileID: 794275475}
+  btnDerecha: {fileID: 964617755}
+  btnSaltar: {fileID: 1947544370}
+  btnAtacar: {fileID: 1895618792}
+  btnRecoger: {fileID: 438323179}
+  btnPausa: {fileID: 0}
 --- !u!1 &1850982172
 GameObject:
   m_ObjectHideFlags: 0
@@ -56021,7 +56004,6 @@ GameObject:
   - component: {fileID: 1895618794}
   - component: {fileID: 1895618793}
   - component: {fileID: 1895618792}
-  - component: {fileID: 1895618795}
   m_Layer: 5
   m_Name: BtnAtacar
   m_TagString: Untagged
@@ -56142,35 +56124,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895618790}
   m_CullTransparentMesh: 1
---- !u!114 &1895618795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1895618790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 497696519}
-          m_TargetAssemblyTypeName: JugadorController, Assembly-CSharp
-          m_MethodName: AtacarTouch
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1932273272
 GameObject:
   m_ObjectHideFlags: 0
@@ -56361,7 +56314,6 @@ GameObject:
   - component: {fileID: 1947544372}
   - component: {fileID: 1947544371}
   - component: {fileID: 1947544370}
-  - component: {fileID: 1947544373}
   m_Layer: 5
   m_Name: BtnSaltar
   m_TagString: Untagged
@@ -56482,35 +56434,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1947544368}
   m_CullTransparentMesh: 1
---- !u!114 &1947544373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1947544368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 497696519}
-          m_TargetAssemblyTypeName: JugadorController, Assembly-CSharp
-          m_MethodName: SaltarTouch
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1956868023
 GameObject:
   m_ObjectHideFlags: 0

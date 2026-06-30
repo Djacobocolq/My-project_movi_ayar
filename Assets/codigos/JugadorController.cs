@@ -2,50 +2,6 @@
 using Spine.Unity;
 using UnityEngine.InputSystem;
 
-public class OcultarCollares : MonoBehaviour
-{
-    private SkeletonAnimation skeletonAnimation;
-    private bool collaresOcultos = false;
-
-    void Start()
-    {
-        skeletonAnimation = GetComponent<SkeletonAnimation>();
-
-        if (skeletonAnimation != null)
-        {
-            // Suscribirse al evento de actualización
-            skeletonAnimation.UpdateComplete += OcultarCollaresEnUpdate;
-        }
-    }
-
-    void OcultarCollaresEnUpdate(ISkeletonAnimation animated)
-    {
-        if (!collaresOcultos && skeletonAnimation.Skeleton != null)
-        {
-            OcultarCollar("collarL");
-            OcultarCollar("collarR");
-            collaresOcultos = true;
-        }
-    }
-
-    void OcultarCollar(string nombreSlot)
-    {
-        var slot = skeletonAnimation.Skeleton.FindSlot(nombreSlot);
-        if (slot != null)
-        {
-            slot.A = 0f; // Alpha = 0 (invisible)
-            // Alternativamente: slot.Bone.ScaleX = 0; // Escala 0
-        }
-    }
-
-    void OnDestroy()
-    {
-        if (skeletonAnimation != null)
-        {
-            skeletonAnimation.UpdateComplete -= OcultarCollaresEnUpdate;
-        }
-    }
-}
 public class JugadorController : MonoBehaviour
 {
     [Header("MOVIMIENTO")]
@@ -75,13 +31,16 @@ public class JugadorController : MonoBehaviour
     private Keyboard keyboard;
 
     // ==========================================
-    // ANIMACIONES ACTUALIZADAS
+    // NUEVO: Control de botones
     // ==========================================
+    private bool botonIzquierdaPresionado = false;
+    private bool botonDerechaPresionado = false;
+
     private string IDLE = "basket_idle_side";
     private string WALK = "[down]walk_side";
     private string JUMP = "twohand_damaged_side";
     private string ATTACK = "sword_attack_stab_side";
-    private string HIT = "[emo]damaged_side"; // ← ACTUALIZADO
+    private string HIT = "[emo]damaged_side";
     private string DEATH = "dead4_side";
 
     void Start()
@@ -98,28 +57,39 @@ public class JugadorController : MonoBehaviour
             skeletonAnimation.AnimationName = IDLE;
             skeletonAnimation.loop = true;
         }
+
+        Debug.Log("✅ JugadorController: Inicializado correctamente");
     }
 
     void Update()
     {
         if (muerto) return;
 
-        // Movimiento
-        if (keyboard != null)
+        // ==========================================
+        // MOVIMIENTO CON TECLADO (SOLO si no hay botones presionados)
+        // ==========================================
+        if (keyboard != null && !botonIzquierdaPresionado && !botonDerechaPresionado)
         {
             movimientoHorizontal = 0f;
+
             if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed)
                 movimientoHorizontal = -1f;
             else if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed)
                 movimientoHorizontal = 1f;
         }
+        // Si hay botones presionados, NO sobrescribimos movimientoHorizontal
 
+        // ==========================================
+        // MOVER AL JUGADOR
+        // ==========================================
         if (!atacando && !recibiendoDanio)
         {
             Mover();
         }
 
-        // Detectar suelo
+        // ==========================================
+        // DETECTAR SUELO
+        // ==========================================
         estabaEnSuelo = enSuelo;
         float raycastLength = longitudRaycast + 0.2f;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raycastLength, capaSuelo);
@@ -246,7 +216,7 @@ public class JugadorController : MonoBehaviour
             {
                 Vector2 direccionEmpuje = new Vector2(direccionX, 0.5f).normalized;
                 enemigo.Empujar(direccionEmpuje, fuerzaEmpuje);
-                Debug.Log("¡Enemigo empujado!");
+                Debug.Log("👊 ¡Enemigo empujado!");
             }
         }
 
@@ -291,11 +261,8 @@ public class JugadorController : MonoBehaviour
 
         recibiendoDanio = true;
         vida -= cantDanio;
-        Debug.Log("Jugador recibe daño. Vida: " + vida);
+        Debug.Log("💥 Jugador recibe daño. Vida: " + vida);
 
-        // ==========================================
-        // ANIMACIÓN DE DAÑO ACTUALIZADA
-        // ==========================================
         if (skeletonAnimation != null)
         {
             skeletonAnimation.AnimationName = HIT;
@@ -352,28 +319,35 @@ public class JugadorController : MonoBehaviour
         }
         rb.bodyType = RigidbodyType2D.Kinematic;
         GetComponent<Collider2D>().enabled = false;
+        Debug.Log("💀 Jugador murió");
     }
 
     // ==========================================
-    // MÉTODOS TÁCTILES
+    // MÉTODOS TÁCTILES (CON CONTROL DE ESTADO)
     // ==========================================
 
     public void MoverIzquierda()
     {
+        botonIzquierdaPresionado = true;
+        botonDerechaPresionado = false;
         movimientoHorizontal = -1f;
-        Debug.Log("MoverIzquierda llamado");
+        Debug.Log("⬅️ MoverIzquierda - movimientoHorizontal: " + movimientoHorizontal);
     }
 
     public void MoverDerecha()
     {
+        botonDerechaPresionado = true;
+        botonIzquierdaPresionado = false;
         movimientoHorizontal = 1f;
-        Debug.Log("MoverDerecha llamado");
+        Debug.Log("➡️ MoverDerecha - movimientoHorizontal: " + movimientoHorizontal);
     }
 
     public void DetenerMovimiento()
     {
+        botonIzquierdaPresionado = false;
+        botonDerechaPresionado = false;
         movimientoHorizontal = 0f;
-        Debug.Log("DetenerMovimiento llamado");
+        Debug.Log("⏹️ DetenerMovimiento - movimientoHorizontal: " + movimientoHorizontal);
     }
 
     public void SaltarTouch()
@@ -386,6 +360,7 @@ public class JugadorController : MonoBehaviour
                 skeletonAnimation.AnimationName = JUMP;
                 skeletonAnimation.loop = false;
             }
+            Debug.Log("🔼 SaltarTouch ejecutado");
         }
     }
 
@@ -394,6 +369,7 @@ public class JugadorController : MonoBehaviour
         if (!atacando && enSuelo && !recibiendoDanio && !muerto)
         {
             Atacar();
+            Debug.Log("⚔️ AtacarTouch ejecutado");
         }
     }
 
@@ -402,7 +378,7 @@ public class JugadorController : MonoBehaviour
         if (!atacando && !recibiendoDanio && !muerto)
         {
             RecogerFlor();
-            Debug.Log("RecogerTouch ejecutado");
+            Debug.Log("🌸 RecogerTouch ejecutado");
         }
     }
 
@@ -417,12 +393,8 @@ public class JugadorController : MonoBehaviour
                 if (distancia <= flor.distanciaInteraccion)
                 {
                     flor.RecogerTouch();
-                    Debug.Log("¡Flor recolectada!");
+                    Debug.Log("🌺 ¡Flor recolectada!");
                     break;
-                }
-                else
-                {
-                    Debug.Log("Flor demasiado lejos. Distancia: " + distancia + " / " + flor.distanciaInteraccion);
                 }
             }
         }

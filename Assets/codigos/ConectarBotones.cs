@@ -16,7 +16,6 @@ public class ConectarBotones : MonoBehaviour
 
     void Start()
     {
-        // Buscar al jugador
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
@@ -24,16 +23,8 @@ public class ConectarBotones : MonoBehaviour
             if (jugador != null)
             {
                 ConectarBotonesAlJugador();
-                Debug.Log("Botones conectados correctamente");
+                Debug.Log("✅ Botones conectados correctamente");
             }
-            else
-            {
-                Debug.LogError("No se encontró JugadorController en el jugador");
-            }
-        }
-        else
-        {
-            Debug.LogError("No se encontró al jugador con Tag 'Player'");
         }
     }
 
@@ -46,37 +37,53 @@ public class ConectarBotones : MonoBehaviour
         // ==========================================
         if (btnIzquierda != null)
         {
-            // Agregar Event Trigger si no existe
-            EventTrigger trigger = btnIzquierda.GetComponent<EventTrigger>();
-            if (trigger == null)
-                trigger = btnIzquierda.gameObject.AddComponent<EventTrigger>();
+            // ELIMINAR Event Trigger si existe (para evitar conflictos)
+            EventTrigger triggerViejo = btnIzquierda.GetComponent<EventTrigger>();
+            if (triggerViejo != null)
+                DestroyImmediate(triggerViejo);
 
-            trigger.triggers.Clear();
+            // Crear NUEVO Event Trigger
+            EventTrigger trigger = btnIzquierda.gameObject.AddComponent<EventTrigger>();
 
-            // Pointer Down
+            // ==========================================
+            // Pointer Down - EMPIEZA a mover
+            // ==========================================
             EventTrigger.Entry entryDown = new EventTrigger.Entry();
             entryDown.eventID = EventTriggerType.PointerDown;
             entryDown.callback.AddListener((data) => {
-                jugador.MoverIzquierda();
-                Debug.Log("BtnIzquierda: Pointer Down");
+                if (jugador != null)
+                {
+                    jugador.MoverIzquierda();
+                    Debug.Log("⬅️ BtnIzquierda: Pointer Down - MoverIzquierda");
+                }
             });
             trigger.triggers.Add(entryDown);
 
-            // Pointer Up
+            // ==========================================
+            // Pointer Up - DEJA de mover (SOLO cuando sueltas)
+            // ==========================================
             EventTrigger.Entry entryUp = new EventTrigger.Entry();
             entryUp.eventID = EventTriggerType.PointerUp;
             entryUp.callback.AddListener((data) => {
-                jugador.DetenerMovimiento();
-                Debug.Log("BtnIzquierda: Pointer Up");
+                if (jugador != null)
+                {
+                    jugador.DetenerMovimiento();
+                    Debug.Log("⬅️ BtnIzquierda: Pointer Up - DetenerMovimiento");
+                }
             });
             trigger.triggers.Add(entryUp);
 
-            // Pointer Exit
+            // ==========================================
+            // Pointer Exit - DEJA de mover (si el dedo sale del botón)
+            // ==========================================
             EventTrigger.Entry entryExit = new EventTrigger.Entry();
             entryExit.eventID = EventTriggerType.PointerExit;
             entryExit.callback.AddListener((data) => {
-                jugador.DetenerMovimiento();
-                Debug.Log("BtnIzquierda: Pointer Exit");
+                if (jugador != null)
+                {
+                    jugador.DetenerMovimiento();
+                    Debug.Log("⬅️ BtnIzquierda: Pointer Exit - DetenerMovimiento");
+                }
             });
             trigger.triggers.Add(entryExit);
         }
@@ -86,18 +93,23 @@ public class ConectarBotones : MonoBehaviour
         // ==========================================
         if (btnDerecha != null)
         {
-            EventTrigger trigger = btnDerecha.GetComponent<EventTrigger>();
-            if (trigger == null)
-                trigger = btnDerecha.gameObject.AddComponent<EventTrigger>();
+            // ELIMINAR Event Trigger viejo
+            EventTrigger triggerViejo = btnDerecha.GetComponent<EventTrigger>();
+            if (triggerViejo != null)
+                DestroyImmediate(triggerViejo);
 
-            trigger.triggers.Clear();
+            // Crear NUEVO Event Trigger
+            EventTrigger trigger = btnDerecha.gameObject.AddComponent<EventTrigger>();
 
             // Pointer Down
             EventTrigger.Entry entryDown = new EventTrigger.Entry();
             entryDown.eventID = EventTriggerType.PointerDown;
             entryDown.callback.AddListener((data) => {
-                jugador.MoverDerecha();
-                Debug.Log("BtnDerecha: Pointer Down");
+                if (jugador != null)
+                {
+                    jugador.MoverDerecha();
+                    Debug.Log("➡️ BtnDerecha: Pointer Down - MoverDerecha");
+                }
             });
             trigger.triggers.Add(entryDown);
 
@@ -105,8 +117,11 @@ public class ConectarBotones : MonoBehaviour
             EventTrigger.Entry entryUp = new EventTrigger.Entry();
             entryUp.eventID = EventTriggerType.PointerUp;
             entryUp.callback.AddListener((data) => {
-                jugador.DetenerMovimiento();
-                Debug.Log("BtnDerecha: Pointer Up");
+                if (jugador != null)
+                {
+                    jugador.DetenerMovimiento();
+                    Debug.Log("➡️ BtnDerecha: Pointer Up - DetenerMovimiento");
+                }
             });
             trigger.triggers.Add(entryUp);
 
@@ -114,8 +129,11 @@ public class ConectarBotones : MonoBehaviour
             EventTrigger.Entry entryExit = new EventTrigger.Entry();
             entryExit.eventID = EventTriggerType.PointerExit;
             entryExit.callback.AddListener((data) => {
-                jugador.DetenerMovimiento();
-                Debug.Log("BtnDerecha: Pointer Exit");
+                if (jugador != null)
+                {
+                    jugador.DetenerMovimiento();
+                    Debug.Log("➡️ BtnDerecha: Pointer Exit - DetenerMovimiento");
+                }
             });
             trigger.triggers.Add(entryExit);
         }
@@ -127,8 +145,11 @@ public class ConectarBotones : MonoBehaviour
         {
             btnSaltar.onClick.RemoveAllListeners();
             btnSaltar.onClick.AddListener(() => {
-                jugador.SaltarTouch();
-                Debug.Log("BtnSaltar: Click");
+                if (jugador != null)
+                {
+                    jugador.SaltarTouch();
+                    Debug.Log("🔼 BtnSaltar: Click");
+                }
             });
         }
 
@@ -139,8 +160,11 @@ public class ConectarBotones : MonoBehaviour
         {
             btnAtacar.onClick.RemoveAllListeners();
             btnAtacar.onClick.AddListener(() => {
-                jugador.AtacarTouch();
-                Debug.Log("BtnAtacar: Click");
+                if (jugador != null)
+                {
+                    jugador.AtacarTouch();
+                    Debug.Log("⚔️ BtnAtacar: Click");
+                }
             });
         }
 
@@ -151,11 +175,14 @@ public class ConectarBotones : MonoBehaviour
         {
             btnRecoger.onClick.RemoveAllListeners();
             btnRecoger.onClick.AddListener(() => {
-                jugador.RecogerTouch();
-                Debug.Log("BtnRecoger: Click");
+                if (jugador != null)
+                {
+                    jugador.RecogerTouch();
+                    Debug.Log("🌸 BtnRecoger: Click");
+                }
             });
         }
 
-        Debug.Log("✅ Todos los botones conectados");
+        Debug.Log("✅ Todos los botones conectados correctamente");
     }
 }

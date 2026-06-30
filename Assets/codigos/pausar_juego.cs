@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-
-public class Pausar_juego : MonoBehaviour
+public class pausar_juego : MonoBehaviour
 {
     public GameObject menuPausa;
     public bool juegoPausado = false;
 
     private Keyboard keyboard;
-    private static Pausar_juego instancia;
+    private static pausar_juego instancia;
 
     void Awake()
     {
@@ -43,14 +42,12 @@ public class Pausar_juego : MonoBehaviour
 
     public void BuscarMenuPausa()
     {
-        // Buscar el menú de pausa en la escena actual
         GameObject menu = GameObject.Find("MenuPause");
-
         if (menu != null)
         {
             menuPausa = menu;
             menuPausa.SetActive(false);
-            Debug.Log("Menú de pausa encontrado: " + menu.name);
+            Debug.Log("Menú de pausa encontrado");
         }
         else
         {
@@ -65,7 +62,18 @@ public class Pausar_juego : MonoBehaviour
 
         Time.timeScale = 1;
         juegoPausado = false;
-        Debug.Log("Juego reanudado");
+
+        // ==========================================
+        // REANUDAR MÚSICA DEL NIVEL ACTUAL
+        // ==========================================
+        MusicaNivel musica = FindObjectOfType<MusicaNivel>();
+        if (musica != null)
+        {
+            musica.ReanudarMusica();
+            Debug.Log("🎵 Música reanudada");
+        }
+
+        Debug.Log("🎮 Juego reanudado");
     }
 
     public void Pausar()
@@ -75,7 +83,18 @@ public class Pausar_juego : MonoBehaviour
 
         Time.timeScale = 0;
         juegoPausado = true;
-        Debug.Log("Juego pausado");
+
+        // ==========================================
+        // PAUSAR MÚSICA DEL NIVEL ACTUAL
+        // ==========================================
+        MusicaNivel musica = FindObjectOfType<MusicaNivel>();
+        if (musica != null)
+        {
+            musica.PausarMusica();
+            Debug.Log("🎵 Música pausada");
+        }
+
+        Debug.Log("⏸️ Juego pausado");
     }
 
     public void AlternarPausa()
