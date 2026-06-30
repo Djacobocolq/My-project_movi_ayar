@@ -2,11 +2,52 @@
 using Spine.Unity;
 using UnityEngine.InputSystem;
 
+public class OcultarCollares : MonoBehaviour
+{
+    private SkeletonAnimation skeletonAnimation;
+    private bool collaresOcultos = false;
+
+    void Start()
+    {
+        skeletonAnimation = GetComponent<SkeletonAnimation>();
+
+        if (skeletonAnimation != null)
+        {
+            // Suscribirse al evento de actualización
+            skeletonAnimation.UpdateComplete += OcultarCollaresEnUpdate;
+        }
+    }
+
+    void OcultarCollaresEnUpdate(ISkeletonAnimation animated)
+    {
+        if (!collaresOcultos && skeletonAnimation.Skeleton != null)
+        {
+            OcultarCollar("collarL");
+            OcultarCollar("collarR");
+            collaresOcultos = true;
+        }
+    }
+
+    void OcultarCollar(string nombreSlot)
+    {
+        var slot = skeletonAnimation.Skeleton.FindSlot(nombreSlot);
+        if (slot != null)
+        {
+            slot.A = 0f; // Alpha = 0 (invisible)
+            // Alternativamente: slot.Bone.ScaleX = 0; // Escala 0
+        }
+    }
+
+    void OnDestroy()
+    {
+        if (skeletonAnimation != null)
+        {
+            skeletonAnimation.UpdateComplete -= OcultarCollaresEnUpdate;
+        }
+    }
+}
 public class JugadorController : MonoBehaviour
 {
-    // ============================================
-    // CONFIGURACIÓN
-    // ============================================
     [Header("MOVIMIENTO")]
     public float velocidad = 5f;
     public float fuerzaSalto = 10f;
@@ -20,11 +61,8 @@ public class JugadorController : MonoBehaviour
 
     [Header("SUELO")]
     public LayerMask capaSuelo;
-    public float longitudRaycast = 0.5f; // ← AUMENTADO
+    public float longitudRaycast = 0.5f;
 
-    // ============================================
-    // REFERENCIAS
-    // ============================================
     private SkeletonAnimation skeletonAnimation;
     private Rigidbody2D rb;
     private float movimientoHorizontal = 0f;
@@ -36,14 +74,14 @@ public class JugadorController : MonoBehaviour
 
     private Keyboard keyboard;
 
-    // ============================================
-    // NOMBRES DE ANIMACIONES
-    // ============================================
+    // ==========================================
+    // ANIMACIONES ACTUALIZADAS
+    // ==========================================
     private string IDLE = "basket_idle_side";
     private string WALK = "[down]walk_side";
     private string JUMP = "twohand_damaged_side";
     private string ATTACK = "sword_attack_stab_side";
-    private string HIT = "twohand_damaged_side";
+    private string HIT = "[emo]damaged_side"; // ← ACTUALIZADO
     private string DEATH = "dead4_side";
 
     void Start()
@@ -66,61 +104,36 @@ public class JugadorController : MonoBehaviour
     {
         if (muerto) return;
 
-        // ==========================================
-        // MOVIMIENTO CON TECLADO
-        // ==========================================
+        // Movimiento
         if (keyboard != null)
         {
             movimientoHorizontal = 0f;
-
             if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed)
                 movimientoHorizontal = -1f;
             else if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed)
                 movimientoHorizontal = 1f;
         }
 
-        // ==========================================
-        // MOVER AL JUGADOR
-        // ==========================================
         if (!atacando && !recibiendoDanio)
         {
             Mover();
         }
 
-        // ==========================================
-        // DETECTAR SUELO (VERSIÓN MEJORADA)
-        // ==========================================
+        // Detectar suelo
         estabaEnSuelo = enSuelo;
-
-        // Raycast principal desde el centro
         float raycastLength = longitudRaycast + 0.2f;
-        RaycastHit2D hit = Physics2D.Raycast(
-            transform.position,
-            Vector2.down,
-            raycastLength,
-            capaSuelo
-        );
-
-        // Debug visual
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raycastLength, capaSuelo);
         Debug.DrawRay(transform.position, Vector2.down * raycastLength, Color.green);
-
         enSuelo = hit.collider != null;
 
-        // Si no detecta suelo, intentar desde los pies
         if (!enSuelo)
         {
             Vector2 feetPosition = new Vector2(transform.position.x, transform.position.y - 0.3f);
-            RaycastHit2D hitFeet = Physics2D.Raycast(
-                feetPosition,
-                Vector2.down,
-                0.3f,
-                capaSuelo
-            );
+            RaycastHit2D hitFeet = Physics2D.Raycast(feetPosition, Vector2.down, 0.3f, capaSuelo);
             enSuelo = hitFeet.collider != null;
             Debug.DrawRay(feetPosition, Vector2.down * 0.3f, Color.yellow);
         }
 
-        // Si toca el suelo, forzar actualización de animación
         if (enSuelo && !estabaEnSuelo)
         {
             if (skeletonAnimation != null && !atacando && !recibiendoDanio)
@@ -138,9 +151,7 @@ public class JugadorController : MonoBehaviour
             }
         }
 
-        // ==========================================
-        // SALTO (Espacio)
-        // ==========================================
+        // Salto
         if (enSuelo && keyboard != null && keyboard.spaceKey.wasPressedThisFrame && !recibiendoDanio && !atacando)
         {
             rb.AddForce(new Vector2(0f, fuerzaSalto), ForceMode2D.Impulse);
@@ -151,25 +162,18 @@ public class JugadorController : MonoBehaviour
             }
         }
 
-        // ==========================================
-        // ATAQUE (E)
-        // ==========================================
+        // Ataque
         if (keyboard != null && keyboard.eKey.wasPressedThisFrame && enSuelo && !atacando && !recibiendoDanio)
         {
             Atacar();
         }
 
-        // ==========================================
-        // RECOGER FLOR (R)
-        // ==========================================
+        // Recoger flor
         if (keyboard != null && keyboard.rKey.wasPressedThisFrame && !atacando && !recibiendoDanio)
         {
             RecogerFlor();
         }
 
-        // ==========================================
-        // ACTUALIZAR ANIMACIONES
-        // ==========================================
         ActualizarAnimaciones();
     }
 
@@ -217,11 +221,10 @@ public class JugadorController : MonoBehaviour
         }
     }
 
-    // ==========================================
-    // ATAQUE (SOLO EMPUJE)
-    // ==========================================
     void Atacar()
     {
+        if (atacando) return;
+
         atacando = true;
         if (skeletonAnimation != null)
         {
@@ -282,9 +285,6 @@ public class JugadorController : MonoBehaviour
         }
     }
 
-    // ==========================================
-    // RECIBIR DAÑO
-    // ==========================================
     public void RecibeDanio(Vector2 direccion, int cantDanio)
     {
         if (recibiendoDanio || muerto) return;
@@ -293,6 +293,9 @@ public class JugadorController : MonoBehaviour
         vida -= cantDanio;
         Debug.Log("Jugador recibe daño. Vida: " + vida);
 
+        // ==========================================
+        // ANIMACIÓN DE DAÑO ACTUALIZADA
+        // ==========================================
         if (skeletonAnimation != null)
         {
             skeletonAnimation.AnimationName = HIT;
@@ -339,9 +342,6 @@ public class JugadorController : MonoBehaviour
         }
     }
 
-    // ==========================================
-    // MUERTE
-    // ==========================================
     void Morir()
     {
         muerto = true;
@@ -399,12 +399,10 @@ public class JugadorController : MonoBehaviour
         if (!atacando && !recibiendoDanio && !muerto)
         {
             RecogerFlor();
+            Debug.Log("RecogerTouch ejecutado");
         }
     }
 
-    // ==========================================
-    // RECOGER FLOR
-    // ==========================================
     void RecogerFlor()
     {
         FlorRecolectable[] flores = FindObjectsByType<FlorRecolectable>(FindObjectsSortMode.None);
@@ -419,21 +417,19 @@ public class JugadorController : MonoBehaviour
                     Debug.Log("¡Flor recolectada!");
                     break;
                 }
+                else
+                {
+                    Debug.Log("Flor demasiado lejos. Distancia: " + distancia + " / " + flor.distanciaInteraccion);
+                }
             }
         }
     }
 
     void OnDrawGizmos()
     {
-        // Visualizar el raycast del suelo
         Gizmos.color = Color.green;
         Gizmos.DrawLine(transform.position, transform.position + Vector3.down * (longitudRaycast + 0.2f));
 
-        Gizmos.color = Color.yellow;
-        Vector3 feetPos = transform.position + Vector3.down * 0.3f;
-        Gizmos.DrawLine(feetPos, feetPos + Vector3.down * 0.3f);
-
-        // Visualizar el raycast de ataque
         Gizmos.color = Color.blue;
         float direccionX = transform.localScale.x > 0 ? 1 : -1;
         Vector3 finRaycast = transform.position + new Vector3(direccionX * distanciaAtaque, 0, 0);

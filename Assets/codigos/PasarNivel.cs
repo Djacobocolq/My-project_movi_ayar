@@ -5,12 +5,11 @@ public class PasarNivel : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Algo tocó la puerta: " + collision.gameObject.name);
+
         if (collision.CompareTag("Player"))
         {
             Debug.Log("¡Jugador tocó la puerta! Cargando siguiente nivel...");
-
-            // NO destruir al jugador (se mantiene con DontDestroyOnLoad)
-            // Solo cambiar de nivel
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
