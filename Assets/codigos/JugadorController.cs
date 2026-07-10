@@ -1,5 +1,5 @@
-﻿using Spine.Unity;
-using UnityEngine;
+﻿using UnityEngine;
+using Spine.Unity;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -12,21 +12,25 @@ public class JugadorController : MonoBehaviour
     public float velocidad = 5f;
     public float fuerzaSalto = 10f;
     public int vida = 3;
-    public float fuerzaEmpuje = 15f;
 
-    [Header("ATAQUE")]
-    public GameObject espadaTrigger;
-    public float distanciaAtaque = 1.8f;
-    public LayerMask capaEnemigo;
+    [Header("EMPUJE")]
+    public float fuerzaEmpujeInicial = 10f;
+    public float distanciaEmpujeInicial = 2f;
+    public float fuerzaEmpujeBaston = 30f;
+    public float distanciaEmpujeBaston = 5f;
 
     [Header("SUELO")]
     public LayerMask capaSuelo;
     public float longitudRaycast = 0.5f;
 
+    [Header("ARMA")]
+    public GameObject baston;
+    public ArmaController arma;
+
     // ============================================
     // REFERENCIAS PRIVADAS
     // ============================================
-    public SkeletonAnimation skeletonAnimation; // ← AHORA PÚBLICA
+    public SkeletonAnimation skeletonAnimation;
     private Rigidbody2D rb;
     private float movimientoHorizontal = 0f;
     private bool enSuelo;
@@ -34,6 +38,27 @@ public class JugadorController : MonoBehaviour
     private bool atacando;
     private bool recibiendoDanio;
     public bool muerto;
+
+    // ============================================
+    // ESTADO DEL BASTÓN
+    // ============================================
+    private bool bastonActivo = false;
+    private bool transicionEnCurso = false;
+    private float tiempoTransicion = 0f;
+    private float duracionTransicion = 3f;
+
+    // ============================================
+    // VALORES ACTUALES DE EMPUJE
+    // ============================================
+    private float fuerzaEmpujeActual;
+    private float distanciaEmpujeActual;
+    private LayerMask capaEnemigo;
+
+    // ============================================
+    // CONTROL DE ANIMACIONES POR POSICIÓN
+    // ============================================
+    private Vector3 posicionAnterior;
+    private bool estabaEnMovimiento = false;
 
     private Keyboard keyboard;
     private bool botonIzquierdaPresionado = false;
@@ -50,6 +75,14 @@ public class JugadorController : MonoBehaviour
     private string DEATH = "dead4_side";
 
     // ============================================
+    // NOMBRES DE ANIMACIONES CON BASTÓN
+    // ============================================
+    private string STAFF_IDLE = "staff_idle_side";
+    private string STAFF_WALK = "staff_walk_side";
+    private string STAFF_ATTACK = "twohand_attack_side";
+    private string STAFF_CAST = "staff_cast_side";
+
+    // ============================================
     // INICIALIZACIÓN
     // ============================================
     void Start()
@@ -57,22 +90,49 @@ public class JugadorController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         skeletonAnimation = GetComponentInChildren<SkeletonAnimation>();
         keyboard = Keyboard.current;
+        posicionAnterior = transform.position;
 
-        if (espadaTrigger != null)
-            espadaTrigger.SetActive(false);
+        // ==========================================
+        // INICIALIZAR BASTÓN
+        // ==========================================
+        if (baston != null)
+        {
+            baston.SetActive(false);
+            arma = baston.GetComponent<ArmaController>();
+            if (arma != null);
+        }
 
+        // ==========================================
+        // VALORES INICIALES DE EMPUJE
+        // ==========================================
+        fuerzaEmpujeActual = fuerzaEmpujeInicial;
+        distanciaEmpujeActual = distanciaEmpujeInicial;
+        capaEnemigo = LayerMask.GetMask("Enemy");
         if (skeletonAnimation != null)
         {
             skeletonAnimation.AnimationName = IDLE;
             skeletonAnimation.loop = true;
         }
 
-        Debug.Log("✅ JugadorController: Inicializado correctamente");
+        Debug.Log("✅ JugadorController: Inicializado (empuje inicial: " + fuerzaEmpujeActual + ")");
     }
 
     void Update()
     {
         if (muerto) return;
+
+        // ==========================================
+        // TRANSICIÓN DEL BASTÓN
+        // ==========================================
+        if (transicionEnCurso)
+        {
+            tiempoTransicion += Time.unscaledDeltaTime;
+            if (tiempoTransicion >= duracionTransicion)
+            {
+                FinalizarTransicion();
+            }
+            return;
+        }
 
         // Movimiento con teclado
         if (keyboard != null && !botonIzquierdaPresionado && !botonDerechaPresionado)
@@ -110,12 +170,12 @@ public class JugadorController : MonoBehaviour
             {
                 if (Mathf.Abs(movimientoHorizontal) > 0.1f)
                 {
-                    skeletonAnimation.AnimationName = WALK;
+                    skeletonAnimation.AnimationName = bastonActivo ? STAFF_WALK : WALK;
                     skeletonAnimation.loop = true;
                 }
                 else
                 {
-                    skeletonAnimation.AnimationName = IDLE;
+                    skeletonAnimation.AnimationName = bastonActivo ? STAFF_IDLE : IDLE;
                     skeletonAnimation.loop = true;
                 }
             }
@@ -132,7 +192,9 @@ public class JugadorController : MonoBehaviour
             }
         }
 
-        // Ataque
+        // ==========================================
+        // ATAQUE = EMPUJE (E o botón)
+        // ==========================================
         if (keyboard != null && keyboard.eKey.wasPressedThisFrame && enSuelo && !atacando && !recibiendoDanio)
         {
             Atacar();
@@ -158,25 +220,36 @@ public class JugadorController : MonoBehaviour
         }
     }
 
+    // ============================================
+    // ACTUALIZAR ANIMACIONES (Basado en posición)
+    // ============================================
     void ActualizarAnimaciones()
     {
-        if (skeletonAnimation == null || atacando || recibiendoDanio || muerto) return;
+        if (skeletonAnimation == null || atacando || recibiendoDanio || muerto || transicionEnCurso) return;
+
+        Vector3 posicionActual = transform.position;
+        float distanciaRecorrida = Vector3.Distance(posicionAnterior, posicionActual);
+        bool enMovimiento = distanciaRecorrida > 0.01f;
+
+        posicionAnterior = posicionActual;
 
         if (enSuelo)
         {
-            if (Mathf.Abs(movimientoHorizontal) > 0.1f)
+            if (enMovimiento)
             {
-                if (skeletonAnimation.AnimationName != WALK)
+                string anim = bastonActivo ? STAFF_WALK : WALK;
+                if (skeletonAnimation.AnimationName != anim)
                 {
-                    skeletonAnimation.AnimationName = WALK;
+                    skeletonAnimation.AnimationName = anim;
                     skeletonAnimation.loop = true;
                 }
             }
             else
             {
-                if (skeletonAnimation.AnimationName != IDLE)
+                string anim = bastonActivo ? STAFF_IDLE : IDLE;
+                if (skeletonAnimation.AnimationName != anim)
                 {
-                    skeletonAnimation.AnimationName = IDLE;
+                    skeletonAnimation.AnimationName = anim;
                     skeletonAnimation.loop = true;
                 }
             }
@@ -189,76 +262,134 @@ public class JugadorController : MonoBehaviour
                 skeletonAnimation.loop = false;
             }
         }
+
+        estabaEnMovimiento = enMovimiento;
     }
 
-    // ==========================================
-    // ATAQUE CON EMPUJE
-    // ==========================================
+    // ============================================
+    // TRANSICIÓN DEL BASTÓN
+    // ============================================
+    public void IniciarTransicionBaston(float duracion, GameObject objetoBaston)
+    {
+        if (transicionEnCurso) return;
+
+        baston = objetoBaston;
+        duracionTransicion = duracion;
+        transicionEnCurso = true;
+        tiempoTransicion = 0f;
+
+        if (skeletonAnimation != null)
+        {
+            skeletonAnimation.AnimationName = STAFF_CAST;
+            skeletonAnimation.loop = false;
+        }
+
+        Debug.Log("🔄 Transición iniciada: " + duracion + " segundos");
+    }
+
+    void FinalizarTransicion()
+    {
+        transicionEnCurso = false;
+        bastonActivo = true;
+
+        if (baston != null)
+        {
+            baston.SetActive(true);
+            if (arma != null)
+            {
+                arma.Activar();
+                // Asignar la referencia al SkeletonAnimation
+                arma.skeletonAnimation = skeletonAnimation;
+            }
+        }
+
+        // ACTUALIZAR VALORES DE EMPUJE
+        fuerzaEmpujeActual = fuerzaEmpujeBaston;
+        distanciaEmpujeActual = distanciaEmpujeBaston;
+
+        if (skeletonAnimation != null)
+        {
+            skeletonAnimation.AnimationName = STAFF_IDLE;
+            skeletonAnimation.loop = true;
+        }
+
+        Debug.Log("✅ Bastón activado! Siguiendo hueso: [base]elbowL");
+    }
+
+    // ============================================
+    // ATAQUE = EMPUJE
+    // ============================================
     void Atacar()
     {
         if (atacando) return;
 
         atacando = true;
+
+        // ==========================================
+        // ANIMACIÓN DE ATAQUE
+        // ==========================================
         if (skeletonAnimation != null)
         {
-            skeletonAnimation.AnimationName = ATTACK;
+            skeletonAnimation.AnimationName = bastonActivo ? STAFF_ATTACK : ATTACK;
             skeletonAnimation.loop = false;
         }
 
-        // Detectar enemigos
-        float direccionX = transform.localScale.x > 0 ? 1 : -1;
-        Vector2 origen = transform.position;
-        Vector2 direccion = new Vector2(direccionX, 0);
-
-        RaycastHit2D hit = Physics2D.Raycast(origen, direccion, distanciaAtaque, capaEnemigo);
-        Debug.DrawRay(origen, direccion * distanciaAtaque, Color.blue, 1f);
-
-        if (hit.collider != null)
+        // ==========================================
+        // ACTIVAR ARMA (BASTÓN)
+        // ==========================================
+        if (bastonActivo && arma != null)
         {
-            EnemigoBase enemigo = hit.collider.GetComponent<EnemigoBase>();
-            if (enemigo != null)
-            {
-                Vector2 direccionEmpuje = new Vector2(direccionX, 0.3f).normalized;
-                enemigo.Empujar(direccionEmpuje, fuerzaEmpuje);
-                Debug.Log("👊 ¡Enemigo empujado!");
-            }
+            arma.ActivarAtaque();
         }
 
-        if (espadaTrigger != null)
-            espadaTrigger.SetActive(true);
+        // ==========================================
+        // EMPUJAR ENEMIGOS
+        // ==========================================
+        EmpujarEnemigos();
 
-        Invoke("DesactivarAtaque", 0.5f);
+        Invoke("DesactivarAtaque", 0.6f);
+    }
+
+    // ============================================
+    // EMPUJAR ENEMIGOS
+    // ============================================
+    void EmpujarEnemigos()
+    {
+        // Detectar enemigos en el área
+        Collider2D[] enemigos = Physics2D.OverlapCircleAll(transform.position, distanciaEmpujeActual, capaEnemigo);
+
+        Debug.Log("🔍 Enemigos detectados: " + enemigos.Length + " | Fuerza: " + fuerzaEmpujeActual);
+
+        foreach (Collider2D col in enemigos)
+        {
+            EnemigoBase enemigo = col.GetComponent<EnemigoBase>();
+            if (enemigo != null)
+            {
+                // Dirección desde el jugador hacia el enemigo
+                Vector2 direccion = (col.transform.position - transform.position).normalized;
+                Vector2 direccionEmpuje = new Vector2(direccion.x, 0.3f).normalized;
+
+                enemigo.Empujar(direccionEmpuje, fuerzaEmpujeActual);
+                Debug.Log("👊 Enemigo empujado! Fuerza: " + fuerzaEmpujeActual);
+            }
+        }
     }
 
     void DesactivarAtaque()
     {
         atacando = false;
-        if (espadaTrigger != null)
-            espadaTrigger.SetActive(false);
 
         if (skeletonAnimation != null && !muerto)
         {
-            if (enSuelo)
-            {
-                if (Mathf.Abs(movimientoHorizontal) > 0.1f)
-                {
-                    skeletonAnimation.AnimationName = WALK;
-                    skeletonAnimation.loop = true;
-                }
-                else
-                {
-                    skeletonAnimation.AnimationName = IDLE;
-                    skeletonAnimation.loop = true;
-                }
-            }
-            else
-            {
-                skeletonAnimation.AnimationName = JUMP;
-                skeletonAnimation.loop = false;
-            }
+            string anim = bastonActivo ? STAFF_IDLE : IDLE;
+            skeletonAnimation.AnimationName = anim;
+            skeletonAnimation.loop = true;
         }
     }
 
+    // ============================================
+    // RECIBIR DAÑO
+    // ============================================
     public void RecibeDanio(Vector2 direccion, int cantDanio)
     {
         if (recibiendoDanio || muerto) return;
@@ -279,8 +410,12 @@ public class JugadorController : MonoBehaviour
         }
         else
         {
-            Vector2 rebote = new Vector2(transform.position.x - direccion.x, 0.2f).normalized;
-            rb.AddForce(rebote * 6f, ForceMode2D.Impulse);
+            // ==========================================
+            // REBOTE EN LA DIRECCIÓN DEL GOLPE CON FUERZA 10
+            // ==========================================
+            Vector2 rebote = direccion * 10f;
+            rb.AddForce(rebote, ForceMode2D.Impulse);
+            Debug.Log("💨 Jugador rebota! Dirección: " + rebote);
             Invoke("DesactivarDanio", 0.3f);
         }
     }
@@ -292,27 +427,15 @@ public class JugadorController : MonoBehaviour
 
         if (skeletonAnimation != null && !muerto)
         {
-            if (enSuelo)
-            {
-                if (Mathf.Abs(movimientoHorizontal) > 0.1f)
-                {
-                    skeletonAnimation.AnimationName = WALK;
-                    skeletonAnimation.loop = true;
-                }
-                else
-                {
-                    skeletonAnimation.AnimationName = IDLE;
-                    skeletonAnimation.loop = true;
-                }
-            }
-            else
-            {
-                skeletonAnimation.AnimationName = JUMP;
-                skeletonAnimation.loop = false;
-            }
+            string anim = bastonActivo ? STAFF_IDLE : IDLE;
+            skeletonAnimation.AnimationName = anim;
+            skeletonAnimation.loop = true;
         }
     }
 
+    // ============================================
+    // MUERTE
+    // ============================================
     void Morir()
     {
         muerto = true;
@@ -327,7 +450,6 @@ public class JugadorController : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Kinematic;
         GetComponent<Collider2D>().enabled = false;
 
-        // Activar Game Over después de 2 segundos
         Invoke("ActivarGameOver", 2f);
     }
 
@@ -345,43 +467,39 @@ public class JugadorController : MonoBehaviour
         }
     }
 
-    // ==========================================
-    // MÉTODO PARA REVIVIR (LLAMADO DESDE POSICIONARJUGADOR)
-    // ==========================================
+    // ============================================
+    // REVIVIR
+    // ============================================
     public void Revivir(int vidaNueva)
     {
-        // Resetear estado
         muerto = false;
         vida = vidaNueva;
         recibiendoDanio = false;
         atacando = false;
         movimientoHorizontal = 0f;
 
-        // Reactivar collider
         Collider2D collider = GetComponent<Collider2D>();
         if (collider != null)
             collider.enabled = true;
 
-        // Reactivar Rigidbody
         if (rb != null)
         {
             rb.bodyType = RigidbodyType2D.Dynamic;
             rb.linearVelocity = Vector2.zero;
         }
 
-        // Resetear animación
         if (skeletonAnimation != null)
         {
-            skeletonAnimation.AnimationName = IDLE;
+            skeletonAnimation.AnimationName = bastonActivo ? STAFF_IDLE : IDLE;
             skeletonAnimation.loop = true;
         }
 
         Debug.Log("❤️ Jugador revivido con vida: " + vidaNueva);
     }
 
-    // ==========================================
-    // MÉTODOS TÁCTILES
-    // ==========================================
+    // ============================================
+    // MÉTODOS TÁCTILES (para botones)
+    // ============================================
 
     public void MoverIzquierda()
     {
@@ -433,6 +551,9 @@ public class JugadorController : MonoBehaviour
         }
     }
 
+    // ============================================
+    // RECOGER FLOR
+    // ============================================
     void RecogerFlor()
     {
         FlorRecolectable[] flores = FindObjectsByType<FlorRecolectable>(FindObjectsSortMode.None);
@@ -451,14 +572,15 @@ public class JugadorController : MonoBehaviour
         }
     }
 
+    // ============================================
+    // VISUALIZACIÓN EN EL EDITOR
+    // ============================================
     void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
         Gizmos.DrawLine(transform.position, transform.position + Vector3.down * (longitudRaycast + 0.2f));
 
         Gizmos.color = Color.blue;
-        float direccionX = transform.localScale.x > 0 ? 1 : -1;
-        Vector3 finRaycast = transform.position + new Vector3(direccionX * distanciaAtaque, 0, 0);
-        Gizmos.DrawLine(transform.position, finRaycast);
+        Gizmos.DrawWireSphere(transform.position, distanciaEmpujeActual);
     }
 }

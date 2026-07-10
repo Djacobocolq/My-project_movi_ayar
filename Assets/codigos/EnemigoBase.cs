@@ -5,7 +5,8 @@ using Spine.Unity;
 public class EnemigoBase : MonoBehaviour
 {
     [Header("MOVIMIENTO")]
-    public float velocidad = 2f;
+    public float velocidadBase = 2f;
+    public float velocidadActual;
 
     [Header("DETECCIÓN")]
     public float distanciaDeteccion = 5f;
@@ -13,10 +14,23 @@ public class EnemigoBase : MonoBehaviour
 
     [Header("VIDA")]
     public int vidaMaxima = 3;
-    public int dañoAtaque = 1;
+    public int dañoBase = 1;
+    public int dañoActual;
+
+    [Header("ATAQUE")]
+    public float cooldownAtaque = 2f;
+    public float fuerzaEmpujeJugador = 10f; // ← NUEVO
 
     [Header("REBOTE")]
-    public float fuerzaRebote = 6f;
+    public float fuerzaRebote = 10f;
+    public float fuerzaReboteJugador = 10f;
+
+    [Header("BUFF")]
+    public float intervaloBuff = 4f;
+    public float probabilidadBuff = 0.4f;
+    public int aumentoVelocidad = 4;
+    public int aumentoDaño = 1;
+    public bool buffActivo = false;
 
     [Header("SUELO")]
     public LayerMask capaSuelo;
@@ -34,7 +48,16 @@ public class EnemigoBase : MonoBehaviour
     private bool muerto;
     private bool jugadorMuerto = false;
     private float direccion = 1;
+    private float tiempoUltimoAtaque = 0f;
 
+    // ==========================================
+    // ESTADO DESACTIVADO (QUIETO)
+    // ==========================================
+    private bool enemigoDesactivado = false;
+
+    // ============================================
+    // NOMBRES DE ANIMACIONES
+    // ============================================
     private string IDLE = "idle_side";
     private string WALK = "walk_side";
     private string ATTACK = "attack_side";
@@ -42,10 +65,11 @@ public class EnemigoBase : MonoBehaviour
     private string DEATH = "dead_side";
     private string DANCE = "dance_side";
 
+    // ============================================
+    // INICIALIZACIÓN
+    // ============================================
     void Start()
     {
-        Debug.Log("Enemigo: Iniciando...");
-
         rb = GetComponent<Rigidbody2D>();
         skeletonAnimation = GetComponentInChildren<SkeletonAnimation>();
 
@@ -62,6 +86,9 @@ public class EnemigoBase : MonoBehaviour
         }
 
         vidaActual = vidaMaxima;
+        velocidadActual = velocidadBase;
+        dañoActual = dañoBase;
+        buffActivo = false;
 
         if (skeletonAnimation != null)
         {
@@ -69,13 +96,17 @@ public class EnemigoBase : MonoBehaviour
             skeletonAnimation.loop = true;
         }
 
-        InvokeRepeating("ComportamientoIA", 0f, 0.5f);
+        StartCoroutine(CicloBuff());
     }
 
+    // ============================================
+    // ACTUALIZACIÓN CADA FRAME
+    // ============================================
     void Update()
     {
         if (muerto || skeletonAnimation == null) return;
 
+        // Detectar estado del jugador
         if (scriptJugador != null)
         {
             if (scriptJugador.muerto && !jugadorMuerto)
@@ -91,6 +122,7 @@ public class EnemigoBase : MonoBehaviour
             }
         }
 
+        // Voltear sprite
         if (jugador != null && !jugadorMuerto && !muerto)
         {
             if (jugador.position.x < transform.position.x)
@@ -99,12 +131,106 @@ public class EnemigoBase : MonoBehaviour
                 skeletonAnimation.Skeleton.ScaleX = 1;
         }
 
+        // Detectar suelo
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, longitudRaycast, capaSuelo);
         enSuelo = hit.collider != null;
+
+        // ==========================================
+        // COMPORTAMIENTO IA
+        // ==========================================
+        if (!muerto && !recibiendoDanio && !atacando && jugador != null && !jugadorMuerto && !enemigoDesactivado)
+        {
+            float distancia = Vector2.Distance(transform.position, jugador.position);
+
+            if (distancia <= distanciaAtaque)
+            {
+                if (Time.time >= tiempoUltimoAtaque + cooldownAtaque)
+                {
+                    Atacar();
+                }
+                else
+                {
+                    if (skeletonAnimation != null)
+                    {
+                        skeletonAnimation.AnimationName = IDLE;
+                        skeletonAnimation.loop = true;
+                    }
+                    rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+                }
+            }
+            else if (distancia <= distanciaDeteccion)
+            {
+                MoverHaciaJugador();
+            }
+            else
+            {
+                if (skeletonAnimation != null)
+                {
+                    skeletonAnimation.AnimationName = IDLE;
+                    skeletonAnimation.loop = true;
+                }
+                rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            }
+        }
+        else if (!muerto && (recibiendoDanio || atacando || enemigoDesactivado))
+        {
+            if (atacando || enemigoDesactivado)
+            {
+                rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            }
+        }
 
         ActualizarAnimaciones();
     }
 
+    // ============================================
+    // SISTEMA DE BUFF CON COROUTINE
+    // ============================================
+    IEnumerator CicloBuff()
+    {
+        while (!muerto)
+        {
+            yield return new WaitForSeconds(intervaloBuff);
+
+            if (muerto || jugadorMuerto) continue;
+
+            float random = Random.value;
+
+            if (random <= probabilidadBuff)
+            {
+                if (!buffActivo)
+                {
+                    velocidadActual = velocidadBase + aumentoVelocidad;
+                    dañoActual = dañoBase + aumentoDaño;
+                    buffActivo = true;
+                    Debug.Log("🔥 ¡BUFF ACTIVADO! Velocidad: " + velocidadActual + " | Daño: " + dañoActual);
+                }
+                else
+                {
+                    Debug.Log("⚡ Buff ya activo, manteniendo...");
+                }
+            }
+            else
+            {
+                velocidadActual = velocidadBase;
+                dañoActual = dañoBase;
+                buffActivo = false;
+                Debug.Log("❌ Buff falló - Valores reiniciados. Velocidad: " + velocidadActual + " | Daño: " + dañoActual);
+            }
+        }
+    }
+
+    public void ReiniciarBuff()
+    {
+        velocidadActual = velocidadBase;
+        dañoActual = dañoBase;
+        buffActivo = false;
+        Debug.Log("🔄 Buff reiniciado manualmente");
+    }
+
+    // ============================================
+    // CELEBRAR VICTORIA (BAILAR)
+    // ============================================
     void CelebrarVictoria()
     {
         if (skeletonAnimation != null)
@@ -126,32 +252,9 @@ public class EnemigoBase : MonoBehaviour
         }
     }
 
-    void ComportamientoIA()
-    {
-        if (muerto || recibiendoDanio || atacando) return;
-        if (jugador == null || jugadorMuerto) return;
-
-        float distancia = Vector2.Distance(transform.position, jugador.position);
-
-        if (distancia <= distanciaAtaque)
-        {
-            Atacar();
-        }
-        else if (distancia <= distanciaDeteccion)
-        {
-            MoverHaciaJugador();
-        }
-        else
-        {
-            if (skeletonAnimation != null)
-            {
-                skeletonAnimation.AnimationName = IDLE;
-                skeletonAnimation.loop = true;
-            }
-            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-        }
-    }
-
+    // ============================================
+    // MOVIMIENTO
+    // ============================================
     void MoverHaciaJugador()
     {
         if (jugador.position.x < transform.position.x)
@@ -160,7 +263,7 @@ public class EnemigoBase : MonoBehaviour
             direccion = 1;
 
         if (!recibiendoDanio && !atacando)
-            rb.linearVelocity = new Vector2(direccion * velocidad, rb.linearVelocity.y);
+            rb.linearVelocity = new Vector2(direccion * velocidadActual, rb.linearVelocity.y);
         else
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
 
@@ -171,11 +274,16 @@ public class EnemigoBase : MonoBehaviour
         }
     }
 
+    // ============================================
+    // ANIMACIONES
+    // ============================================
     void ActualizarAnimaciones()
     {
         if (jugadorMuerto) return;
-        if (atacando || recibiendoDanio || muerto) return;
+        if (atacando || muerto) return;
         if (skeletonAnimation == null) return;
+
+        if (recibiendoDanio) return;
 
         if (enSuelo && Mathf.Abs(rb.linearVelocity.x) < 0.1f)
         {
@@ -187,9 +295,15 @@ public class EnemigoBase : MonoBehaviour
         }
     }
 
+    // ============================================
+    // ATAQUE (CORREGIDO - DIRECCIÓN CORRECTA)
+    // ============================================
     void Atacar()
     {
+        if (atacando) return;
+
         atacando = true;
+        tiempoUltimoAtaque = Time.time;
         rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
 
         if (skeletonAnimation != null)
@@ -203,9 +317,12 @@ public class EnemigoBase : MonoBehaviour
             float distancia = Vector2.Distance(transform.position, jugador.position);
             if (distancia <= distanciaAtaque + 0.5f)
             {
+                // ==========================================
+                // DIRECCIÓN DESDE EL ENEMIGO HACIA EL JUGADOR
+                // ==========================================
                 Vector2 direccionAtaque = (jugador.position - transform.position).normalized;
-                scriptJugador.RecibeDanio(direccionAtaque, dañoAtaque);
-                Debug.Log("⚔️ Enemigo atacó al jugador! Daño: " + dañoAtaque);
+                scriptJugador.RecibeDanio(direccionAtaque, dañoActual);
+                Debug.Log("⚔️ Enemigo atacó al jugador! Dirección: " + direccionAtaque + " | Daño: " + dañoActual);
             }
         }
 
@@ -223,7 +340,7 @@ public class EnemigoBase : MonoBehaviour
     }
 
     // ============================================
-    // RECIBIR DAÑO (del jugador)
+    // RECIBIR DAÑO
     // ============================================
     public void RecibeDanio(Vector2 direccion, int cantDanio)
     {
@@ -252,41 +369,32 @@ public class EnemigoBase : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         recibiendoDanio = false;
-        rb.linearVelocity = Vector2.zero;
     }
 
     // ============================================
-    // EMPUJAR (CON ANIMACIÓN)
+    // EMPUJAR
     // ============================================
     public void Empujar(Vector2 direccion, float fuerza)
     {
         if (muerto) return;
 
-        // Aplicar fuerza de empuje
         rb.AddForce(direccion * fuerza, ForceMode2D.Impulse);
-        Debug.Log("💨 Enemigo empujado con fuerza: " + fuerza);
+        Debug.Log("💨 Enemigo empujado! Fuerza: " + fuerza);
 
-        // ==========================================
-        // REPRODUCIR ANIMACIÓN DE EMPUJE
-        // ==========================================
         if (skeletonAnimation != null)
         {
             skeletonAnimation.AnimationName = HIT;
             skeletonAnimation.loop = false;
         }
 
-        // Activar estado de daño
         recibiendoDanio = true;
-
-        // Desactivar daño después del empuje
         CancelInvoke("DesactivarDanioEmpuje");
-        Invoke("DesactivarDanioEmpuje", 0.3f);
+        Invoke("DesactivarDanioEmpuje", 0.2f);
     }
 
     void DesactivarDanioEmpuje()
     {
         recibiendoDanio = false;
-        rb.linearVelocity = Vector2.zero;
 
         if (skeletonAnimation != null && !muerto)
         {
@@ -295,6 +403,36 @@ public class EnemigoBase : MonoBehaviour
         }
     }
 
+    // ============================================
+    // DESACTIVAR ENEMIGO (QUIETO) - PARA PRIMER ACTO
+    // ============================================
+    public void DesactivarEnemigo(float tiempo)
+    {
+        if (enemigoDesactivado) return;
+
+        enemigoDesactivado = true;
+        rb.linearVelocity = Vector2.zero;
+
+        if (skeletonAnimation != null)
+        {
+            skeletonAnimation.AnimationName = IDLE;
+            skeletonAnimation.loop = true;
+        }
+
+        Debug.Log("🛑 Enemigo desactivado por " + tiempo + " segundos");
+
+        Invoke("ReactivarEnemigo", tiempo);
+    }
+
+    void ReactivarEnemigo()
+    {
+        enemigoDesactivado = false;
+        Debug.Log("✅ Enemigo reactivado");
+    }
+
+    // ============================================
+    // MUERTE
+    // ============================================
     void Morir()
     {
         muerto = true;
@@ -309,16 +447,9 @@ public class EnemigoBase : MonoBehaviour
         Destroy(gameObject, 2f);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Espada"))
-        {
-            Vector2 direccionDanio = new Vector2(collision.gameObject.transform.position.x, 0);
-            RecibeDanio(direccionDanio, 1);
-            Debug.Log("🗡️ Enemigo golpeado por la espada!");
-        }
-    }
-
+    // ============================================
+    // COLISIÓN CON EL JUGADOR (REBOTE SIN DAÑO)
+    // ============================================
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -331,12 +462,31 @@ public class EnemigoBase : MonoBehaviour
                 {
                     Vector2 direccionRebote = Vector2.up;
                     jugadorScript.RecibeDanio(direccionRebote, 0);
-                    Debug.Log("⬇️ ¡El jugador saltó encima del enemigo!");
+                    rbJugador.linearVelocity = new Vector2(rbJugador.linearVelocity.x, 0);
+                    rbJugador.AddForce(Vector2.up * fuerzaReboteJugador, ForceMode2D.Impulse);
+                    rb.AddForce(Vector2.down * 2f, ForceMode2D.Impulse);
+                    Debug.Log("⬆️ ¡El jugador saltó encima del enemigo y rebotó!");
                 }
             }
         }
     }
 
+    // ============================================
+    // TRIGGER CON LA ESPADA
+    // ============================================
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Espada"))
+        {
+            Vector2 direccionDanio = new Vector2(collision.gameObject.transform.position.x, 0);
+            RecibeDanio(direccionDanio, 1);
+            Debug.Log("🗡️ Enemigo golpeado por la espada!");
+        }
+    }
+
+    // ============================================
+    // VISUALIZACIÓN EN EL EDITOR
+    // ============================================
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
