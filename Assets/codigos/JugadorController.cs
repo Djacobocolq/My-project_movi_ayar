@@ -12,6 +12,7 @@ public class JugadorController : MonoBehaviour
     public float velocidad = 5f;
     public float fuerzaSalto = 10f;
     public int vida = 3;
+    public ArmaController arma;
 
     [Header("EMPUJE")]
     public float fuerzaEmpujeInicial = 10f;
@@ -25,7 +26,6 @@ public class JugadorController : MonoBehaviour
 
     [Header("ARMA")]
     public GameObject baston;
-    public ArmaController arma;
 
     // ============================================
     // REFERENCIAS PRIVADAS
@@ -134,22 +134,42 @@ public class JugadorController : MonoBehaviour
             return;
         }
 
-        // Movimiento con teclado
+        // ==========================================
+        // MOVIMIENTO CON TECLADO
+        // ==========================================
         if (keyboard != null && !botonIzquierdaPresionado && !botonDerechaPresionado)
         {
+            float movimientoAnterior = movimientoHorizontal;
             movimientoHorizontal = 0f;
+
             if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed)
                 movimientoHorizontal = -1f;
             else if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed)
                 movimientoHorizontal = 1f;
+
+            // ==========================================
+            // ACTUALIZAR DIRECCIÓN DEL ARMA CUANDO CAMBIA
+            // ==========================================
+            if (movimientoHorizontal != 0 && movimientoHorizontal != movimientoAnterior)
+            {
+                if (arma != null && bastonActivo)
+                {
+                    arma.CambiarDireccion(movimientoHorizontal > 0 ? 1f : -1f);
+                }
+            }
         }
 
+        // ==========================================
+        // MOVER AL JUGADOR (SIEMPRE QUE NO ESTÉ ATACANDO O RECIBIENDO DAÑO)
+        // ==========================================
         if (!atacando && !recibiendoDanio)
         {
             Mover();
         }
 
-        // Detectar suelo
+        // ==========================================
+        // DETECTAR SUELO
+        // ==========================================
         estabaEnSuelo = enSuelo;
         float raycastLength = longitudRaycast + 0.2f;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raycastLength, capaSuelo);
@@ -181,7 +201,9 @@ public class JugadorController : MonoBehaviour
             }
         }
 
-        // Salto
+        // ==========================================
+        // SALTO
+        // ==========================================
         if (enSuelo && keyboard != null && keyboard.spaceKey.wasPressedThisFrame && !recibiendoDanio && !atacando)
         {
             rb.AddForce(new Vector2(0f, fuerzaSalto), ForceMode2D.Impulse);
@@ -193,19 +215,24 @@ public class JugadorController : MonoBehaviour
         }
 
         // ==========================================
-        // ATAQUE = EMPUJE (E o botón)
+        // ATAQUE
         // ==========================================
         if (keyboard != null && keyboard.eKey.wasPressedThisFrame && enSuelo && !atacando && !recibiendoDanio)
         {
             Atacar();
         }
 
-        // Recoger flor
+        // ==========================================
+        // RECOGER FLOR
+        // ==========================================
         if (keyboard != null && keyboard.rKey.wasPressedThisFrame && !atacando && !recibiendoDanio)
         {
             RecogerFlor();
         }
 
+        // ==========================================
+        // ACTUALIZAR ANIMACIONES
+        // ==========================================
         ActualizarAnimaciones();
     }
 
@@ -217,6 +244,21 @@ public class JugadorController : MonoBehaviour
         if (movimientoHorizontal != 0 && skeletonAnimation != null)
         {
             skeletonAnimation.Skeleton.ScaleX = movimientoHorizontal > 0 ? 1 : -1;
+        }
+
+        // ==========================================
+        // ACTUALIZAR DIRECCIÓN DEL ARMA (FUERA DEL IF)
+        // ==========================================
+        if (arma != null && bastonActivo)
+        {
+            if (movimientoHorizontal > 0.1f)
+            {
+                arma.CambiarDireccion(1f);
+            }
+            else if (movimientoHorizontal < -0.1f)
+            {
+                arma.CambiarDireccion(-1f);
+            }
         }
     }
 
@@ -290,7 +332,7 @@ public class JugadorController : MonoBehaviour
     void FinalizarTransicion()
     {
         transicionEnCurso = false;
-        bastonActivo = true;
+        bastonActivo = true; // ← Asegurar que esté en true
 
         if (baston != null)
         {
@@ -298,12 +340,11 @@ public class JugadorController : MonoBehaviour
             if (arma != null)
             {
                 arma.Activar();
-                // Asignar la referencia al SkeletonAnimation
-                arma.skeletonAnimation = skeletonAnimation;
+                // Forzar dirección inicial (derecha)
+                arma.CambiarDireccion(1f);
             }
         }
 
-        // ACTUALIZAR VALORES DE EMPUJE
         fuerzaEmpujeActual = fuerzaEmpujeBaston;
         distanciaEmpujeActual = distanciaEmpujeBaston;
 
@@ -313,7 +354,7 @@ public class JugadorController : MonoBehaviour
             skeletonAnimation.loop = true;
         }
 
-        Debug.Log("✅ Bastón activado! Siguiendo hueso: [base]elbowL");
+        Debug.Log("✅ Bastón activado! Fuerza: " + fuerzaEmpujeActual + " | Distancia: " + distanciaEmpujeActual);
     }
 
     // ============================================
