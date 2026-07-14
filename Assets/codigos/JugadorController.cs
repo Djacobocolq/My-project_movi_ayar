@@ -243,6 +243,7 @@ public class JugadorController : MonoBehaviour
 
         if (movimientoHorizontal != 0 && skeletonAnimation != null)
         {
+            // Voltear el esqueleto del jugador
             skeletonAnimation.Skeleton.ScaleX = movimientoHorizontal > 0 ? 1 : -1;
         }
 
@@ -367,7 +368,7 @@ public class JugadorController : MonoBehaviour
         atacando = true;
 
         // ==========================================
-        // ANIMACIÓN DE ATAQUE
+        // REPRODUCIR ANIMACIÓN DE ATAQUE
         // ==========================================
         if (skeletonAnimation != null)
         {

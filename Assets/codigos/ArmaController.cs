@@ -16,7 +16,8 @@ public class ArmaController : MonoBehaviour
     public float rotacionIdleIzquierda = 55f;
 
     [Header("ATAQUE")]
-    public float rotacionAtaque = -90f;
+    public float rotacionAtaqueDerecha = -90f;
+    public float rotacionAtaqueIzquierda = 90f;
     public float duracionAtaque = 0.3f;
     public float profundidadZ = -1f;
     public float escalaX = 0.6f;
@@ -32,7 +33,8 @@ public class ArmaController : MonoBehaviour
     // ==========================================
     private Vector3 offsetActual;
     private float rotacionIdleActual;
-    private float direccionActual = 1f; // 1 = derecha, -1 = izquierda
+    private float rotacionAtaqueActual;
+    private float direccionActual = 1f;
 
     void Start()
     {
@@ -52,6 +54,7 @@ public class ArmaController : MonoBehaviour
         // Valores iniciales (por defecto derecha)
         offsetActual = offsetDerecha;
         rotacionIdleActual = rotacionIdleDerecha;
+        rotacionAtaqueActual = rotacionAtaqueDerecha;
         direccionActual = 1f;
     }
 
@@ -106,7 +109,7 @@ public class ArmaController : MonoBehaviour
         if (atacando)
         {
             float progreso = (Time.time - tiempoAtaque) / duracionAtaque;
-            float angulo = Mathf.Lerp(rotacionIdleActual, rotacionAtaque, progreso * 2f);
+            float angulo = Mathf.Lerp(rotacionIdleActual, rotacionAtaqueActual, progreso * 2f);
             transform.rotation = Quaternion.Euler(0, 0, angulo);
 
             if (progreso >= 1f)
@@ -126,7 +129,6 @@ public class ArmaController : MonoBehaviour
     // ==========================================
     public void CambiarDireccion(float nuevaDireccion)
     {
-        // Solo cambiar si la dirección es diferente
         if (direccionActual == nuevaDireccion) return;
 
         direccionActual = nuevaDireccion;
@@ -135,19 +137,19 @@ public class ArmaController : MonoBehaviour
         {
             offsetActual = offsetDerecha;
             rotacionIdleActual = rotacionIdleDerecha;
-            Debug.Log("➡️ Bastón: DIRECCIÓN DERECHA - Offset: " + offsetActual + " | Rotación: " + rotacionIdleActual);
+            rotacionAtaqueActual = rotacionAtaqueDerecha;
+            Debug.Log("➡️ Bastón: DERECHA");
         }
         else
         {
             offsetActual = offsetIzquierda;
             rotacionIdleActual = rotacionIdleIzquierda;
-            Debug.Log("⬅️ Bastón: DIRECCIÓN IZQUIERDA - Offset: " + offsetActual + " | Rotación: " + rotacionIdleActual);
+            rotacionAtaqueActual = rotacionAtaqueIzquierda;
+            Debug.Log("⬅️ Bastón: IZQUIERDA");
         }
 
-        // Actualizar escala
         transform.localScale = new Vector3(direccionActual * escalaX, escalaY, 1f);
 
-        // Actualizar rotación inmediatamente
         if (!atacando)
         {
             transform.rotation = Quaternion.Euler(0, 0, rotacionIdleActual);
@@ -160,14 +162,28 @@ public class ArmaController : MonoBehaviour
         gameObject.SetActive(true);
         transform.localScale = new Vector3(direccionActual * escalaX, escalaY, 1f);
         BuscarHueso();
-        Debug.Log("✅ Bastón activado! Dirección inicial: " + (direccionActual > 0 ? "Derecha" : "Izquierda"));
+        Debug.Log("✅ Bastón activado!");
     }
 
     public void ActivarAtaque()
     {
         if (!activo) return;
+
+        // ==========================================
+        // ROTACIÓN DE ATAQUE SEGÚN DIRECCIÓN
+        // ==========================================
+        if (direccionActual > 0)
+        {
+            rotacionAtaqueActual = rotacionAtaqueDerecha;
+        }
+        else
+        {
+            rotacionAtaqueActual = rotacionAtaqueIzquierda;
+        }
+
         atacando = true;
         tiempoAtaque = Time.time;
+        Debug.Log("⚔️ Ataque! Dirección: " + (direccionActual > 0 ? "Derecha" : "Izquierda"));
     }
 
     void OnDestroy()
